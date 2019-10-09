@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 608274868}
   - component: {fileID: 608274867}
   - component: {fileID: 608274866}
+  - component: {fileID: 608274872}
   m_Layer: 0
   m_Name: MainRoom
   m_TagString: Untagged
@@ -615,6 +616,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &608274872
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608274864}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 72, y: 42.433594}
+    newSize: {x: 72, y: 42.433594}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -24.48383, y: -2.137041}
+      - {x: -36, y: -21.216797}
+      - {x: 36, y: -21.216797}
+      - {x: 24.544483, y: -2.1279275}
 --- !u!1 &732501317
 GameObject:
   m_ObjectHideFlags: 0
