@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     //IsometricCharacterRenderer isoRenderer;
 
     Rigidbody2D rbody;
-
+    
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
