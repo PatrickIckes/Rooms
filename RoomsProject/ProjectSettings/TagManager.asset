@@ -44,11 +44,11 @@ TagManager:
   - name: Background
     uniqueID: 3595747845
     locked: 0
-  - name: Stairs
-    uniqueID: 623168897
-    locked: 0
   - name: Player
     uniqueID: 4109254511
+    locked: 0
+  - name: Stairs
+    uniqueID: 623168897
     locked: 0
   - name: Angel
     uniqueID: 3743967279
