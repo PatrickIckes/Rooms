@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     //IsometricCharacterRenderer isoRenderer;
 
     Rigidbody2D rbody;
+
+    //Used to track when items are picked up
+    public Inventory inventory;
     
     private void Awake()
     {
@@ -25,5 +28,23 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         rbody.MovePosition(newPos);
+    }
+
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    IInventoryItem item = hit.collider.GetComponent<IInventoryItem>();
+    //    if(item != null)
+    //    {
+    //        inventory.AddItem(item);
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        IInventoryItem item = GetComponent<IInventoryItem>();
+        if (item != null)
+        {
+            inventory.AddItem(item);
+        }
     }
 }
