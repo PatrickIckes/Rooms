@@ -59,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
     //}
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        IInventoryItem item = GetComponent<IInventoryItem>();
+    {   
+        IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {
             inventory.AddItem(item);
