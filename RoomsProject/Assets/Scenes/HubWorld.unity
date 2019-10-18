@@ -616,7 +616,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.81
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -640,18 +640,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.76, y: -2.1787322, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &530868054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7444315504994395427, guid: 26e96ef50f319e346bac00203aae9662,
-    type: 3}
-  m_PrefabInstance: {fileID: 7444315504752968309}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &530868055 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7444315504994395426, guid: 26e96ef50f319e346bac00203aae9662,
@@ -1191,53 +1185,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1300596807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1300596809}
-  - component: {fileID: 1300596808}
-  m_Layer: 0
-  m_Name: PlayerInventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1300596808
+--- !u!114 &1300596808 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 340808086900707104, guid: b372120d6ce37334f89a0fef5f0d7cf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1658009728848979928}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300596807}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c3c1424771ff54fbbb97c1cb29804c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SLOTS: 5
-  InventoryUI: {fileID: 960142589}
-  PrefabImage: {fileID: 530868054}
-  CurrentLocation: {x: 0, y: 0, z: 0}
---- !u!4 &1300596809
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300596807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 387.87482, y: 22.21603, z: -129.34375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1691105528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1658009728686307108, guid: b372120d6ce37334f89a0fef5f0d7cf5,

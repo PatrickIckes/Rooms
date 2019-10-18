@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlothHallway.unity
     guid: a955b92e6d61cef43b37ba77d915df2c
+  - enabled: 1
+    path: Assets/Scenes/SlolthBossRoom.unity
+    guid: e768d18dd0884a443ac3758d2f111cde
   m_configObjects: {}

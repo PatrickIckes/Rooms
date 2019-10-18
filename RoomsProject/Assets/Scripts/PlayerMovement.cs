@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rbody;
     Collider2D colliderTrigger;
     Animator playerAnimator;
-
+    QuestManager qm;
     //Used to track when items are picked up
     public Inventory inventory;
     
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         colliderTrigger = GetComponent<Collider2D>();
         playerAnimator = GetComponent<Animator>();
+        qm = new QuestManager();
     }
 
     // Update is called once per frame
@@ -33,11 +34,19 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput != 0 || verticalInput != 0)
         {
             playerAnimator.SetBool("isWalking", true);
-        }
+        }//Walking animation
         else
         {
             playerAnimator.SetBool("isWalking", false);
-        }
+        }//Idle Anim if not moving
+        if (horizontalInput < 0)
+        {
+            this.GetComponent<SpriteRenderer>().flipX = false;
+        }//Flips left
+        else if (horizontalInput > 0)
+        {
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }//flips right
         float jumpInput = Input.GetAxis("Jump");
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
@@ -48,40 +57,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
+        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && inventory.CheckObject("key"))
         {
             SceneManager.LoadScene(1);
         }
     }
 
-    //private void OnControllerColliderHit(ControllerColliderHit hit)
-    //{
-    //    IInventoryItem item = hit.collider.GetComponent<IInventoryItem>();
-    //    if(item != null)
-    //    {
-    //        inventory.AddItem(item);
-    //    }
-    //}
-
-    //private void CheckForEntrance()
-    //{
-
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
-    {   
+    {
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {
-            inventory.AddItem(item);
+            if (item.IsQuestItem)
+            {
+                qm.CollectedQuestItem(item);
+                if(qm.DoneWithQuest())
+                {
+                    SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene, LoadSceneMode.Single);
+                }
+            }
+            else
+            {
+                inventory.AddItem(item);
+            }
         }
 
-        if(collision.name == "Door")
+        if (collision.name == "Door")
         {
             withinInteractable = true;
         }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.name == "Door")

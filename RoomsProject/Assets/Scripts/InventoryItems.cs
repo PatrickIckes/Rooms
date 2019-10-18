@@ -10,6 +10,8 @@ public interface IInventoryItem
 
     Sprite Image { get; }
 
+    bool IsQuestItem { get; }
+
     void OnPickup();
 }
 
