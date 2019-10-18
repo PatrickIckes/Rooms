@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rbody;
     Collider2D colliderTrigger;
+    Animator playerAnimator;
 
     //Used to track when items are picked up
     public Inventory inventory;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         colliderTrigger = GetComponent<Collider2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            playerAnimator.SetBool("isWalking", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isWalking", false);
+        }
         float jumpInput = Input.GetAxis("Jump");
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
