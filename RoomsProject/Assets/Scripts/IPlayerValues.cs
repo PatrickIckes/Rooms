@@ -25,6 +25,9 @@ public class PlayerAttributes
   
     internal List<GameObject> Collectables;
     internal int health;
+
+    //Used to track when items are picked up
+    public Inventory inventory;
     /// <summary>
     /// Note that Unity vector 3 is not serializable therefore cannot be saved accurately use custom vector3 to save
     /// </summary>
