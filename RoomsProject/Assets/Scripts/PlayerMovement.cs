@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public bool withinInteractable;
     public bool CanMoveUp;
     public bool canJump;
+    bool isColliding;
     //IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
     Collider2D colliderTrigger;
@@ -24,11 +25,13 @@ public class PlayerMovement : MonoBehaviour
         colliderTrigger = GetComponent<Collider2D>();
         playerAnimator = GetComponent<Animator>();
         qm = new QuestManager();
+        isColliding = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        isColliding = false;
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="currentPos"></param>
     public void MovePlayer(float horizontalInput, float verticalInput, Vector2 currentPos)
     {
-        if(!CanMoveUp)
+        if(!CanMoveUp && verticalInput > 0)
         {
             verticalInput = 0;
         }
@@ -107,14 +110,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
+        isColliding = true;
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {
             if (item.IsQuestItem)
             {
                 qm.CollectedQuestItem(item);
-                if(qm.DoneWithQuest())
+                if (qm.DoneWithQuest())
                 {
                     SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene, LoadSceneMode.Single);
                 }
@@ -125,35 +129,60 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (collision.name == "Door" || collision.name == "PlatformArea")
+        if (collision.tag == "Platform")
         {
-            withinInteractable = true;
-        } 
-       if(collision.tag == "Platform")
+            if (withinInteractable)
+            {
+                rbody.gravityScale = 0;
+                canJump = true;
+                CanMoveUp = true;
+            }
+        }
+        if (collision.tag == "Floor")
         {
             CanMoveUp = true;
             rbody.gravityScale = 0;
-            canJump = true;
-            Debug.Log(canJump);
+        }
+        if (collision.name == "Door" || collision.name == "PlatformArea")
+        {
+            withinInteractable = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.name == "Door" || collision.name == "PlatformArea")
         {
+            Debug.Log("Out of interactable");
             withinInteractable = false;
         }
-        if(collision.name == "PlatformArea")
+        if (collision.name == "PlatformArea")
         {
-            rbody.gravityScale = 0;
-            CanMoveUp = true;
+            if (CanMoveUp == true)
+            {
+                Debug.Log("Out of platformarea");
+                rbody.gravityScale = 0;
+                CanMoveUp = true;
+            }
             canJump = false;
         }
         if (collision.tag == "Platform")
         {
-            canJump = false;
-            Debug.Log(canJump);
-            rbody.gravityScale = 5;
+            if (withinInteractable)
+            {
+                Debug.Log("Falling here");
+                canJump = false;
+                CanMoveUp = false;
+            }
+            else
+            {
+                Debug.Log("Shouldn't be falling");
+            }
+        }
+
+        if (collision.tag == "Floor")
+        {
+            Debug.Log("Tried to walk up the wall");
+            rbody.gravityScale = 1;
             CanMoveUp = false;
         }
     }

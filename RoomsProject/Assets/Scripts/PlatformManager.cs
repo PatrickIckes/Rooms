@@ -46,7 +46,7 @@ public class PlatformManager : MonoBehaviour
             if (platform != Platforms[safe])
             {
                 Vector3 p = platform.transform.position;
-                Instantiate(Debris, new Vector3(p.x,p.y+50,p.z),Quaternion.identity);
+                Instantiate(Debris, new Vector3(p.x,p.y+15,p.z),Quaternion.identity);
                 
             }
         }

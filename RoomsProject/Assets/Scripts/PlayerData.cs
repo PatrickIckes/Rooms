@@ -35,4 +35,12 @@ public class PlayerData : MonoBehaviour
             Debug.Log(health);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Hazard")
+        {
+            pa.health -= 1;
+            Destroy(collision.gameObject);
+        }
+    }
 }

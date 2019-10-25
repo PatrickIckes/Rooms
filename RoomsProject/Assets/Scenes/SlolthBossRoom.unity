@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8942523
+      value: -3.008
       objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
@@ -208,7 +208,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 398990894}
-  - component: {fileID: 398990893}
   - component: {fileID: 398990892}
   m_Layer: 0
   m_Name: PlatformArea
@@ -247,27 +246,6 @@ PolygonCollider2D:
       - {x: -1.0663745, y: -0.24031818}
       - {x: 1.0834672, y: -0.23129117}
       - {x: 0.6683495, y: 0.76902735}
---- !u!50 &398990893
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398990891}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &398990894
 Transform:
   m_ObjectHideFlags: 0
@@ -276,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398990891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.472, y: -1.808, z: -1.9659934}
+  m_LocalPosition: {x: -0.472, y: -1.808, z: 0}
   m_LocalScale: {x: 2.1125, y: 1, z: 1}
   m_Children:
   - {fileID: 1932512513}
@@ -385,7 +363,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016985036, y: 0}
+  m_Offset: {x: 0.016985029, y: 0.044042617}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -396,7 +374,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27530354, y: 1}
+  m_Size: {x: 0.27530354, y: 1.0880852}
   m_EdgeRadius: 0
 --- !u!1 &1449601711
 GameObject:
@@ -442,7 +420,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016985036, y: 0}
+  m_Offset: {x: 0.016985029, y: 0.016407251}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -453,7 +431,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27530354, y: 1}
+  m_Size: {x: 0.27530354, y: 1.0328145}
   m_EdgeRadius: 0
 --- !u!1 &1632550024
 GameObject:
@@ -505,7 +483,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 30
   field of view: 64.7
   orthographic: 1
   orthographic size: 2.6772337
@@ -551,7 +529,7 @@ GameObject:
   - component: {fileID: 1717729113}
   m_Layer: 0
   m_Name: SlothBossRoom
-  m_TagString: Platform
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +609,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.4310117}
+  m_Offset: {x: 0, y: -1.3712456}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -642,7 +620,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.22, y: 0.68797636}
+  m_Size: {x: 12.22, y: 0.80750847}
   m_EdgeRadius: 0
 --- !u!1 &1781316265
 GameObject:
@@ -676,7 +654,7 @@ MonoBehaviour:
   Doors: []
   Boundaries: []
   player: {fileID: 945091990}
-  GameInProgress: 0
+  GameInProgress: 1
   restart: 0
 --- !u!4 &1781316267
 Transform:
@@ -849,6 +827,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151567435624231491, guid: 9478d301df90b5046b70f3dbcb98dba3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.016985029
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151567435624231491, guid: 9478d301df90b5046b70f3dbcb98dba3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06282568
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151567435624231491, guid: 9478d301df90b5046b70f3dbcb98dba3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1256514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9478d301df90b5046b70f3dbcb98dba3, type: 3}

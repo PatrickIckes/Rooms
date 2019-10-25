@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hazard
   - Platform
+  - Floor
   layers:
   - Default
   - TransparentFX
