@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour, IInventoryItem
+public class DoorKnobPieces : MonoBehaviour, IInventoryItem
 {
-    public bool IsQuestItem
-    {
-        get
-        {
-            return false;
-        }
-    }
+
+    public bool IsQuestItem { get { return true; } }
+
+
     public string Name
     {
         get
         {
-            return "Key";
+            return "Doorknob Pieces";
         }
     }
 
@@ -33,6 +30,7 @@ public class Key : MonoBehaviour, IInventoryItem
     {
         // Add logic what happens when key is picked up by player for example unlock door
         gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
 }

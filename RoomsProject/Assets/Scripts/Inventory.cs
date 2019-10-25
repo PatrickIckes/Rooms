@@ -17,7 +17,10 @@ public class Inventory : MonoBehaviour
     public Vector3 CurrentLocation;//Where the current inventory Item was on the canvas
     private void Start()
     {
-        CurrentLocation = InventoryUI.transform.position;
+        if (InventoryUI != null)
+        {
+            CurrentLocation = InventoryUI.transform.position;
+        }
     }
 
     public void AddItem(IInventoryItem item)
@@ -44,5 +47,32 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
+    public bool CheckObject(string name)
+    {
+        return CheckExistence(name);
+    }
+    private bool CheckExistence(string name)
+    {
+        foreach (IInventoryItem item in mItems)
+        {
+            if (name == "key")
+            {
+                if (item.GetType() == typeof(Key))
+                {
+                    return true;
+                }
+                else
+                {
+                    //This should not be a thing that happens.
+                    Debug.Log("Wrong Implementation Exception");
+                    return false;
+                }
+            }
+            else
+            {
+                Debug.Log("Not looking for a key");
+            }
+        }
+        return false;
+    }
 }

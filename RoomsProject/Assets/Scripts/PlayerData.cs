@@ -8,10 +8,12 @@ public class PlayerData : MonoBehaviour
     private int startinghealth;
     public int health;
     private int previoushealth = 0;
+    public PlayerMovement playerMovement;
     public void ResetPlayer()
     {
         pa.health = startinghealth;
         pa.Collectables = new List<GameObject>();
+        
     }
 
     // Start is called before the first frame update
@@ -19,6 +21,8 @@ public class PlayerData : MonoBehaviour
     {
         pa = new PlayerAttributes();
         startinghealth = 3;
+        playerMovement = GetComponent<PlayerMovement>();
+        pa.inventory = playerMovement.inventory;
     }
 
     // Update is called once per frame
@@ -29,6 +33,14 @@ public class PlayerData : MonoBehaviour
         {
             previoushealth = health = pa.health;
             Debug.Log(health);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Hazard")
+        {
+            pa.health -= 1;
+            Destroy(collision.gameObject);
         }
     }
 }
