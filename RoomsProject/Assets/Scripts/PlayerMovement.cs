@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
+        //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
@@ -124,54 +124,18 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (collision.tag == "Platform")
-        {
-            if (withinInteractable)
-            {
-                rbody.gravityScale = 0;
-                canJump = true;
-            }
-        }
-        if (collision.tag == "Floor")
-        {
-            rbody.gravityScale = 0;
-        }
-        if (collision.name == "Door" || collision.name == "PlatformArea")
+        
+        if (collision.name == "Door")
         {
             withinInteractable = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Door" || collision.name == "PlatformArea")
+        if (collision.name == "Door")
         {
             Debug.Log("Out of interactable");
             withinInteractable = false;
-        }
-        if (collision.name == "PlatformArea")
-        {
-                Debug.Log("Out of platformarea");
-                rbody.gravityScale = 0;
-            canJump = false;
-        }
-        if (collision.tag == "Platform")
-        {
-            if (withinInteractable)
-            {
-                Debug.Log("Falling here");
-                canJump = false;
-                rbody.gravityScale = 1;
-            }
-            else
-            {
-                Debug.Log("Shouldn't be falling");
-            }
-        }
-
-        if (collision.tag == "Floor")
-        {
-            Debug.Log("Tried to walk up the wall");
-            rbody.gravityScale = 1;
         }
     }
 }

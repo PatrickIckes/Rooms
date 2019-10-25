@@ -12,6 +12,7 @@ public class PlatformManager : MonoBehaviour
     public GameObject Debris;
     public MyGameManager gm;
     public GameObject Sloth;
+    public float spawnHeight;
     PlayerData player_script;
 
     // Start is called before the first frame update
@@ -43,16 +44,18 @@ public class PlatformManager : MonoBehaviour
     private void TriggerFall()
     {
         int safe = Random.Range(0, Platforms.Length);
-        Lights[safe].SetActive(true);
         Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
+        int i = 0;
         foreach(GameObject platform in Platforms)
         {
+
             if (platform != Platforms[safe])
             {
                 Vector3 p = platform.transform.position;
-                Instantiate(Debris, new Vector3(p.x,p.y+15,p.z),Quaternion.identity);
+                Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight,p.z),Quaternion.identity);
+                Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
             }
+            i++;
         }
-        Lights[safe].SetActive(false);
     }
 }
