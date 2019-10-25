@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlatformManager : MonoBehaviour
 {
     public GameObject[] Platforms;
+    public GameObject[] Lights;
     double timer;
     double fallingtimer;
     public GameObject Debris;
     public MyGameManager gm;
     public GameObject Sloth;
     PlayerData player_script;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,14 +43,16 @@ public class PlatformManager : MonoBehaviour
     private void TriggerFall()
     {
         int safe = Random.Range(0, Platforms.Length);
+        Lights[safe].SetActive(true);
+        Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
         foreach(GameObject platform in Platforms)
         {
             if (platform != Platforms[safe])
             {
                 Vector3 p = platform.transform.position;
                 Instantiate(Debris, new Vector3(p.x,p.y+15,p.z),Quaternion.identity);
-                
             }
         }
+        Lights[safe].SetActive(false);
     }
 }

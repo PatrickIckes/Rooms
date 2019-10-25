@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 1f;
     public float jumpSpeed = 1f;
     public bool withinInteractable;
-    public bool CanMoveUp;
     public bool canJump;
     bool isColliding;
     //IsometricCharacterRenderer isoRenderer;
@@ -58,10 +57,6 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="currentPos"></param>
     public void MovePlayer(float horizontalInput, float verticalInput, Vector2 currentPos)
     {
-        if(!CanMoveUp && verticalInput > 0)
-        {
-            verticalInput = 0;
-        }
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;
@@ -135,12 +130,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 rbody.gravityScale = 0;
                 canJump = true;
-                CanMoveUp = true;
             }
         }
         if (collision.tag == "Floor")
         {
-            CanMoveUp = true;
             rbody.gravityScale = 0;
         }
         if (collision.name == "Door" || collision.name == "PlatformArea")
@@ -157,12 +150,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.name == "PlatformArea")
         {
-            if (CanMoveUp == true)
-            {
                 Debug.Log("Out of platformarea");
                 rbody.gravityScale = 0;
-                CanMoveUp = true;
-            }
             canJump = false;
         }
         if (collision.tag == "Platform")
@@ -171,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Falling here");
                 canJump = false;
-                CanMoveUp = false;
+                rbody.gravityScale = 1;
             }
             else
             {
@@ -183,7 +172,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Tried to walk up the wall");
             rbody.gravityScale = 1;
-            CanMoveUp = false;
         }
     }
 }
