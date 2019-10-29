@@ -14,7 +14,9 @@ public class PlatformManager : MonoBehaviour
     public GameObject Sloth;
     public float spawnHeight;
     PlayerData player_script;
-
+    public float Fallspeed;
+    public float FallspeedIncrementer;
+    int lastval;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +38,11 @@ public class PlatformManager : MonoBehaviour
                 fallingtimer = 0;
                 TriggerFall();
             }
-            if (timer > 20)
+            if ((int)timer % 5==0 && lastval != (int)timer)
             {
+                Fallspeed += FallspeedIncrementer; // Not sure how well this will work but every 5 seconds it will speed up the fallrate
+                Debug.Log($"{lastval} {(int)timer}");
+                lastval = (int)timer;
             }
         }
     }
@@ -52,7 +57,8 @@ public class PlatformManager : MonoBehaviour
             if (platform != Platforms[safe])
             {
                 Vector3 p = platform.transform.position;
-                Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight,p.z),Quaternion.identity);
+                GameObject temp = Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight,p.z),Quaternion.identity);
+                temp.GetComponent<Rigidbody2D>().gravityScale += Fallspeed;
                 Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
             }
             i++;

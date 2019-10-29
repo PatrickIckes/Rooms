@@ -383,6 +383,7 @@ MonoBehaviour:
   gm: {fileID: 1781316266}
   Sloth: {fileID: 0}
   spawnHeight: 15
+  FallspeedIncrementer: 0.1
 --- !u!4 &419017871
 Transform:
   m_ObjectHideFlags: 0
