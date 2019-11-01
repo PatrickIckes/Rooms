@@ -7,21 +7,50 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public Button StartGameButton;
+    public Button SettingsButton;
+    public Button CreditsButton;
+    public Button CreditsBackButton;
+    public Button SettingsBackButton;
+    public GameObject MainMenuCanvas;
+    public GameObject SettingsCanvas;
+    public GameObject CreditsCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
         StartGameButton.onClick.AddListener(StartGame);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SettingsButton.onClick.AddListener(Settings);
+        CreditsButton.onClick.AddListener(Credits);
+        CreditsBackButton.onClick.AddListener(CreditsBack);
+        SettingsBackButton.onClick.AddListener(SettingsBack);
     }
 
     void StartGame()
     {
         SceneManager.LoadScene(0);
+    }
+
+    void Credits()
+    {
+        MainMenuCanvas.SetActive(false);
+        CreditsCanvas.SetActive(true);
+    }
+
+    void CreditsBack()
+    {
+        CreditsCanvas.SetActive(false);
+        MainMenuCanvas.SetActive(true);
+    }
+
+    void Settings()
+    {
+        MainMenuCanvas.SetActive(false);
+        SettingsCanvas.SetActive(true);
+    }
+
+    void SettingsBack()
+    {
+        SettingsCanvas.SetActive(false);
+        MainMenuCanvas.SetActive(true);
     }
 }
