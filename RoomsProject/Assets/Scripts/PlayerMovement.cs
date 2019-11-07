@@ -7,8 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 1f;
     public float jumpSpeed = 1f;
+    public float DistanceToGround;
     public bool withinInteractable;
+    //When in grounded areas
     public bool canJump;
+    public bool GravityEnabled;
+    public bool Grounded;
     bool isColliding;
     //IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
@@ -17,16 +21,29 @@ public class PlayerMovement : MonoBehaviour
     QuestManager qm;
     //Used to track when items are picked up
     public Inventory inventory;
-    
+    internal MyGameManager gameManager;
     private void Awake()
     {
+        qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
         colliderTrigger = GetComponent<Collider2D>();
         playerAnimator = GetComponent<Animator>();
-        qm = new QuestManager();
         isColliding = false;
     }
-
+    private void Start()
+    {
+        gameManager = FindObjectOfType<MyGameManager>();
+        GravityEnabled = gameManager.levelManager.GravityEnabled;
+        if(GravityEnabled)
+        {
+            rbody.gravityScale = 0.4f;
+        } else
+        {
+            rbody.gravityScale = 0;
+        }
+        DistanceToGround = GetComponent<Collider2D>().bounds.extents.y;
+        Debug.Log(DistanceToGround);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -44,9 +61,10 @@ public class PlayerMovement : MonoBehaviour
             PlayerJump(jumpInput,currentPos);
         }
     }
-    public void PlayerJump(float jumpInput, Vector2 CurrentPos)
+    public virtual void PlayerJump(float jumpInput, Vector2 CurrentPos)
     {
-        rbody.AddForce(new Vector2(0,Mathf.Abs(CurrentPos.y) * jumpInput*jumpSpeed),ForceMode2D.Impulse);
+        rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
+        canJump = false;
         Debug.Log("Jumped");
     }
     /// <summary>
@@ -55,13 +73,24 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="horizontalInput"></param>
     /// <param name="verticalInput"></param>
     /// <param name="currentPos"></param>
-    public void MovePlayer(float horizontalInput, float verticalInput, Vector2 currentPos)
+    public virtual void MovePlayer(float horizontalInput, float verticalInput, Vector2 currentPos)
     {
+
+        if (GravityEnabled)
+        {
+            verticalInput = 0;
+        }
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        rbody.MovePosition(newPos);
+        if (!GravityEnabled)
+        {
+            rbody.MovePosition(newPos);
+        } else
+        {
+            this.transform.position = newPos;
+        }
     }
     /// <summary>
     /// Animates the player
@@ -84,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
     /// Flips the player sprite based on the horizontalInput
     /// </summary>
     /// <param name="horizontalInput">Gets what direction the player input</param>
-    public void flipPlayer(float horizontalInput)
+    public virtual void flipPlayer(float horizontalInput)
     {
         if (horizontalInput < 0)
         {
@@ -102,11 +131,14 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
+        if(GravityEnabled && collision.tag == "Platform")
+        {
+            canJump = true;
+        }
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {

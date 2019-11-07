@@ -249,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
@@ -274,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: jumpSpeed
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
@@ -340,7 +340,7 @@ Transform:
   - {fileID: 1082332325}
   - {fileID: 1449601712}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419017869
 GameObject:
@@ -383,6 +383,7 @@ MonoBehaviour:
   gm: {fileID: 1781316266}
   Sloth: {fileID: 0}
   spawnHeight: 15
+  Fallspeed: 0
   FallspeedIncrementer: 0.1
 --- !u!4 &419017871
 Transform:
@@ -396,7 +397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559445850
 GameObject:
@@ -475,7 +476,7 @@ Transform:
   m_LocalScale: {x: 0.21059999, y: 0.21059999, z: 0.21059999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945091990 stripped
 GameObject:
@@ -757,7 +758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726474884
 GameObject:
@@ -790,7 +791,7 @@ Transform:
   - {fileID: 145940117}
   - {fileID: 1203790684}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781316265
 GameObject:
@@ -802,6 +803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781316267}
   - component: {fileID: 1781316266}
+  - component: {fileID: 1781316268}
   m_Layer: 0
   m_Name: MyGameManager
   m_TagString: Untagged
@@ -826,6 +828,7 @@ MonoBehaviour:
   player: {fileID: 945091990}
   GameInProgress: 1
   restart: 0
+  levelManager: {fileID: 1781316268}
 --- !u!4 &1781316267
 Transform:
   m_ObjectHideFlags: 0
@@ -838,8 +841,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1781316268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781316265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46121939ad373ee48bdf878f97814df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GravityEnabled: 1
 --- !u!1 &1877478567
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +934,7 @@ Transform:
   m_LocalScale: {x: 0.386, y: 0.386, z: 0.386}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932512512 stripped
 GameObject:
@@ -932,6 +948,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7151567436377882433}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1932512515
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932512512}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2050099397
 GameObject:
   m_ObjectHideFlags: 0

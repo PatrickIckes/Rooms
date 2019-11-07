@@ -82,6 +82,7 @@ Transform:
   m_LocalScale: {x: 0.16074707, y: 0.16074707, z: 0.16074707}
   m_Children:
   - {fileID: 9178101363803078329}
+  - {fileID: 600803654632271077}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,7 +170,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2.4
   jumpSpeed: 1
+  DistanceToGround: 0
   withinInteractable: 0
+  canJump: 0
+  GravityEnabled: 0
+  Grounded: 0
   inventory: {fileID: 6768777302839310364}
 --- !u!61 &5645019339603542501
 BoxCollider2D:
@@ -256,3 +261,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   health: 0
+  playerMovement: {fileID: 0}
+--- !u!1 &7454150820322988052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600803654632271077}
+  - component: {fileID: 7651376714509669044}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600803654632271077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454150820322988052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5645019339603542500}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7651376714509669044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454150820322988052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c503ff6e34fbffe4197d1ff1dbc2c324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

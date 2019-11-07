@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class QuestManager
+public class QuestManager : MonoBehaviour
 {
     Inventory QuestInventory;
     Quest quest;
-    public Quest CurrentQuest { get { return quest; } }
+
+    public Quest CurrentQuest { get { return quest; } set { quest = value; } }
     // Start is called before the first frame update
-    public QuestManager()
+    private void Awake()
     {
-        quest = new HallwayQuest();
     }
     public void CollectedQuestItem(IInventoryItem item)
     {

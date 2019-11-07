@@ -12,10 +12,16 @@ public class MyGameManager : MonoBehaviour
     public GameObject player;//Used to keep track of the player
     public bool GameInProgress;//Used to see if the game is still in progress
     public bool restart;
+    public LevelManager levelManager;
+    public List<Quest> AllQuests;
+    int PresentLevel;
     // Start is called before the first frame update
     void Start()
     {
-
+        AllQuests = new List<Quest>();
+        AllQuests.Add(new HallwayQuest());
+        AllQuests.Add(new BeatSloth());//Solve adding quests later
+        player.GetComponent<PlayerMovement>().gameManager = this;
     }
 
 
@@ -33,6 +39,7 @@ public class MyGameManager : MonoBehaviour
             DontDestroyOnLoad(player);
             SceneManager.LoadScene("Scene 2", LoadSceneMode.Single);
         }
+        player.GetComponentInChildren<QuestManager>().CurrentQuest = levelManager.levelQuest;
     }
 
     //Gets in the cause of the game being over and prints it to the console.
