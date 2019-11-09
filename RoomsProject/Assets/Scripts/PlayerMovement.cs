@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rbody.gravityScale = 0;
         }
-        DistanceToGround = GetComponent<Collider2D>().bounds.extents.y;
         Debug.Log(DistanceToGround);
     }
     // Update is called once per frame
@@ -65,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
         canJump = false;
-        Debug.Log("Jumped");
     }
     /// <summary>
     /// Moves the player
@@ -126,6 +124,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if(GetComponentInChildren<QuestManager>().CurrentQuest == null)
+        {
+            GetComponentInChildren<QuestManager>().CurrentQuest = gameManager.levelManager.levelQuest;
+        }
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable && inventory.CheckObject("key"))
         {
             SceneManager.LoadScene(1);

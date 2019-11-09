@@ -16,6 +16,7 @@ public class PlatformManager : MonoBehaviour
     PlayerData player_script;
     public float Fallspeed;
     public float FallspeedIncrementer;
+    public float fallingtime;
     int lastval;
     // Start is called before the first frame update
     void Start()
@@ -26,10 +27,7 @@ public class PlatformManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    }
-    private void FixedUpdate()
-    {
-        if (gm.GameInProgress)
+        if (gm.GameInProgress && timer < fallingtime)
         {
             fallingtimer += Time.deltaTime;
             timer += Time.deltaTime;
@@ -38,13 +36,16 @@ public class PlatformManager : MonoBehaviour
                 fallingtimer = 0;
                 TriggerFall();
             }
-            if ((int)timer % 5==0 && lastval != (int)timer)
+            if ((int)timer % 5 == 0 && lastval != (int)timer)
             {
                 Fallspeed += FallspeedIncrementer; // Not sure how well this will work but every 5 seconds it will speed up the fallrate
                 Debug.Log($"{lastval} {(int)timer}");
                 lastval = (int)timer;
             }
         }
+    }
+    private void FixedUpdate()
+    {
     }
     private void TriggerFall()
     {

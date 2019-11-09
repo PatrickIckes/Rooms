@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
-        
+        if (SceneManager.GetActiveScene().buildIndex == 1)//TODO make this more dynamic for the quest system
+        {
+            levelQuest = new HallwayQuest();
+        }
     }
 }
