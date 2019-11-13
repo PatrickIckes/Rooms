@@ -222,8 +222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117265513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.96, y: -2.67, z: -1}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 3.222, y: -0.712, z: -1}
+  m_LocalScale: {x: 0.109225, y: 0.109225, z: 0.4369}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -724,7 +724,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 2.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -748,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.124, y: -2.1787324, z: -10}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1022,6 +1022,7 @@ MonoBehaviour:
   player: {fileID: 173166844}
   GameInProgress: 0
   restart: 0
+  levelManager: {fileID: 0}
 --- !u!1 &960142589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,21 +1504,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 952250130}
-    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: InventoryUI
-      value: 
-      objectReference: {fileID: 960142589}
-    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: PrefabImage
-      value: 
-      objectReference: {fileID: 1401419493}
     - target: {fileID: 5645019339603542502, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_Offset.y
@@ -1538,6 +1524,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.193441
       objectReference: {fileID: 0}
+    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 952250130}
+    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: InventoryUI
+      value: 
+      objectReference: {fileID: 960142589}
+    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: PrefabImage
+      value: 
+      objectReference: {fileID: 1401419493}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
 --- !u!1001 &7444315504752968309
