@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     internal MyGameManager gameManager;
     internal bool canCheckForObject;
     List<GameObject> CollidingObjects;
+    public float GravityScale; //Only set at start
     private void Awake()
     {
         CollidingObjects = new List<GameObject>();
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
         {
-            rbody.gravityScale = 0.4f;
+            rbody.gravityScale = GravityScale;
         } else
         {
             rbody.gravityScale = 0;
