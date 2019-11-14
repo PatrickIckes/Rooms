@@ -132,6 +132,12 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        if(Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.DoneWithQuest()) // Change later so the scenes aren't hardCoded
+        {
+            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest)) {
+                SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -147,10 +153,6 @@ public class PlayerMovement : MonoBehaviour
             if (item.IsQuestItem)
             {
                 qm.CollectedQuestItem(item);
-                if (qm.DoneWithQuest())
-                {
-                    SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene, LoadSceneMode.Single);
-                }
             }
             else
             {
