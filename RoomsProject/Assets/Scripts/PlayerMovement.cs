@@ -22,8 +22,11 @@ public class PlayerMovement : MonoBehaviour
     //Used to track when items are picked up
     public Inventory inventory;
     internal MyGameManager gameManager;
+    internal bool canCheckForObject;
+    List<GameObject> CollidingObjects;
     private void Awake()
     {
+        CollidingObjects = new List<GameObject>();
         qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
         colliderTrigger = GetComponent<Collider2D>();
@@ -124,23 +127,47 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if(GetComponentInChildren<QuestManager>().CurrentQuest == null)
+        if(GetComponentInChildren<QuestManager>().CurrentQuest == null)//Instantiates the current quest because in start is doesn't work properly
         {
             GetComponentInChildren<QuestManager>().CurrentQuest = gameManager.levelManager.levelQuest;
         }
+        QuestItemCollection();
+        OpenDoor();
+    }
+
+    public void QuestItemCollection()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && canCheckForObject) 
+        {
+            foreach(GameObject collidingObject in CollidingObjects)
+            {
+                if(collidingObject.GetComponentInChildren<DoorKnobPieces>() != null)
+                {
+                    qm.CollectedQuestItem(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject.GetComponent<IInventoryItem>());
+                    Destroy(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
+                }
+            }
+        }
+    }
+
+    public void OpenDoor()
+    {
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable && inventory.CheckObject("key"))
         {
             SceneManager.LoadScene(1);
         }
-        if(Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.DoneWithQuest()) // Change later so the scenes aren't hardCoded
+        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.DoneWithQuest()) // Change later so the scenes aren't hardCoded
         {
-            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest)) {
+            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest))
+            {
                 SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        CollidingObjects.Add(collision.gameObject);
         //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
         if(GravityEnabled && collision.tag == "Platform")
@@ -168,6 +195,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        CollidingObjects.Remove(collision.gameObject);
         if (collision.name == "Door")
         {
             Debug.Log("Out of interactable");

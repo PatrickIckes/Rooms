@@ -19,9 +19,18 @@ public class HidingSpot : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Notification.enabled = true;
+        if(collision.gameObject.GetComponent<PlayerMovement>() != null)
+        {
+            collision.gameObject.GetComponent<PlayerMovement>().canCheckForObject = true;
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         Notification.enabled = false;
+        if (collision.gameObject.GetComponent<PlayerMovement>() != null)
+        {
+            collision.gameObject.GetComponent<PlayerMovement>().canCheckForObject = false;
+        }
     }
 }
