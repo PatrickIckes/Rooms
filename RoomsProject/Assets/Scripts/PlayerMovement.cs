@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     //Used to track when items are picked up
     public Inventory inventory;
     internal MyGameManager gameManager;
-
+    public Text QuestCollectionText;
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
     private void Awake()
@@ -149,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
                 if(collidingObject.GetComponentInChildren<DoorKnobPieces>() != null)
                 {
                     qm.CollectedQuestItem(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject.GetComponent<IInventoryItem>());
+                    QuestCollectionText.text = "You collected a Doorknob";
                     Destroy(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
                 }
             }

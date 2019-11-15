@@ -23,6 +23,7 @@ public class HidingSpot : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerMovement>().canCheckForObject = true;
         }
+        Notification.text = "Press F to check for objects";
 
     }
     private void OnTriggerExit2D(Collider2D collision)
