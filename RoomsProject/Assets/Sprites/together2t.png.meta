@@ -1,0 +1,629 @@
+fileFormatVersion: 2
+guid: 2723c3de0877a30488deba1ba55e5330
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 100204111467065388
+    second: together2t_0
+  - first:
+      213: 1679900969428285145
+    second: together2t_1
+  - first:
+      213: 3209765557845040047
+    second: together2t_2
+  - first:
+      213: -8166152657750827207
+    second: together2t_3
+  - first:
+      213: -4973566347036875738
+    second: together2t_4
+  - first:
+      213: 8432871859335450243
+    second: together2t_5
+  - first:
+      213: -2985501141490934832
+    second: together2t_6
+  - first:
+      213: -7406639990597390707
+    second: together2t_7
+  - first:
+      213: -3197484440666272081
+    second: together2t_8
+  - first:
+      213: -7039254485146810905
+    second: together2t_9
+  - first:
+      213: 4649241304397452134
+    second: together2t_10
+  - first:
+      213: 6864324482100908030
+    second: together2t_11
+  - first:
+      213: -4456491338637726243
+    second: together2t_12
+  - first:
+      213: 4151165892788291118
+    second: together2t_13
+  - first:
+      213: -1409078502595742965
+    second: together2t_14
+  - first:
+      213: 7685370578089164077
+    second: together2t_15
+  - first:
+      213: -5277414475600511138
+    second: together2t_16
+  - first:
+      213: -3795540684944557953
+    second: together2t_17
+  - first:
+      213: -5130105683531062199
+    second: together2t_18
+  - first:
+      213: 8942175458671353093
+    second: together2t_19
+  - first:
+      213: -3600728056367456613
+    second: together2t_20
+  - first:
+      213: -5066135068008178705
+    second: together2t_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: together2t_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1072
+        width: 250
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8b3bcd82d79f64aafde785d85802b6
+      internalID: 100204111467065388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_1
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1072
+        width: 249
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33cc69464cc9e24982dac1b7e25ccdf
+      internalID: 1679900969428285145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1072
+        width: 250
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0a96bb541468445a4658911a124be6
+      internalID: 3209765557845040047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1072
+        width: 245
+        height: 749
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650b921bd127a864cb525eae89868550
+      internalID: -8166152657750827207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_4
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1072
+        width: 251
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646145e80797ca4b80a48341c736b64
+      internalID: -4973566347036875738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_5
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 1072
+        width: 250
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081f3ee9a0b2f604c89777f157659fc5
+      internalID: 8432871859335450243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_6
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1072
+        width: 378
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16abee1e2070ab48a133507af9dab11
+      internalID: -2985501141490934832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_7
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 1102
+        width: 430
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf16b05091959643ae249b72e002d5c
+      internalID: -7406639990597390707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_8
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 1113
+        width: 376
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765b38f2a5e03cb4989cb55f35ce7fb8
+      internalID: -3197484440666272081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_9
+      rect:
+        serializedVersion: 2
+        x: 2951
+        y: 1072
+        width: 285
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ee16294dadb054f9bfab319b1dd22f
+      internalID: -7039254485146810905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 304
+        width: 245
+        height: 731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817089b22249b844193c661c994b730c
+      internalID: 4649241304397452134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_11
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 304
+        width: 238
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4054d0e27c373774c9a011fbb2dac256
+      internalID: 6864324482100908030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_12
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 304
+        width: 232
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55ed001ee8de68488689ba5003c3711
+      internalID: -4456491338637726243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_13
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 304
+        width: 257
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a0ec11f809a0b4ca288a40a6fd8c2e
+      internalID: 4151165892788291118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_14
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 298
+        width: 244
+        height: 730
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29bd1b2666a68243b883d5c458b3694
+      internalID: -1409078502595742965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_15
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 298
+        width: 237
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0420c2bd5377b40a516a4f84fd9643
+      internalID: 7685370578089164077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_16
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 298
+        width: 232
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93614c288095232419742965e12f4b0e
+      internalID: -5277414475600511138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_17
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 298
+        width: 256
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525cb2926a278874abebae2a68c26124
+      internalID: -3795540684944557953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 117
+        width: 87
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be3ee36b4c3f7e4dbe645247c0d9a74
+      internalID: -5130105683531062199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_19
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 117
+        width: 89
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a65820f2560ebf47b1b8dd319aa3b8f
+      internalID: 8942175458671353093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_20
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 117
+        width: 89
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5a457659c748a4f9c5a4b4a8bb6a97
+      internalID: -3600728056367456613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: together2t_21
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 117
+        width: 88
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53862511fa1ec724284c90c20cfb29f1
+      internalID: -5066135068008178705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 338411fce3953144d8b9315554ecbbff
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
