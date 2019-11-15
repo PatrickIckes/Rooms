@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool GravityEnabled;
     public bool Grounded;
     bool isColliding;
+    internal bool canCheckForObject;
     //IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
     Collider2D colliderTrigger;
@@ -22,9 +23,9 @@ public class PlayerMovement : MonoBehaviour
     //Used to track when items are picked up
     public Inventory inventory;
     internal MyGameManager gameManager;
-    internal bool canCheckForObject;
+
     List<GameObject> CollidingObjects;
-    public float GravityScale; //Only set at start
+    public float PlayerGravityScale; //Only set at start
     private void Awake()
     {
         CollidingObjects = new List<GameObject>();
@@ -40,12 +41,11 @@ public class PlayerMovement : MonoBehaviour
         GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
         {
-            rbody.gravityScale = GravityScale;
+            rbody.gravityScale = PlayerGravityScale;
         } else
         {
             rbody.gravityScale = 0;
         }
-        Debug.Log(DistanceToGround);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -132,6 +132,10 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponentInChildren<QuestManager>().CurrentQuest = gameManager.levelManager.levelQuest;
         }
+        if(transform.position.y < -10)
+        {
+            gameManager.GameInProgress = false;
+        }
         QuestItemCollection();
         OpenDoor();
     }
@@ -175,6 +179,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = true;
         }
+        //Collision for HallwayQuest managed in hidingpoints
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {

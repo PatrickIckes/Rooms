@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class CustomVector3
@@ -25,9 +26,9 @@ public class PlayerAttributes
   
     internal List<GameObject> Collectables;
     internal int health;
-
+    internal int CurrentScene;
     //Used to track when items are picked up
-    public Inventory inventory;
+    //internal Inventory inventory; Can't save this atm b/c serialization issues
     /// <summary>
     /// Note that Unity vector 3 is not serializable therefore cannot be saved accurately use custom vector3 to save
     /// </summary>
@@ -36,6 +37,13 @@ public class PlayerAttributes
     /// Set CustomVector3 by transfering unity vector3 Values into constructor
     /// </summary>
     /// <param name="pos"></param>
+    public PlayerAttributes(int health,int CurrentScene, List<GameObject> Collectables/*, Inventory inventory*/, Vector3 position)
+    {
+        this.health = health;
+        this.CurrentScene = CurrentScene;
+        //this.inventory = inventory;
+        SetPlayerPosition(position);
+    }
     public void SetPlayerPosition(Vector3 pos)
     {
         playerpostion = new CustomVector3(pos.x, pos.y, pos.z);

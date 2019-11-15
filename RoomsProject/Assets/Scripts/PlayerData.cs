@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerData : MonoBehaviour
     public int health;
     private int previoushealth = 0;
     PlayerMovement playerMovement;
+    public static PlayerData SavePoint;
     public void ResetPlayer()
     {
         pa.health = startinghealth;
@@ -20,10 +22,10 @@ public class PlayerData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pa = new PlayerAttributes();
         startinghealth = 3;
         playerMovement = GetComponent<PlayerMovement>();
-        pa.inventory = playerMovement.inventory;
+        pa = new PlayerAttributes(startinghealth,SceneManager.GetActiveScene().buildIndex,new List<GameObject>(), this.transform.position);
+        gameManager.GetComponent<MyGameManager>().SaveLevel();
     }
 
     // Update is called once per frame
@@ -40,7 +42,8 @@ public class PlayerData : MonoBehaviour
         if(collision.tag == "Hazard")
         {
             pa.health -= 1;
-            if(health <= 0)
+            Debug.Log($"Health: {pa.health}");
+            if(pa.health <= 0)
             {
                 gameManager.GetComponent<MyGameManager>().GameInProgress = false;
             }

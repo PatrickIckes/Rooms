@@ -39,7 +39,6 @@ public class PlatformManager : MonoBehaviour
             if ((int)timer % 5 == 0 && lastval != (int)timer)
             {
                 Fallspeed += FallspeedIncrementer; // Not sure how well this will work but every 5 seconds it will speed up the fallrate
-                Debug.Log($"{lastval} {(int)timer}");
                 lastval = (int)timer;
             }
         }
@@ -59,7 +58,6 @@ public class PlatformManager : MonoBehaviour
             {
                 Vector3 p = platform.transform.position;
                 GameObject temp = Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight,p.z),Quaternion.identity);
-                temp.GetComponent<Rigidbody2D>().gravityScale += Fallspeed;
                 Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
             }
             i++;

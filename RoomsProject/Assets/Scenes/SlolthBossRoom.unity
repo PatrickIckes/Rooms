@@ -355,6 +355,11 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1781316265}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
 --- !u!1 &398990891
@@ -464,7 +469,7 @@ MonoBehaviour:
   spawnHeight: 15
   Fallspeed: 0
   FallspeedIncrementer: 0.1
-  fallingtime: 0
+  fallingtime: 30
 --- !u!4 &419017871
 Transform:
   m_ObjectHideFlags: 0

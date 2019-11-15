@@ -22,6 +22,7 @@ public class MyGameManager : MonoBehaviour
         AllQuests.Add(new HallwayQuest());
         AllQuests.Add(new BeatSloth());//Solve adding quests later
         player.GetComponent<PlayerMovement>().gameManager = this;
+        GameInProgress = true;
     }
 
 
@@ -32,7 +33,7 @@ public class MyGameManager : MonoBehaviour
         {
             GameInProgress = true;
             restart = false;
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("HubWorld", LoadSceneMode.Single);
         }
         else
         {
@@ -47,12 +48,12 @@ public class MyGameManager : MonoBehaviour
     {
         Debug.ClearDeveloperConsole();
         Debug.Log(Text);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LoadLevel();
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))//to restart
+        if(!GameInProgress || Input.GetKeyDown(KeyCode.R))
         {
             restart = true;
             LoadGamesLevel("");
@@ -67,10 +68,13 @@ public class MyGameManager : MonoBehaviour
             LoadLevel();
         }
     }
-    void SaveLevel()
+    internal void SaveLevel()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        player.GetComponent<PlayerData>().pa.SetPlayerPosition(player.transform.position);
+        PlayerAttributes data = player.GetComponent<PlayerData>().pa;
+        PlayerData.SavePoint = player.GetComponent<PlayerData>();
+        data.SetPlayerPosition(player.transform.position);
+        data.CurrentScene = SceneManager.GetActiveScene().buildIndex;
         string path = Application.persistentDataPath + "/playerInfo.dat";
         if (!File.Exists(path))
         {
@@ -78,20 +82,22 @@ public class MyGameManager : MonoBehaviour
         }
         using (FileStream fs = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open))
         {
-            bf.Serialize(fs, player.GetComponent<PlayerData>().pa);
+            bf.Serialize(fs, data);
         }
         Debug.Log($"Saved at {Application.persistentDataPath}/playerInfo.dat");
     }
     void LoadLevel()
     {
         BinaryFormatter bf = new BinaryFormatter();
+        PlayerAttributes data = player.GetComponent<PlayerData>().pa;
         if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
         {
             using (FileStream fs = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open))
             {
-                player.GetComponent<PlayerData>().pa = (PlayerAttributes)bf.Deserialize(fs);
+               data = (PlayerAttributes)bf.Deserialize(fs);
             }
         }
-        player.transform.position = player.GetComponent<PlayerData>().pa.GetPlayerPosition();
+        player.transform.position = data.GetPlayerPosition();
+        SceneManager.LoadScene(data.CurrentScene);
     }
 }

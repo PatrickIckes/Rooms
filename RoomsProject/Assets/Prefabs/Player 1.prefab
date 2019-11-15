@@ -176,6 +176,7 @@ MonoBehaviour:
   GravityEnabled: 0
   Grounded: 0
   inventory: {fileID: 6768777302839310364}
+  PlayerGravityScale: 0.6
 --- !u!61 &5645019339603542501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,7 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   health: 0
-  playerMovement: {fileID: 0}
 --- !u!1 &7454150820322988052
 GameObject:
   m_ObjectHideFlags: 0

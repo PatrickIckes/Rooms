@@ -1388,6 +1388,11 @@ PrefabInstance:
       propertyPath: PrefabImage
       value: 
       objectReference: {fileID: 539308413}
+    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1740647300}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
 --- !u!1 &1740647300
@@ -1402,7 +1407,7 @@ GameObject:
   - component: {fileID: 1740647303}
   - component: {fileID: 1740647302}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MyGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
