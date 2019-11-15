@@ -361,7 +361,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -4481205168007247489, guid: ed02dabddafbd684095a15e6f04710a1,
     type: 3}
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 623168897
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7658940821623937640, guid: 5d5d37948c49a6747baca0c3fc95f94f,
     type: 3}
@@ -612,7 +612,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 623168897
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1e4a3edd3ee7c54b88b9a2195db658f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -724,7 +724,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 2.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -748,7 +748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.124, y: -2.1787324, z: -10}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -834,8 +834,10 @@ PolygonCollider2D:
       - {x: -35.883068, y: -2.8873837}
       - {x: -36.094826, y: -14.535614}
       - {x: -22.271841, y: -14.452308}
-      - {x: -22.566143, y: -13.459553}
-      - {x: -24.986872, y: -11.731467}
+      - {x: -22.268127, y: -13.459553}
+      - {x: -22.14579, y: -10.5990095}
+      - {x: -23.651907, y: -9.604742}
+      - {x: -24.911713, y: -8.110046}
       - {x: -24.957914, y: -2.383513}
       - {x: -21.45551, y: -2.4199855}
       - {x: -21.431349, y: -3.5369148}
@@ -854,7 +856,12 @@ PolygonCollider2D:
       - {x: 21.40706, y: -3.6061585}
       - {x: 21.417595, y: -2.4339876}
       - {x: 24.951849, y: -2.464795}
-      - {x: 25.04942, y: -11.764153}
+      - {x: 24.992023, y: -8.043893}
+      - {x: 23.629862, y: -9.696516}
+      - {x: 23.369905, y: -10.027553}
+      - {x: 22.946133, y: -10.281618}
+      - {x: 22.316881, y: -10.3685}
+      - {x: 22.10695, y: -10.695052}
       - {x: 22.51999, y: -13.879163}
       - {x: 22.540226, y: -14.55429}
       - {x: 28.083248, y: -14.504658}
@@ -1518,16 +1525,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
+    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
-      propertyPath: InventoryUI
+      propertyPath: gameManager
       value: 
-      objectReference: {fileID: 960142589}
-    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: PrefabImage
-      value: 
-      objectReference: {fileID: 1401419493}
+      objectReference: {fileID: 952250130}
     - target: {fileID: 5645019339603542502, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_Offset.y
@@ -1548,11 +1550,16 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.193441
       objectReference: {fileID: 0}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
+    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
-      propertyPath: gameManager
+      propertyPath: InventoryUI
       value: 
-      objectReference: {fileID: 952250130}
+      objectReference: {fileID: 960142589}
+    - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: PrefabImage
+      value: 
+      objectReference: {fileID: 1401419493}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
 --- !u!1001 &7444315504752968309
