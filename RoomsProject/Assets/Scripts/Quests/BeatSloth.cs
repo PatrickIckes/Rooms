@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 class BeatSloth : Quest
 {
-    public int NextScene;
+
+    public static int CurrentScene = 2;
     public BeatSloth()
     {
+
         qr = new List<QuestRequirement>()
             {
-                new QuestRequirement("Quest", "Defeat Sloth", 1)
+                new QuestRequirement("Quest", "Sloth Reward", 1)
             };
-        NextScene = 2;
+        NextScene = 0;
     }
 }

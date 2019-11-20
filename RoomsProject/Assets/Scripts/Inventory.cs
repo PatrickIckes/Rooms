@@ -4,17 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
 public class Inventory : MonoBehaviour
 {
     [SerializeField] int SLOTS = 5;
 
     private List<IInventoryItem> mItems = new List<IInventoryItem>();
-
+    public List<IInventoryItem> items {get {return new List<IInventoryItem>(mItems);}}
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
     public GameObject InventoryUI;
     public GameObject PrefabImage;
     public Vector3 CurrentLocation;//Where the current inventory Item was on the canvas
+    internal void PopulateInventory(List<IInventoryItem> playerinventory)
+    {
+        mItems.AddRange(playerinventory);
+    }
     private void Start()
     {
         if (InventoryUI != null)

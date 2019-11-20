@@ -25,7 +25,6 @@ public class PlayerData : MonoBehaviour
         startinghealth = 3;
         playerMovement = GetComponent<PlayerMovement>();
         pa = new PlayerAttributes(startinghealth,SceneManager.GetActiveScene().buildIndex,new List<GameObject>(), this.transform.position);
-        gameManager.GetComponent<MyGameManager>().SaveLevel();
     }
 
     // Update is called once per frame
@@ -44,6 +43,7 @@ public class PlayerData : MonoBehaviour
             Debug.Log($"Health: {pa.health}");
             if(pa.health <= 0)
             {
+                ResetPlayer();
                 gameManager.GetComponent<MyGameManager>().GameInProgress = false;
             }
             Destroy(collision.gameObject);

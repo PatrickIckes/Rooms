@@ -48,7 +48,7 @@ public class MyGameManager : MonoBehaviour
     {
         Debug.ClearDeveloperConsole();
         Debug.Log(Text);
-        LoadLevel();
+        LoadLastSave();
     }
     // Update is called once per frame
     void Update()
@@ -65,7 +65,7 @@ public class MyGameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Backslash))//to restart
         {
-            LoadLevel();
+            LoadLastSave();
         }
     }
     internal void SaveLevel()
@@ -73,6 +73,7 @@ public class MyGameManager : MonoBehaviour
         BinaryFormatter bf = new BinaryFormatter();
         PlayerAttributes data = player.GetComponent<PlayerData>().pa;
         PlayerData.SavePoint = player.GetComponent<PlayerData>();
+        //data.inventory = player.GetComponent<PlayerMovement>().inventory.items;
         data.SetPlayerPosition(player.transform.position);
         data.CurrentScene = SceneManager.GetActiveScene().buildIndex;
         string path = Application.persistentDataPath + "/playerInfo.dat";
@@ -86,7 +87,7 @@ public class MyGameManager : MonoBehaviour
         }
         Debug.Log($"Saved at {Application.persistentDataPath}/playerInfo.dat");
     }
-    void LoadLevel()
+    PlayerAttributes LoadData()
     {
         BinaryFormatter bf = new BinaryFormatter();
         PlayerAttributes data = player.GetComponent<PlayerData>().pa;
@@ -97,7 +98,23 @@ public class MyGameManager : MonoBehaviour
                data = (PlayerAttributes)bf.Deserialize(fs);
             }
         }
+        return data;
+
+    }
+    void LoadLastSave()
+    {
+        PlayerAttributes data = LoadData();
         player.transform.position = data.GetPlayerPosition();
         SceneManager.LoadScene(data.CurrentScene);
+        player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
+    }
+    internal void LoadInventory()
+    {
+
+        PlayerAttributes data = LoadData();
+        if (data.inventory != null)
+        {
+            player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
+        }
     }
 }

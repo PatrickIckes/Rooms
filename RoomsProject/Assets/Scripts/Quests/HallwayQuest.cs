@@ -4,11 +4,12 @@ using UnityEngine;
 class HallwayQuest : Quest {
     DoorKnobPieces dkp;
     public int NextScene;
+    public static int CurrentScene = 1;
     public HallwayQuest() {
         qr = new List<QuestRequirement>()
         {
             new QuestRequirement("Quest", "Doorknob Pieces", 3)
         };
-        NextScene = 2;
+        NextScene = BeatSloth.CurrentScene;
     }
 }

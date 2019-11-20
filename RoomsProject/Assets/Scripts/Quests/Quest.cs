@@ -5,9 +5,10 @@ public abstract class Quest
 {
     protected List<QuestRequirement> qr;
     private bool IsDone;
-
+    public int NextScene;
     public Quest()
     {
+        NextScene = 0;
         qr = new List<QuestRequirement>();
     }
     public virtual bool CollectedItem(IInventoryItem item) 

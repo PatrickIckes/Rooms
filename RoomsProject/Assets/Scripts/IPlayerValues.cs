@@ -28,7 +28,7 @@ public class PlayerAttributes
     internal int health;
     internal int CurrentScene;
     //Used to track when items are picked up
-    //internal Inventory inventory; Can't save this atm b/c serialization issues
+    internal List<IInventoryItem> inventory; //Can't save this atm b/c serialization issues
     /// <summary>
     /// Note that Unity vector 3 is not serializable therefore cannot be saved accurately use custom vector3 to save
     /// </summary>

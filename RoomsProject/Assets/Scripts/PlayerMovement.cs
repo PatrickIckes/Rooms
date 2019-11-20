@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     QuestManager qm;
     //Used to track when items are picked up
     public Inventory inventory;
-    internal MyGameManager gameManager;
+    public MyGameManager gameManager;
     public Text QuestCollectionText;
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
+        gameManager.LoadInventory();
         gameManager = FindObjectOfType<MyGameManager>();
         GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rbody.gravityScale = 0;
         }
+        Debug.Log(inventory.items.Count);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -131,7 +133,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(GetComponentInChildren<QuestManager>().CurrentQuest == null)//Instantiates the current quest because in start is doesn't work properly
         {
-            GetComponentInChildren<QuestManager>().CurrentQuest = gameManager.levelManager.levelQuest;
+            GetComponentInChildren<QuestManager>().CurrentQuest = qm.CurrentQuest = gameManager.levelManager.levelQuest;
+            Start();
         }
         if(transform.position.y < -10)
         {
@@ -143,30 +146,46 @@ public class PlayerMovement : MonoBehaviour
 
     public void QuestItemCollection()
     {
+
         if (Input.GetKeyDown(KeyCode.F) && canCheckForObject) 
         {
-            foreach(GameObject collidingObject in CollidingObjects)
+            List <GameObject> RemoveObjects = new List<GameObject>();
+            foreach (GameObject collidingObject in CollidingObjects)
             {
                 if(collidingObject.GetComponentInChildren<DoorKnobPieces>() != null)
                 {
                     qm.CollectedQuestItem(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject.GetComponent<IInventoryItem>());
                     QuestCollectionText.text = "You collected a Doorknob";
-                    Destroy(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
+                    RemoveObjects.Add(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
+
                 }
+            }
+            for (int i = 0; i < RemoveObjects.Count; i++)
+            {
+                Destroy(RemoveObjects[i]);
             }
         }
     }
 
     public void OpenDoor()
     {
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && inventory.CheckObject("key"))
+        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
         {
-            SceneManager.LoadScene(1);
-        }
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.DoneWithQuest()) // Change later so the scenes aren't hardCoded
-        {
-            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest))
+            if (inventory.CheckObject("key"))
             {
+                gameManager.SaveLevel();
+                SceneManager.LoadScene(1);
+            } else
+            {
+                QuestCollectionText.enabled = true;
+                QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.CurrentQuest != null) 
+        {
+            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest) && qm.DoneWithQuest())
+            {
+                gameManager.SaveLevel();
                 SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
             }
         }
@@ -174,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Stairway movement handled in stairmovement script
         CollidingObjects.Add(collision.gameObject);
         //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
@@ -207,6 +227,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.name == "Door")
         {
             Debug.Log("Out of interactable");
+            QuestCollectionText.enabled = false;
             withinInteractable = false;
         }
     }

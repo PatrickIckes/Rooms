@@ -9,8 +9,12 @@ public class QuestManager : MonoBehaviour
     Quest quest;
 
     public Quest CurrentQuest { get { return quest; } set { quest = value; } }
+
     // Start is called before the first frame update
     private void Awake()
+    {
+    }
+    private void Update()
     {
     }
     public void CollectedQuestItem(IInventoryItem item)
