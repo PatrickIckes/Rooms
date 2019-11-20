@@ -170,11 +170,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.73
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20330468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.91, y: -3.91, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -276,10 +276,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 55738697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6f1268aa3c0124d84677c0f930f8de, type: 3}
+  m_Script: {fileID: 11500000, guid: b79834991475c9c4f828912accbcb163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notification: {fileID: 156389665}
+  Notification: {fileID: 1664848068}
 --- !u!61 &55738700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 156389666}
   - component: {fileID: 156389665}
   m_Layer: 5
-  m_Name: HiddenSpotText
+  m_Name: QuestText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,10 +643,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 852273904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6f1268aa3c0124d84677c0f930f8de, type: 3}
+  m_Script: {fileID: 11500000, guid: b79834991475c9c4f828912accbcb163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notification: {fileID: 156389665}
+  Notification: {fileID: 1664848068}
 --- !u!61 &852273907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -714,10 +714,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 872042030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6f1268aa3c0124d84677c0f930f8de, type: 3}
+  m_Script: {fileID: 11500000, guid: b79834991475c9c4f828912accbcb163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notification: {fileID: 156389665}
+  Notification: {fileID: 1664848068}
 --- !u!61 &872042033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1378,6 +1378,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: QuestCollectionText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1740647303}
+    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1740647300}
     - target: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: InventoryUI
@@ -1388,18 +1403,14 @@ PrefabInstance:
       propertyPath: PrefabImage
       value: 
       objectReference: {fileID: 539308413}
-    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: QuestCollectionText
-      value: 
-      objectReference: {fileID: 156389665}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 1740647300}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+--- !u!1 &1664848068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3529394729408210272, guid: 4aaaef29d9813ea4db8d430495a8192f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1607308352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1740647300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GravityEnabled: 0
+  questText: {fileID: 156389665}
 --- !u!114 &1740647303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,10 +1522,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1858853502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6f1268aa3c0124d84677c0f930f8de, type: 3}
+  m_Script: {fileID: 11500000, guid: b79834991475c9c4f828912accbcb163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notification: {fileID: 156389665}
+  Notification: {fileID: 1664848068}
 --- !u!61 &1858853505
 BoxCollider2D:
   m_ObjectHideFlags: 0

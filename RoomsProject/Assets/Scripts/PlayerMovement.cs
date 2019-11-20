@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
     public float PlayerGravityScale; //Only set at start
     private void Awake()
     {
+        if (QuestCollectionText != null)
+        {
+            QuestCollectionText.enabled = false;
+        }
         CollidingObjects = new List<GameObject>();
         qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
@@ -38,8 +42,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        gameManager.LoadInventory();
-        gameManager = FindObjectOfType<MyGameManager>();
+        //gameManager.LoadInventory();
         GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
         {
@@ -155,7 +158,6 @@ public class PlayerMovement : MonoBehaviour
                 if(collidingObject.GetComponentInChildren<DoorKnobPieces>() != null)
                 {
                     qm.CollectedQuestItem(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject.GetComponent<IInventoryItem>());
-                    QuestCollectionText.text = "You collected a Doorknob";
                     RemoveObjects.Add(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
 
                 }
@@ -177,8 +179,11 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene(1);
             } else
             {
-                QuestCollectionText.enabled = true;
-                QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
+                if (QuestCollectionText != null)
+                {
+                    QuestCollectionText.enabled = true;
+                    QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.CurrentQuest != null) 
@@ -223,6 +228,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (QuestCollectionText != null)
+        {
+            QuestCollectionText.enabled = false;
+        }
         CollidingObjects.Remove(collision.gameObject);
         if (collision.name == "Door")
         {

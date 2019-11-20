@@ -14,8 +14,8 @@ public class PlatformManager : MonoBehaviour
     public GameObject Sloth;
     public float spawnHeight;
     PlayerData player_script;
-    public ushort Fallspeed;
-    public ushort FallspeedIncrementer;
+    public float Fallspeed;
+    public float FallspeedIncrementer;
     public float fallingtime;
     int lastval;
     internal bool RoomDone;

@@ -25,8 +25,6 @@ public class MyGameManager : MonoBehaviour
         GameInProgress = true;
     }
 
-
-
     public void LoadGamesLevel(string levelname)
     {
         if (restart)
@@ -109,12 +107,11 @@ public class MyGameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
     }
     internal void LoadInventory()
-    {
-
-        PlayerAttributes data = LoadData();
-        if (data.inventory != null)
-        {
-            player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
-        }
+    { 
+        //PlayerAttributes data = LoadData();
+        //if (data.inventory != null)
+        //{
+        //    player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
+        //}
     }
 }

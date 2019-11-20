@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Quest
+public class Quest
 {
     protected List<QuestRequirement> qr;
     private bool IsDone;
@@ -26,6 +26,16 @@ public abstract class Quest
         }
         Debug.Log("Didn't Find item");
         return false;
+    }
+    string QuestString;
+    public string DisplayQuest()
+    {
+        QuestString = "";
+        foreach(QuestRequirement requirement in qr)
+        {
+            QuestString += requirement.QuestString()+"\n";
+        }
+        return QuestString;
     }
 
     public bool CheckQuestDone()
