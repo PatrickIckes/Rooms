@@ -4,7 +4,7 @@ using UnityEngine;
 class HallwayQuest : Quest {
     DoorKnobPieces dkp;
     public int NextScene;
-    public static int CurrentScene = 1;
+    public static int CurrentScene = 2;
     public HallwayQuest() {
         qr = new List<QuestRequirement>()
         {

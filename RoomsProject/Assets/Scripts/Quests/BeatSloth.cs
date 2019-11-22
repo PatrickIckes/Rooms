@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 class BeatSloth : Quest
 {
 
-    public static int CurrentScene = 2;
+    public static int CurrentScene = 3;
     public BeatSloth()
     {
 

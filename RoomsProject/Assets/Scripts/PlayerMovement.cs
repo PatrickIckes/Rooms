@@ -10,10 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 1f;
     public float DistanceToGround;
     public bool withinInteractable;
+    public GameObject Notification;
     //When in grounded areas
     public bool canJump;
     public bool GravityEnabled;
-    public bool Grounded;
+    public bool grounded;
     bool isColliding;
     internal bool canCheckForObject;
     //IsometricCharacterRenderer isoRenderer;
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
             rbody.gravityScale = 0;
         }
         Debug.Log(inventory.items.Count);
+        grounded = false;
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -64,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         AnimatePlayer(horizontalInput,verticalInput);
         flipPlayer(horizontalInput);
         MovePlayer(horizontalInput, verticalInput, currentPos);
+        HandleLayers();
         if(canJump && jumpInput != 0)
         {
             
@@ -74,6 +77,13 @@ public class PlayerMovement : MonoBehaviour
     {
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
         canJump = false;
+
+        //if (!canJump)
+        //{
+        //    playerAnimator.SetBool("Land", false);
+        //}
+
+
     }
     /// <summary>
     /// Moves the player
@@ -95,7 +105,8 @@ public class PlayerMovement : MonoBehaviour
         if (!GravityEnabled)
         {
             rbody.MovePosition(newPos);
-        } else
+        }
+        else
         {
             this.transform.position = newPos;
         }
@@ -176,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
             if (inventory.CheckObject("key"))
             {
                 gameManager.SaveLevel();
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             } else
             {
                 if (QuestCollectionText != null)
@@ -202,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
         CollidingObjects.Add(collision.gameObject);
         //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
-        if(GravityEnabled && collision.tag == "Platform")
+        if (GravityEnabled && collision.tag == "Platform")
         {
             canJump = true;
         }
@@ -220,10 +231,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        
+
         if (collision.name == "Door")
         {
             withinInteractable = true;
+            Notification.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -238,6 +250,19 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Out of interactable");
             QuestCollectionText.enabled = false;
             withinInteractable = false;
+            Notification.SetActive(false);
+        }
+    }
+
+    private void HandleLayers()
+    {
+        if (!grounded)
+        {
+            playerAnimator.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            playerAnimator.SetLayerWeight(1, 0);
         }
     }
 }

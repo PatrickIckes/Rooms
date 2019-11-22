@@ -14,7 +14,6 @@ public class StairMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stairway.GetComponent<SpriteRenderer>().sortingLayerName = "Stairs";
         Notification.SetActive(false);
     }
 
@@ -39,7 +38,6 @@ public class StairMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         withinStairway = true;
-        stairway.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
         Notification.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D collision)

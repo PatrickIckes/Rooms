@@ -8,13 +8,13 @@ public class MainMenuController : MonoBehaviour
 {
     public Button StartGameButton;
     public Button PlayGameButton;
-    public Button SettingsButton;
+    //public Button SettingsButton;
     public Button CreditsButton;
     public Button CreditsBackButton;
-    public Button SettingsBackButton;
+    //public Button SettingsBackButton;
     public GameObject MainMenuCanvas;
     public GameObject StoryCanvas;
-    public GameObject SettingsCanvas;
+    //public GameObject SettingsCanvas;
     public GameObject CreditsCanvas;
 
     // Start is called before the first frame update
@@ -22,15 +22,15 @@ public class MainMenuController : MonoBehaviour
     {
         StartGameButton.onClick.AddListener(Story);
         PlayGameButton.onClick.AddListener(StartGame);
-        SettingsButton.onClick.AddListener(Settings);
+        //SettingsButton.onClick.AddListener(Settings);
         CreditsButton.onClick.AddListener(Credits);
         CreditsBackButton.onClick.AddListener(CreditsBack);
-        SettingsBackButton.onClick.AddListener(SettingsBack);
+        //SettingsBackButton.onClick.AddListener(SettingsBack);
     }
 
     void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     void Story()
@@ -51,15 +51,15 @@ public class MainMenuController : MonoBehaviour
         MainMenuCanvas.SetActive(true);
     }
 
-    void Settings()
-    {
-        MainMenuCanvas.SetActive(false);
-        SettingsCanvas.SetActive(true);
-    }
+    //void Settings()
+    //{
+    //    MainMenuCanvas.SetActive(false);
+    //    SettingsCanvas.SetActive(true);
+    //}
 
-    void SettingsBack()
-    {
-        SettingsCanvas.SetActive(false);
-        MainMenuCanvas.SetActive(true);
-    }
+    //void SettingsBack()
+    //{
+    //    SettingsCanvas.SetActive(false);
+    //    MainMenuCanvas.SetActive(true);
+    //}
 }

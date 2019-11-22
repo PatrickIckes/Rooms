@@ -365,14 +365,14 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1781316265}
-    - target: {fileID: 7085306090168746326, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542042, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085306090168746326, guid: 4aaaef29d9813ea4db8d430495a8192f,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 1877478568}
   - component: {fileID: 1877478570}
   m_Layer: 0
-  m_Name: playerAndSloth_1
+  m_Name: Sloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
