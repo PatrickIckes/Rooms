@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: b0bfd7ae9b7b08144a0f6c6afa7dc120
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6229341521057833362
+    second: PunchNJump_0
+  - first:
+      213: 3932481271544772440
+    second: PunchNJump_1
+  - first:
+      213: 4806108574039226308
+    second: PunchNJump_2
+  - first:
+      213: -2798943500904654173
+    second: PunchNJump_3
+  - first:
+      213: -5400089267131034077
+    second: PunchNJump_4
+  - first:
+      213: 2342159792302455479
+    second: PunchNJump_5
+  - first:
+      213: 4492205804328181250
+    second: PunchNJump_6
+  - first:
+      213: -7524738676014916826
+    second: PunchNJump_7
+  - first:
+      213: 6129982521664319133
+    second: PunchNJump_8
+  - first:
+      213: 832096535219478275
+    second: PunchNJump_9
+  - first:
+      213: -7240014735091433786
+    second: PunchNJump_10
+  - first:
+      213: -1992042090497870193
+    second: PunchNJump_11
+  - first:
+      213: 4182088955619439564
+    second: PunchNJump_12
+  - first:
+      213: 631248505205085843
+    second: PunchNJump_13
+  - first:
+      213: 8619213519009789457
+    second: PunchNJump_14
+  - first:
+      213: -4703331612182141262
+    second: PunchNJump_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PunchNJump_0
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 926
+        width: 918
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f311fb592a10854385a8b2afa1cb301
+      internalID: -6229341521057833362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_1
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 926
+        width: 918
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e87339d488eab848b3a5364a6497173
+      internalID: 3932481271544772440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_2
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 926
+        width: 900
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0c4eaa47397104dbaad18fd6f3996c
+      internalID: 4806108574039226308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_3
+      rect:
+        serializedVersion: 2
+        x: 3553
+        y: 926
+        width: 1074
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab5d028ee9024446b005a0055de4075
+      internalID: -2798943500904654173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_4
+      rect:
+        serializedVersion: 2
+        x: 4715
+        y: 926
+        width: 1082
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5ecfc5138e99d4c9342146e23d1f32
+      internalID: -5400089267131034077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_5
+      rect:
+        serializedVersion: 2
+        x: 6077
+        y: 926
+        width: 890
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdfca383b409924f8658bf4c2a11a2f
+      internalID: 2342159792302455479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_6
+      rect:
+        serializedVersion: 2
+        x: 7247
+        y: 926
+        width: 890
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890f17441f9a3b14fbedef3b44bc98b5
+      internalID: 4492205804328181250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_7
+      rect:
+        serializedVersion: 2
+        x: 8375
+        y: 926
+        width: 932
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c07bdf94fbf6e4098265f2b0071d11
+      internalID: -7524738676014916826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_8
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 89
+        width: 251
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ea933e30c68df48a80e5a08016d97b
+      internalID: 6129982521664319133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_9
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 89
+        width: 288
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c47581cbf4aa249acff10dc54f5333
+      internalID: 832096535219478275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_10
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 89
+        width: 251
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49839a4464999c4429a48a97dba59eb9
+      internalID: -7240014735091433786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_11
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 89
+        width: 283
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626d3804284d14840ab7b3538e029a1b
+      internalID: -1992042090497870193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_12
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 89
+        width: 557
+        height: 644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcffe63c22b82184c878da364a3e14e3
+      internalID: 4182088955619439564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_13
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 89
+        width: 297
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f680392c825a046a612cae1ada0f65
+      internalID: 631248505205085843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_14
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 89
+        width: 241
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3989db210728784e86487565a0575da
+      internalID: 8619213519009789457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PunchNJump_15
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 89
+        width: 251
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2095a727c008f4aa83d2efafb44d01
+      internalID: -4703331612182141262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 937f51f508ec17d4ca68eae50492b7f8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
