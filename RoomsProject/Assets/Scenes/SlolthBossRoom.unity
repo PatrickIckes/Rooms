@@ -364,7 +364,7 @@ PrefabInstance:
         type: 3}
       propertyPath: QuestCollectionText
       value: 
-      objectReference: {fileID: 1772483459}
+      objectReference: {fileID: 575890563}
     - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: gameManager
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &575890564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -927,13 +927,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449601711}
-  m_LocalRotation: {x: 0, y: 0, z: 0.34938982, w: 0.9369775}
-  m_LocalPosition: {x: 2.241, y: -0.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.29194266, w: 0.9564359}
+  m_LocalPosition: {x: 2.172, y: 2.45, z: 0}
   m_LocalScale: {x: 1.0711762, y: 1.0711799, z: 1}
   m_Children: []
   m_Father: {fileID: 398990894}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.9}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.949}
 --- !u!61 &1449601713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -947,7 +947,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5645173, y: 1.873571}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
