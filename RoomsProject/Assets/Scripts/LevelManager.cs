@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public Quest levelQuest;
     public bool GravityEnabled;//Probably a bad practice but to work simply needed a public setter
     List<Quest> possibleQuests;
-    public Text questText; 
+    public Text questText;
     private void Awake()
     {
     }

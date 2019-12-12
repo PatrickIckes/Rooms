@@ -13,6 +13,6 @@ class BeatSloth : Quest
             {
                 new QuestRequirement("Quest", "Sloth Reward", 1)
             };
-        NextScene = (int)Scenes.MainMenu;
+        NextScene = (int)Scenes.HubWorld;
     }
 }

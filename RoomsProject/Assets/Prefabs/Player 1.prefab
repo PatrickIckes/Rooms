@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 5661623879628954030}
   - component: {fileID: 7085306090168746326}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,9 @@ MonoBehaviour:
   GravityEnabled: 0
   Grounded: 0
   inventory: {fileID: 6768777302839310364}
+  gameManager: {fileID: 0}
   QuestCollectionText: {fileID: 0}
+  InteractionIndicator: {fileID: 3529394729408210272}
   PlayerGravityScale: 0.6
 --- !u!61 &5645019339603542501
 BoxCollider2D:

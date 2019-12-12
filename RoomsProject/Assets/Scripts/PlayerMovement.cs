@@ -30,10 +30,6 @@ public class PlayerMovement : MonoBehaviour
     public float PlayerGravityScale; //Only set at start
     private void Awake()
     {
-        if (QuestCollectionText != null)
-        {
-            QuestCollectionText.enabled = false;
-        }
         CollidingObjects = new List<GameObject>();
         qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
@@ -41,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         isColliding = false;
         InteractionIndicator.SetActive(false);
+        if (QuestCollectionText != null)
+        {
+            QuestCollectionText.enabled = false;
+        }
     }
     private void Start()
     {

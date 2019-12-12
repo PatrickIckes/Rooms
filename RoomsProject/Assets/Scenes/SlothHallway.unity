@@ -170,11 +170,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.01
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 2.73
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20330468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.786, y: -3.91, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Notification: {fileID: 1664848068}
+  NotificationText: {fileID: 156389665}
 --- !u!61 &55738700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -647,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Notification: {fileID: 1664848068}
+  NotificationText: {fileID: 156389665}
 --- !u!61 &852273907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -718,6 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Notification: {fileID: 1664848068}
+  NotificationText: {fileID: 156389665}
 --- !u!61 &872042033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1464,7 +1467,7 @@ PrefabInstance:
         type: 3}
       propertyPath: QuestCollectionText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 156389665}
     - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: gameManager
@@ -1608,6 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Notification: {fileID: 1664848068}
+  NotificationText: {fileID: 156389665}
 --- !u!61 &1858853505
 BoxCollider2D:
   m_ObjectHideFlags: 0

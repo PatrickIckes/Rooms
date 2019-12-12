@@ -657,7 +657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press F to interact....An eye indicates interactable objects.
+  m_Text: Press F to interact
 --- !u!222 &362972499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1124,6 +1124,7 @@ MonoBehaviour:
   player: {fileID: 173166844}
   ExitPoint: {fileID: 532308869}
   Notification: {fileID: 350343453}
+  NotificationText: {fileID: 362972498}
 --- !u!224 &530868055 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7444315504994395426, guid: 26e96ef50f319e346bac00203aae9662,
@@ -1204,6 +1205,7 @@ MonoBehaviour:
   player: {fileID: 173166844}
   ExitPoint: {fileID: 522048969}
   Notification: {fileID: 350343453}
+  NotificationText: {fileID: 362972498}
 --- !u!1 &608274864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,6 +2070,7 @@ MonoBehaviour:
   player: {fileID: 173166844}
   ExitPoint: {fileID: 2117914720}
   Notification: {fileID: 350343453}
+  NotificationText: {fileID: 362972498}
 --- !u!1 &1898291351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2249,7 @@ MonoBehaviour:
   player: {fileID: 173166844}
   ExitPoint: {fileID: 1662216695}
   Notification: {fileID: 350343453}
+  NotificationText: {fileID: 362972498}
 --- !u!61 &2117914723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2402,6 +2406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PrefabImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444315504994395427, guid: 26e96ef50f319e346bac00203aae9662,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7444315504994395426, guid: 26e96ef50f319e346bac00203aae9662,
         type: 3}

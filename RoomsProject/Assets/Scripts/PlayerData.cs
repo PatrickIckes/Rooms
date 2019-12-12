@@ -22,6 +22,7 @@ public class PlayerData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         startinghealth = 3;
         playerMovement = GetComponent<PlayerMovement>();
         pa = new PlayerAttributes(startinghealth,SceneManager.GetActiveScene().buildIndex,new List<GameObject>(), this.transform.position);
