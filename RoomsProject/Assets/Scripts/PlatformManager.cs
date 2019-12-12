@@ -54,7 +54,7 @@ public class PlatformManager : MonoBehaviour
             if (timer >= 2)
             {
                 gm.SaveLevel();
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(gm.levelManager.levelQuest.NextScene);
             }
         }
     }

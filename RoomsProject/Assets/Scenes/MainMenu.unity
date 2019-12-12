@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 837, y: -481}
+  m_AnchoredPosition: {x: 573.19995, y: -340.9}
   m_SizeDelta: {x: 206.6, y: 79.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6291234
@@ -2082,10 +2082,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartGameButton: {fileID: 869050812}
   PlayGameButton: {fileID: 6291234}
+  SettingsButton: {fileID: 10011724}
   CreditsButton: {fileID: 1338188256}
   CreditsBackButton: {fileID: 1859931883}
+  SettingsBackButton: {fileID: 0}
   MainMenuCanvas: {fileID: 930282384}
   StoryCanvas: {fileID: 1746598893}
+  SettingsCanvas: {fileID: 0}
   CreditsCanvas: {fileID: 1828370869}
 --- !u!1 &869050810
 GameObject:

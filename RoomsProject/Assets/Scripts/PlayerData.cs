@@ -40,7 +40,6 @@ public class PlayerData : MonoBehaviour
         if(collision.tag == "Hazard")
         {
             pa.health -= 1;
-            Debug.Log($"Health: {pa.health}");
             if(pa.health <= 0)
             {
                 ResetPlayer();

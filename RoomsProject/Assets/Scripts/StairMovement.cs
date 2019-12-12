@@ -10,6 +10,7 @@ public class StairMovement : MonoBehaviour
     public GameObject ExitPoint;
     bool withinStairway;
     public GameObject Notification;
+    public Text NotificationText;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,6 @@ public class StairMovement : MonoBehaviour
             {
                 stairway.SetActive(true);
             }
-            Debug.Log(ExitPoint.name);
             player.transform.position = new Vector3(ExitPoint.transform.position.x, ExitPoint.transform.position.y);
         }
     }
@@ -39,10 +39,12 @@ public class StairMovement : MonoBehaviour
     {
         withinStairway = true;
         Notification.SetActive(true);
+        NotificationText.enabled = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         withinStairway = false;
         Notification.SetActive(false);
+        NotificationText.enabled = false;
     }
 }

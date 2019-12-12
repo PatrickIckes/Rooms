@@ -10,11 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 1f;
     public float DistanceToGround;
     public bool withinInteractable;
-    public GameObject Notification;
     //When in grounded areas
     public bool canJump;
     public bool GravityEnabled;
-    public bool grounded;
+    public bool Grounded;
     bool isColliding;
     internal bool canCheckForObject;
     //IsometricCharacterRenderer isoRenderer;
@@ -26,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public Inventory inventory;
     public MyGameManager gameManager;
     public Text QuestCollectionText;
+    public GameObject InteractionIndicator;
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
     private void Awake()
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         colliderTrigger = GetComponent<Collider2D>();
         playerAnimator = GetComponent<Animator>();
         isColliding = false;
+        InteractionIndicator.SetActive(false);
     }
     private void Start()
     {
@@ -52,8 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rbody.gravityScale = 0;
         }
-        Debug.Log(inventory.items.Count);
-        grounded = false;
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -66,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
         AnimatePlayer(horizontalInput,verticalInput);
         flipPlayer(horizontalInput);
         MovePlayer(horizontalInput, verticalInput, currentPos);
-        HandleLayers();
         if(canJump && jumpInput != 0)
         {
             
@@ -77,13 +75,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
         canJump = false;
-
-        //if (!canJump)
-        //{
-        //    playerAnimator.SetBool("Land", false);
-        //}
-
-
     }
     /// <summary>
     /// Moves the player
@@ -105,8 +96,7 @@ public class PlayerMovement : MonoBehaviour
         if (!GravityEnabled)
         {
             rbody.MovePosition(newPos);
-        }
-        else
+        } else
         {
             this.transform.position = newPos;
         }
@@ -187,14 +177,13 @@ public class PlayerMovement : MonoBehaviour
             if (inventory.CheckObject("key"))
             {
                 gameManager.SaveLevel();
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene((int)Scenes.SlothHallway);
             } else
             {
                 if (QuestCollectionText != null)
                 {
-                    QuestCollectionText.enabled = true;
                     QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
-                }
+                } 
             }
         }
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.CurrentQuest != null) 
@@ -213,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
         CollidingObjects.Add(collision.gameObject);
         //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
         isColliding = true;
-        if (GravityEnabled && collision.tag == "Platform")
+        if(GravityEnabled && collision.tag == "Platform")
         {
             canJump = true;
         }
@@ -221,6 +210,8 @@ public class PlayerMovement : MonoBehaviour
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
         {
+            QuestCollectionText.enabled = true;
+            InteractionIndicator.SetActive(true);
             if (item.IsQuestItem)
             {
                 qm.CollectedQuestItem(item);
@@ -231,38 +222,27 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
+        
         if (collision.name == "Door")
         {
+            QuestCollectionText.enabled = true;
             withinInteractable = true;
-            Notification.SetActive(true);
+            InteractionIndicator.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        InteractionIndicator.SetActive(false);
+        QuestCollectionText.enabled = false;
         if (QuestCollectionText != null)
         {
-            QuestCollectionText.enabled = false;
+            QuestCollectionText.text = "Press F to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
         if (collision.name == "Door")
         {
             Debug.Log("Out of interactable");
-            QuestCollectionText.enabled = false;
             withinInteractable = false;
-            Notification.SetActive(false);
-        }
-    }
-
-    private void HandleLayers()
-    {
-        if (!grounded)
-        {
-            playerAnimator.SetLayerWeight(1, 1);
-        }
-        else
-        {
-            playerAnimator.SetLayerWeight(1, 0);
         }
     }
 }
