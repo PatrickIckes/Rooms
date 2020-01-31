@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlatformManager : MonoBehaviour
 {
+    enum BossFight { First, Second, Dead }
+    BossFight rounds;
     public GameObject[] Platforms;
     public GameObject[] Lights;
     double timer;
@@ -22,48 +25,77 @@ public class PlatformManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rounds = BossFight.First;
         player_script = gm.player.GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!RoomDone && timer < fallingtime)
+        switch (rounds)
+        {
+            case BossFight.First:
+                FirstStage(timer);
+                break;            
+            case BossFight.Second:
+                SecondStage(timer);
+                break;            
+            case BossFight.Dead:
+                Dead();
+                break;
+        }
+        timer += Time.deltaTime;
+    }
+
+    private void FirstStage(double timer)
+    {
+        if (timer < fallingtime)
         {
             fallingtimer += Time.deltaTime;
-            timer += Time.deltaTime;
             if (fallingtimer > Fallspeed)
             {
                 fallingtimer = 0;
                 TriggerFall();
             }
-            if ((int)timer % 5 == 0 && lastval != (int)timer)
-            {
-                Fallspeed -= FallspeedIncrementer; // Not sure how well this will work but every 5 seconds it will speed up the fallrate
-                lastval = (int)timer;
-            }
-        }
-        else if (!RoomDone && timer >= fallingtime)
+        } else
         {
             timer = 0;
-            Sloth.GetComponent<SlothBossFight>().startFight = true;
-        }
-        if (RoomDone)
-        {
-            timer += Time.deltaTime;
-            if (timer >= 2)
-            {
-                gm.SaveLevel();
-                SceneManager.LoadScene(gm.levelManager.levelQuest.NextScene);
-            }
+            rounds = BossFight.Second;
         }
     }
+
+    private void SecondStage(double timer)
+    {
+        if (timer < fallingtime)
+        {
+            fallingtimer += Time.deltaTime;
+
+            if (fallingtimer > Fallspeed)
+            {
+                fallingtimer = 0;
+                TriggerFall();
+            }
+        }
+        else
+        {
+            timer = 0;
+            rounds = BossFight.Dead;
+        }
+    }
+
+    private void Dead()
+    {
+        Debug.Log("Boss is dead");
+    }
+
+
     private void FixedUpdate()
     {
     }
+
     private void TriggerFall()
     {
-        int safe = Random.Range(0, Platforms.Length);
+        int safe = UnityEngine.Random.Range(0, Platforms.Length);
         Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
         int i = 0;
         foreach (GameObject platform in Platforms)
