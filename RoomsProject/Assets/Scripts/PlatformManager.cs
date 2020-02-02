@@ -10,6 +10,7 @@ public class PlatformManager : MonoBehaviour
     BossFight rounds;
     public GameObject[] Platforms;
     public GameObject[] Lights;
+    public GameObject[] FallingConnector;
     double timer;
     double fallingtimer;
     public GameObject Debris;
@@ -18,13 +19,14 @@ public class PlatformManager : MonoBehaviour
     public float spawnHeight;
     PlayerData player_script;
     public float Fallspeed;
-    public float FallspeedIncrementer;
     public float fallingtime;
     int lastval;
     internal bool RoomDone;
+    public int[] Sequence = new int[12] { 1,3,2,1,3,2,1,3,2,3,1,3 }; // Maybe Randomly implement this
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
         rounds = BossFight.First;
         player_script = gm.player.GetComponent<PlayerData>();
     }
@@ -35,49 +37,60 @@ public class PlatformManager : MonoBehaviour
         switch (rounds)
         {
             case BossFight.First:
-                FirstStage(timer);
-                break;            
+                FirstStage();
+                break;
             case BossFight.Second:
-                SecondStage(timer);
-                break;            
+                SecondStage();
+                break;
             case BossFight.Dead:
                 Dead();
                 break;
         }
-        timer += Time.deltaTime;
-    }
 
-    private void FirstStage(double timer)
-    {
+    }
+    int i = 0;
+    private void FirstStage()
+    {   
         if (timer < fallingtime)
         {
+            int safe = Sequence[i] - 1;
             fallingtimer += Time.deltaTime;
+            timer += Time.deltaTime;
             if (fallingtimer > Fallspeed)
             {
                 fallingtimer = 0;
-                TriggerFall();
-            }
-        } else
-        {
-            timer = 0;
-            rounds = BossFight.Second;
-        }
-    }
-
-    private void SecondStage(double timer)
-    {
-        if (timer < fallingtime)
-        {
-            fallingtimer += Time.deltaTime;
-
-            if (fallingtimer > Fallspeed)
-            {
-                fallingtimer = 0;
-                TriggerFall();
+                IndicateSafe(safe);
+                TriggerFall(safe);
+                i++;
             }
         }
         else
         {
+            i = 0;
+            timer = 0;
+            ClearLights();
+            rounds = BossFight.Second;
+        }
+    }
+
+    private void SecondStage()
+    {
+        if (timer < fallingtime)
+        {
+            int safe = Sequence[i]-1;
+            fallingtimer += Time.deltaTime;
+            timer += Time.deltaTime;
+            if (fallingtimer > Fallspeed)
+            {
+                fallingtimer = 0;
+                PlanksFall();
+                TriggerFall(safe);
+                i++;
+            }
+        }
+        else
+        {
+            i = 0;
             timer = 0;
             rounds = BossFight.Dead;
         }
@@ -88,24 +101,47 @@ public class PlatformManager : MonoBehaviour
         Debug.Log("Boss is dead");
     }
 
-
-    private void FixedUpdate()
+    private void PlanksFall()
     {
+        foreach(GameObject plank in FallingConnector)
+        {
+            plank.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
     }
 
-    private void TriggerFall()
+    private void ClearLights()
     {
-        int safe = UnityEngine.Random.Range(0, Platforms.Length);
-        Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
         int i = 0;
         foreach (GameObject platform in Platforms)
         {
+            Lights[i].GetComponent<SpriteRenderer>().color = new Color(185,183,183);
+            i++;
+        }
+    }
 
+    private void IndicateSafe(int safe)
+    {
+
+        int i = 0;
+        Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
+        foreach (GameObject platform in Platforms)
+        {
+            if (platform != Platforms[safe])
+            {
+                Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+            }
+            i++;
+        }
+    }
+    private void TriggerFall(int safe)
+    {
+        int i = 0;
+        foreach (GameObject platform in Platforms)
+        {
             if (platform != Platforms[safe])
             {
                 Vector3 p = platform.transform.position;
                 GameObject temp = Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
-                Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
             }
             i++;
         }
