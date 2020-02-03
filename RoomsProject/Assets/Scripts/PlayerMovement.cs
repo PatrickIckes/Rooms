@@ -26,8 +26,10 @@ public class PlayerMovement : MonoBehaviour
     public MyGameManager gameManager;
     public Text QuestCollectionText;
     public GameObject InteractionIndicator;
+    public GameObject ThrowableObject;
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
+    //Called upon initialization of the object.
     private void Awake()
     {
         CollidingObjects = new List<GameObject>();
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             QuestCollectionText.enabled = false;
         }
     }
+    //Called on the frame the script is enabled right before update is called the first time
     private void Start()
     {
         //gameManager.LoadInventory();
@@ -100,6 +103,19 @@ public class PlayerMovement : MonoBehaviour
         {
             this.transform.position = newPos;
         }
+        if (ThrowableObject != null) ThrowableObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.2f, 0);
+    }
+
+
+    public virtual void PlayerThrow()
+    {
+        if(Input.GetButtonDown("Fire1") && ThrowableObject != null)
+        {
+            ThrowableObject.GetComponent<Thrown>().Throw();
+            //Calculate Angle between two vectors
+            ThrowableObject = null;
+
+        }
     }
     /// <summary>
     /// Animates the player
@@ -133,6 +149,10 @@ public class PlayerMovement : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = true;
         }//flips right
     }
+
+    /// <summary>
+    /// Called every frame
+    /// </summary>
     private void Update()
     {
         if(GetComponentInChildren<QuestManager>().CurrentQuest == null)//Instantiates the current quest because in start is doesn't work properly
@@ -146,6 +166,7 @@ public class PlayerMovement : MonoBehaviour
         }
         QuestItemCollection();
         OpenDoor();
+        PlayerThrow();
     }
 
     public void QuestItemCollection()
@@ -170,6 +191,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Figures out the situation and if the requirements are met it saves the game and goes to the next position
+    /// </summary>
     public void OpenDoor()
     {
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable)

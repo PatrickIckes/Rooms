@@ -72,26 +72,30 @@ public class PlatformManager : MonoBehaviour
             rounds = BossFight.Second;
         }
     }
-
+    int timesThrough;
     private void SecondStage()
     {
-        if (timer < fallingtime)
+        if (Sloth != null)
         {
             int safe = Sequence[i]-1;
             fallingtimer += Time.deltaTime;
-            timer += Time.deltaTime;
+
+            if(timesThrough == 3)
+            {
+
+            } 
             if (fallingtimer > Fallspeed)
             {
                 fallingtimer = 0;
                 PlanksFall();
                 TriggerFall(safe);
                 i++;
+                timesThrough++;
             }
         }
         else
         {
             i = 0;
-            timer = 0;
             rounds = BossFight.Dead;
         }
     }
