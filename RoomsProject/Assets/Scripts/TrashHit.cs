@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class TrashHit : MonoBehaviour
 {
-    public GameObject ThrowableObject;
+    public GameObject TrashDrop;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Instantiate(ThrowableObject, collision.transform.position, Quaternion.identity);
+        if (collision.tag == "Hazard" && PlatformManager.DropItem)
+        {
+            Instantiate(TrashDrop, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            PlatformManager.DropItem = false;
+        }
     }
 }

@@ -11,6 +11,7 @@ public class Thrown : MonoBehaviour
     Vector2 StartPosition;
     float Angle;
     public Rigidbody2D rigidBody;
+    public int damage
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class Thrown : MonoBehaviour
     public void Move()//TODO More natural projectile movement
     {
         Vector2 force = new Vector2(power * Mathf.Cos((Angle * Mathf.PI) / 180),0);
-        rigidBody.AddForce(force*0.75f,ForceMode2D.Impulse);
+        rigidBody.velocity = new Vector2(force.x*0.75f,1);
     }
 
     public void Throw()
@@ -42,6 +43,10 @@ public class Thrown : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == Enemy.name) Enemy.GetComponent<Health>().Damage(5);
+        if (collision.gameObject.name == Enemy.name)
+        {
+            collision.gameObject.GetComponent<Health>().Damage(damage);
+            Destroy(this.gameObject);
+        }
     }
 }

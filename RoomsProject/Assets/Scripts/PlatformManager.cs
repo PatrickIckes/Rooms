@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlatformManager : MonoBehaviour
 {
-    enum BossFight { First, Second, Dead }
+    enum BossFight { First, Second, Dead, Done }
     BossFight rounds;
     public GameObject[] Platforms;
     public GameObject[] Lights;
@@ -16,7 +16,10 @@ public class PlatformManager : MonoBehaviour
     public GameObject Debris;
     public MyGameManager gm;
     public GameObject Sloth;
+    public GameObject EndManager; // Object with the end script on it
+    public static bool DropItem;
     public float spawnHeight;
+    public GameObject TrashDrop;
     PlayerData player_script;
     public float Fallspeed;
     public float fallingtime;
@@ -24,6 +27,7 @@ public class PlatformManager : MonoBehaviour
     internal bool RoomDone;
     public int[] Sequence = new int[12] { 1,3,2,1,3,2,1,3,2,3,1,3 }; // Maybe Randomly implement this
     // Start is called before the first frame update
+    
     void Start()
     {
         timer = 0;
@@ -45,6 +49,9 @@ public class PlatformManager : MonoBehaviour
             case BossFight.Dead:
                 Dead();
                 break;
+            case BossFight.Done:
+                break;
+                
         }
 
     }
@@ -77,13 +84,11 @@ public class PlatformManager : MonoBehaviour
     {
         if (Sloth != null)
         {
+            if (i >= Sequence.Length) i = 0;
             int safe = Sequence[i]-1;
             fallingtimer += Time.deltaTime;
+            //Spawns a drop after every effect.
 
-            if(timesThrough == 3)
-            {
-
-            } 
             if (fallingtimer > Fallspeed)
             {
                 fallingtimer = 0;
@@ -91,6 +96,11 @@ public class PlatformManager : MonoBehaviour
                 TriggerFall(safe);
                 i++;
                 timesThrough++;
+            }
+            if (timesThrough-1 == 3)
+            {
+                timesThrough = 0;
+                Instantiate(TrashDrop, Platforms[safe].transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
             }
         }
         else
@@ -102,7 +112,8 @@ public class PlatformManager : MonoBehaviour
 
     private void Dead()
     {
-        Debug.Log("Boss is dead");
+        EndManager.GetComponent<EndRoom>().RoomOver();
+        rounds = BossFight.Done;
     }
 
     private void PlanksFall()

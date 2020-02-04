@@ -21,6 +21,6 @@ public class Health : MonoBehaviour
     internal void Damage(int damageValue)
     {
         this.health -= damageValue;
-        if (this.health < 0) Destroy(gameObject);
+        if (this.health < 0) Destroy(this.gameObject);
     }
 }

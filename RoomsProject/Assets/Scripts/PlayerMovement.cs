@@ -103,7 +103,8 @@ public class PlayerMovement : MonoBehaviour
         {
             this.transform.position = newPos;
         }
-        if (ThrowableObject != null) ThrowableObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.2f, 0);
+        if (ThrowableObject != null) 
+            ThrowableObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.2f, 0);
     }
 
 
@@ -216,6 +217,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 gameManager.SaveLevel();
                 SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
+            }
+            if (qm.CurrentQuest.GetType() == typeof(BeatSloth) && qm.DoneWithQuest())
+            {
+                gameManager.SaveLevel();
+                SceneManager.LoadScene(((BeatSloth)qm.CurrentQuest).NextScene);
             }
         }
     }

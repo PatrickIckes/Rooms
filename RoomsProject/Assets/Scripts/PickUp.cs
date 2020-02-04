@@ -13,7 +13,8 @@ public class PickUp : MonoBehaviour
         //this.transform.parent = Player.transform;
             if (collision.gameObject.name == Player.name)
             {
-                Player.GetComponent<PlayerMovement>().ThrowableObject = this.gameObject;
+                collision.gameObject.GetComponent<PlayerMovement>().ThrowableObject = this.gameObject;
+                Connected = true;
             }
         }
     }

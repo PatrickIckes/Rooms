@@ -571,6 +571,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.03862022}
   serializedVersion: 2
   m_Radius: 0.12137978
+--- !u!50 &442920334
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442920328}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &575890561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1679,7 @@ GameObject:
   - component: {fileID: 1877478569}
   - component: {fileID: 1877478568}
   - component: {fileID: 1877478570}
+  - component: {fileID: 1877478571}
   m_Layer: 0
   m_Name: Sloth
   m_TagString: Untagged
@@ -1748,6 +1770,18 @@ MonoBehaviour:
   QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
     type: 3}
   platformManager: {fileID: 419017870}
+--- !u!114 &1877478571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877478567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074352d1c62b0284c927dbd9b347da10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932512512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151567435624231489, guid: 9478d301df90b5046b70f3dbcb98dba3,
