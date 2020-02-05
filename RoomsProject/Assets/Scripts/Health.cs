@@ -21,6 +21,11 @@ public class Health : MonoBehaviour
     internal void Damage(int damageValue)
     {
         this.health -= damageValue;
-        if (this.health < 0) Destroy(this.gameObject);
+        Debug.Log($"{health}");
+        if (this.health < 0)
+        {
+            Debug.Log("<0");
+            Destroy(this.gameObject);
+        }
     }
 }
