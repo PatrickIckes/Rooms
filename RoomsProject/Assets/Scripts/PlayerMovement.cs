@@ -208,6 +208,10 @@ public class PlayerMovement : MonoBehaviour
                 if (QuestCollectionText != null)
                 {
                     QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
+
+                    //jpost audio test (please leave commented out)
+                    //play hello world sound from FMOD
+                    //FMODUnity.RuntimeManager.PlayOneShot("event:/sx_test_hello_world", GetComponent<Transform>().position);
                 } 
             }
         }

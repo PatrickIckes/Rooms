@@ -111,7 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3807533557685417163, guid: 5ae86dcdbec572a40ab8d236fee67551, type: 3}
   power: 10
+  rigidBody: {fileID: 0}
   damage: 1
+
 --- !u!50 &-8558967328857665635
 Rigidbody2D:
   serializedVersion: 4
