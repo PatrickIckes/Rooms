@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912261808173798278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18471794, y: 3.2695265, z: 0}
+  m_LocalPosition: {x: 4.104655, y: 1.6252358, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,8 @@ MonoBehaviour:
   Enemy: {fileID: 3807533557685417163, guid: 5ae86dcdbec572a40ab8d236fee67551, type: 3}
   power: 10
   rigidBody: {fileID: 0}
-  damage: 0
+  damage: 1
+
 --- !u!50 &-8558967328857665635
 Rigidbody2D:
   serializedVersion: 4

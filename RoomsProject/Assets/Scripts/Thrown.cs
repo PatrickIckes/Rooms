@@ -11,7 +11,7 @@ public class Thrown : MonoBehaviour
     Vector2 StartPosition;
     float Angle;
     public Rigidbody2D rigidBody;
-    public int damage;
+    public int damage = 1;
     // Start is called before the first frame update
     void Start()
     {

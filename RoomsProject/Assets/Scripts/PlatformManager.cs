@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,11 +24,17 @@ public class PlatformManager : MonoBehaviour
     public float fallingtime;
     int lastval;
     internal bool RoomDone;
-    public int[] Sequence = new int[12] { 1,3,2,1,3,2,1,3,2,3,1,3 }; // Maybe Randomly implement this
+    public int SequenceCount;
+    public int[] Sequence; // Maybe Randomly implement this
     // Start is called before the first frame update
     
     void Start()
     {
+        Sequence = new int[SequenceCount];
+        for (int i = 0; i < SequenceCount; i++)
+        {
+            Sequence[i] = Random.Range(1, 4);
+        }
         timer = 0;
         rounds = BossFight.First;
         player_script = gm.player.GetComponent<PlayerData>();
