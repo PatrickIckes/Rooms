@@ -30,6 +30,7 @@ public class PlatformManager : MonoBehaviour
     
     void Start()
     {
+        SequenceCount = (int)(fallingtime / Fallspeed);
         Sequence = new int[SequenceCount];
         for (int i = 0; i < SequenceCount; i++)
         {

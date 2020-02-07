@@ -10,10 +10,11 @@ public class EndRoom : MonoBehaviour
     public GameObject QuestReward;
     Quest PlayerQuest;
     public GameObject Player;
+    Animator doorAnimator;
     // Start is called before the first frame update
     void Start()
     {
-
+        doorAnimator = Door.GetComponent<Animator>();
         Door.SetActive(false);
     }
 
@@ -28,6 +29,7 @@ public class EndRoom : MonoBehaviour
     public void RoomOver()
     {
         Door.SetActive(true);
+        doorAnimator.SetBool("Fall", true);
         Instantiate(Sword, Spawner.transform);
         GameObject temp = Instantiate(QuestReward);
         PlayerQuest.CollectedItem(temp.GetComponentInChildren<IInventoryItem>());
