@@ -262,8 +262,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   QuestCollectionText: {fileID: 0}
   InteractionIndicator: {fileID: 3529394729408210272}
-  ThrowableObject: {fileID: 4912261808173798278, guid: 956ce2107a1afba4b9ad8cc80e69ff37,
-    type: 3}
+  ThrowableObject: {fileID: 0}
   PlayerGravityScale: 0.6
 --- !u!61 &5645019339603542501
 BoxCollider2D:

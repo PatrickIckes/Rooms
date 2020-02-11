@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.Quests;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
     {
         if (questText != null)
         {
+
             if (SceneManager.GetActiveScene().buildIndex == HallwayQuest.CurrentScene)
             {
                 levelQuest = new HallwayQuest();
@@ -24,7 +26,12 @@ public class LevelManager : MonoBehaviour
             {
                 levelQuest = new BeatSloth();
 
-            } else
+            }
+            if (SceneManager.GetActiveScene().buildIndex == BeatEnvy.CurrentScene)
+            {
+                levelQuest = new BeatEnvy();
+            }
+            else
             {
                 levelQuest = new Quest();
             }
