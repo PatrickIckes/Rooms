@@ -120,4 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b08e06fdc0dffc418bce61850a7c782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 5645019339603542040, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+  Direction: {x: 0, y: 0, z: 0}
+  bulletSpeed: 10
