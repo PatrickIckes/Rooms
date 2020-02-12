@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Fired : MonoBehaviour
 {
+    public Transform Direction;
+    public float bulletSpeed;
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(1, 0, 0) * Time.deltaTime;
+        Debug.Log($"position {Direction.position}");
+        this.transform.position = Vector2.MoveTowards(transform.position,Direction.position,bulletSpeed);
     }
 }

@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         //gameManager.LoadInventory();
-        GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
         {
             rbody.gravityScale = PlayerGravityScale;
@@ -65,14 +64,13 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         float jumpInput = Input.GetAxis("Jump");
-        AnimatePlayer(horizontalInput,verticalInput);
         flipPlayer(horizontalInput);
         MovePlayer(horizontalInput, verticalInput, currentPos);
-        if(canJump && jumpInput != 0)
+        if (canJump && jumpInput != 0)
         {
-            
-            PlayerJump(jumpInput,currentPos);
+            PlayerJump(jumpInput, currentPos);
         }
+        AnimatePlayer(horizontalInput, verticalInput);
     }
     public virtual void PlayerJump(float jumpInput, Vector2 CurrentPos)
     {
@@ -133,6 +131,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("isWalking", false);
         }//Idle Anim if not moving
+        if(!canJump && !playerAnimator.GetBool("isJumping"))
+        {
+            playerAnimator.SetBool("isJumping", true);
+        }
 
     }
     /// <summary>
@@ -239,6 +241,7 @@ public class PlayerMovement : MonoBehaviour
         if(GravityEnabled && collision.tag == "Platform")
         {
             canJump = true;
+            playerAnimator.SetBool("isJumping", false);
         }
         //Collision for HallwayQuest managed in hidingpoints
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
