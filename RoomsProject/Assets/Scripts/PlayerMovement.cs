@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         //gameManager.LoadInventory();
+        GravityEnabled = gameManager.levelManager.GravityEnabled;
         if(GravityEnabled)
         {
             rbody.gravityScale = PlayerGravityScale;
