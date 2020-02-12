@@ -19,4 +19,4 @@ namespace Assets.Scripts.Quests
         }
     }
 }
-}
+
