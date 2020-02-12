@@ -20,12 +20,13 @@ public class EnvyBossFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sandBagTimer = noteFireTimer += Time.deltaTime;
+        noteFireTimer += Time.deltaTime;
+        sandBagTimer += Time.deltaTime;
         if(noteFireTimer >= FireTime)
         {
             GameObject temp = Instantiate(Note, this.transform);
             temp.transform.LookAt(Player.transform);
-            temp.GetComponent<Fired>().Direction = Player.transform;
+            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
             noteFireTimer = 0;
         }
         if(sandBagTimer >= FallTime)
