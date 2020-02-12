@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
                 levelQuest = new BeatSloth();
 
             }
-            if (SceneManager.GetActiveScene().buildIndex == BeatEnvy.CurrentScene)
+            else if (SceneManager.GetActiveScene().buildIndex == BeatEnvy.CurrentScene)
             {
                 levelQuest = new BeatEnvy();
             }
