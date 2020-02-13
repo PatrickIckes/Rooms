@@ -78,8 +78,10 @@ public class PlayerMovement : MonoBehaviour
     float prevY;
     public void CheckFalling()
     {
+        
         if (prevY > this.transform.position.y) Falling = true;
         else Falling = false;
+        prevY = this.transform.position.y;
     }
     public virtual void PlayerJump(float jumpInput, Vector2 CurrentPos)
     {
