@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canJump;
     public bool GravityEnabled;
     public bool Grounded;
+    public bool Falling;
     bool isColliding;
     internal bool canCheckForObject;
     //IsometricCharacterRenderer isoRenderer;
@@ -67,11 +68,18 @@ public class PlayerMovement : MonoBehaviour
         float jumpInput = Input.GetAxis("Jump");
         flipPlayer(horizontalInput);
         MovePlayer(horizontalInput, verticalInput, currentPos);
+        CheckFalling();
         if (canJump && jumpInput != 0)
         {
             PlayerJump(jumpInput, currentPos);
         }
         AnimatePlayer(horizontalInput, verticalInput);
+    }
+    float prevY;
+    public void CheckFalling()
+    {
+        if (prevY > this.transform.position.y) Falling = true;
+        else Falling = false;
     }
     public virtual void PlayerJump(float jumpInput, Vector2 CurrentPos)
     {
@@ -135,6 +143,11 @@ public class PlayerMovement : MonoBehaviour
         if(!canJump && !playerAnimator.GetBool("isJumping"))
         {
             playerAnimator.SetBool("isJumping", true);
+        }
+        if(playerAnimator.GetBool("isJumping") && Falling)
+        {
+            playerAnimator.SetBool("isJumping", false);
+            playerAnimator.SetBool("isFalling", true);
         }
 
     }
@@ -242,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
         if(GravityEnabled && collision.tag == "Platform")
         {
             canJump = true;
-            playerAnimator.SetBool("isJumping", false);
+            playerAnimator.SetBool("isFalling", false);
         }
         //Collision for HallwayQuest managed in hidingpoints
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
