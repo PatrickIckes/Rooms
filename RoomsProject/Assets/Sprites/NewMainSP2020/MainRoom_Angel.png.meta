@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -8362804862640629032
     second: MainRoom_Angel_1
+  - first:
+      213: -5380761000446743305
+    second: MainRoom_Angel_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -100,7 +103,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -119,16 +122,37 @@ TextureImporter:
         x: 2610
         y: 972
         width: 1966
-        height: 1402
+        height: 451
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 355}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 6cc368e0c20ac174aabdda61a63705ab
       internalID: -8362804862640629032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainRoom_Angel_2
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1423
+        width: 1966
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e98c54f3940f7a4c9a56ba0ad110d1f
+      internalID: -5380761000446743305
       vertices: []
       indices: 
       edges: []

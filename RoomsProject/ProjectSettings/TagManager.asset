@@ -52,6 +52,9 @@ TagManager:
   - name: Stairs
     uniqueID: 623168897
     locked: 0
+  - name: BottomAngel
+    uniqueID: 3328737781
+    locked: 0
   - name: Player
     uniqueID: 4109254511
     locked: 0
