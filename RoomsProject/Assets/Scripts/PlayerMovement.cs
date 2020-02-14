@@ -285,10 +285,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InteractionIndicator.SetActive(false);
-        QuestCollectionText.enabled = false;
+
         if (QuestCollectionText != null)
         {
+            InteractionIndicator.SetActive(false);
+            QuestCollectionText.enabled = false;
             QuestCollectionText.text = "Press F to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);

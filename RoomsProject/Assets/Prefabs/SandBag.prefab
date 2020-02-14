@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5510867349794554042}
   - component: {fileID: 5510867349794554043}
   - component: {fileID: 5510867349794554044}
+  - component: {fileID: 4334427013244524041}
   m_Layer: 0
   m_Name: SandBag
   m_TagString: Untagged
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &4334427013244524041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510867349794554045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3138701341eae342a4ee72148617b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

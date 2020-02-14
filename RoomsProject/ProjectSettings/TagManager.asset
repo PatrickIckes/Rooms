@@ -7,6 +7,8 @@ TagManager:
   - Hazard
   - Platform
   - Floor
+  - Note
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - 
   - Player
   - Enemy
-  - 
+  - Note
   - 
   - 
   - 

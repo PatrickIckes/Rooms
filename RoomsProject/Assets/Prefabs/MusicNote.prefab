@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7498940961652079137}
   - component: {fileID: 7498940961652079136}
   - component: {fileID: 7498940961652079135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MusicNote
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

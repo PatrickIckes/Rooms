@@ -6,6 +6,7 @@ public class Fired : MonoBehaviour
 {
     public Vector3 Direction;
     public float bulletSpeed;
+    public int damage = 1;
     // Update is called once per frame
     void Update()
     {
@@ -14,6 +15,17 @@ public class Fired : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log(collision.name);
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerData>().Damage(damage);
+            Destroy(gameObject);
+            Debug.Log("Hurt player");
+        } else if(collision.name == "EnvyManager")
+        {
+            collision.GetComponent<Enemy>().TakeDamage(damage);
+            Destroy(gameObject);
+            Debug.Log("Hurt Boss");
+        }
     }
 }

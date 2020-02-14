@@ -45,7 +45,7 @@ public class Thrown : MonoBehaviour
     {
         if (collision.gameObject.name == Enemy.name)
         {
-            collision.gameObject.GetComponent<Health>().Damage(damage);
+            collision.gameObject.GetComponent<BossHealth>().Damage(damage);
             Destroy(this.gameObject);
         }
     }

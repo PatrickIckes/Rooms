@@ -36,16 +36,20 @@ public class PlayerData : MonoBehaviour
             previoushealth = health = pa.health;
         }
     }
+    internal void Damage(int damage)
+    {
+        pa.health -= damage;
+        if (pa.health <= 0)
+        {
+            ResetPlayer();
+            gameManager.GetComponent<MyGameManager>().GameInProgress = false;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Hazard")
         {
-            pa.health -= 1;
-            if(pa.health <= 0)
-            {
-                ResetPlayer();
-                gameManager.GetComponent<MyGameManager>().GameInProgress = false;
-            }
+            Damage(1);
             Destroy(collision.gameObject);
         }
     }

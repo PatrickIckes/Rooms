@@ -24,8 +24,7 @@ public class EnvyBossFight : MonoBehaviour
         sandBagTimer += Time.deltaTime;
         if(noteFireTimer >= FireTime)
         {
-            GameObject temp = Instantiate(Note, this.transform);
-            temp.transform.LookAt(Player.transform);
+            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x-0.75f,0,0),Quaternion.identity,this.transform);
             temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
             noteFireTimer = 0;
         }
