@@ -248,7 +248,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //jpost Audio
-    public void PlayFootstepsWood()
+    public void PlayFootstep()
     {
         //play the FMOD event for footsteps wood
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
@@ -259,6 +259,8 @@ public class PlayerMovement : MonoBehaviour
         //play the FMOD event for door locked
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/sx_game_int_door_locked", GetComponent<Transform>().position);
     }
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
