@@ -248,6 +248,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //jpost Audio
+    public void PlayFootstepsWood()
+    {
+        //play the FMOD event for footsteps wood
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Stairway movement handled in stairmovement script
