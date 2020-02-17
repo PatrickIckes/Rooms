@@ -80,7 +80,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: PlayFootstepsWood
+    functionName: PlayFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
