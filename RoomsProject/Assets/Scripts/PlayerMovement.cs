@@ -219,8 +219,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (inventory.CheckObject("key"))
             {
-                gameManager.SaveLevel();
+                //jpost Audio
+                PlayDoorOpen();
+
+                gameManager.SaveLevel();                
                 SceneManager.LoadScene((int)Scenes.SlothHallway);
+                
             } else
             {
                 if (QuestCollectionText != null)
@@ -257,10 +261,15 @@ public class PlayerMovement : MonoBehaviour
     public void PlayDoorLocked()
     {
         //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/sx_game_int_door_locked", GetComponent<Transform>().position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_locked", GetComponent<Transform>().position);
     }
 
-    
+    public void PlayDoorOpen()
+    {
+        //play the FMOD event for door locked
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

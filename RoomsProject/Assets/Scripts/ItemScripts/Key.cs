@@ -41,7 +41,7 @@ public class Key : MonoBehaviour, IInventoryItem
     public void PlayKeyPickup()
     {
         //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/sx_game_int_key_pickup", GetComponent<Transform>().position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Keys/sx_game_int_key_pickup", GetComponent<Transform>().position);
     }
 
 }
