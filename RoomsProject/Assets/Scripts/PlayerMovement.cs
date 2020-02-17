@@ -227,9 +227,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
 
-                    //jpost audio test (please leave commented out)
-                    //play hello world sound from FMOD
-                    //FMODUnity.RuntimeManager.PlayOneShot("event:/sx_test_hello_world", GetComponent<Transform>().position);
+                    //jpost Audio
+                    PlayDoorLocked();
                 } 
             }
         }
@@ -253,6 +252,12 @@ public class PlayerMovement : MonoBehaviour
     {
         //play the FMOD event for footsteps wood
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
+    }
+
+    public void PlayDoorLocked()
+    {
+        //play the FMOD event for door locked
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/sx_game_int_door_locked", GetComponent<Transform>().position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
