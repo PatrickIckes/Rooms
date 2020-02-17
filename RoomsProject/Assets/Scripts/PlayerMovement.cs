@@ -221,9 +221,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 //jpost Audio
                 PlayDoorOpen();
+                
+                gameManager.SaveLevel();
 
-                gameManager.SaveLevel();                
-                SceneManager.LoadScene((int)Scenes.SlothHallway);
+                //jpost Audio test delaying loading next scene to allow door open sfx to play properly
+                Invoke("LoadSceneSlothHallway", 1.01f);
+
+                //original scene loader
+                //SceneManager.LoadScene((int)Scenes.SlothHallway);
                 
             } else
             {
@@ -270,7 +275,10 @@ public class PlayerMovement : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
     }
 
-
+    public void LoadSceneSlothHallway()
+    {
+        SceneManager.LoadScene((int)Scenes.SlothHallway);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Stairway movement handled in stairmovement script
