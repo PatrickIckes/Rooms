@@ -279,6 +279,7 @@ public class PlayerMovement : MonoBehaviour
     {
         SceneManager.LoadScene((int)Scenes.SlothHallway);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Stairway movement handled in stairmovement script
