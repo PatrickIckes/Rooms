@@ -5,13 +5,13 @@
 			<value>10 FX3352 Mouth Pop 2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.2002947845804988</value>
+			<value>1.2002916666666668</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{520db17b-7a8a-4164-b6dd-8458644edfb8}</destination>
