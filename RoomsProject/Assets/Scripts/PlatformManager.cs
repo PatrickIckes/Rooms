@@ -145,6 +145,9 @@ public class PlatformManager : MonoBehaviour
 
         int i = 0;
         Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
+        //jpost Audio
+        //play the FMOD event for door locked
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[safe].GetComponent<Transform>().position);
         foreach (GameObject platform in Platforms)
         {
             if (platform != Platforms[safe])
@@ -166,5 +169,10 @@ public class PlatformManager : MonoBehaviour
             }
             i++;
         }
+    }
+    //jpost Audio
+    public void PlaySpotlightTurnOn()
+    {
+        
     }
 }

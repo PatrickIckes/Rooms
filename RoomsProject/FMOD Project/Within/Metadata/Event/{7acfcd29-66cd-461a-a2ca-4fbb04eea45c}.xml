@@ -95,6 +95,7 @@
 		<relationship name="modulators">
 			<destination>{aed422b1-c4ab-442c-aab5-99f66d8a34d3}</destination>
 			<destination>{16f75a2d-6512-4931-84f0-54912fa90d41}</destination>
+			<destination>{6990dee6-0e27-42cb-a965-0ee8b3972c17}</destination>
 		</relationship>
 		<relationship name="sounds">
 			<destination>{8c953578-4a7c-497d-bfb6-fbf878c84966}</destination>
@@ -138,6 +139,14 @@
 		</property>
 		<property name="amount">
 			<value>6.25</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{6990dee6-0e27-42cb-a965-0ee8b3972c17}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>startOffset</value>
+		</property>
+		<property name="amount">
+			<value>10</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{8c953578-4a7c-497d-bfb6-fbf878c84966}">
