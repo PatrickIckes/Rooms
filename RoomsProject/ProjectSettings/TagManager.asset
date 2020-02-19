@@ -55,6 +55,12 @@ TagManager:
   - name: BottomAngel
     uniqueID: 3328737781
     locked: 0
+  - name: GarbageBack
+    uniqueID: 263760177
+    locked: 0
+  - name: GarbageFront
+    uniqueID: 1836959899
+    locked: 0
   - name: Player
     uniqueID: 4109254511
     locked: 0
