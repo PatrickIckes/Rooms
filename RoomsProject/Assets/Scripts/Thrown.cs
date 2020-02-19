@@ -43,7 +43,7 @@ public class Thrown : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == Enemy.name)
+        if (collision.gameObject.tag == "Boss")
         {
             collision.gameObject.GetComponent<BossHealth>().Damage(damage);
             Destroy(this.gameObject);

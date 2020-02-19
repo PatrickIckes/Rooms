@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419017871}
-  - component: {fileID: 419017870}
+  - component: {fileID: 419017872}
   m_Layer: 0
   m_Name: PlatformManager
   m_TagString: Untagged
@@ -429,40 +429,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &419017870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419017869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa81547003ccf92419ff3620b809aebb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Platforms:
-  - {fileID: 1082332324}
-  - {fileID: 1932512512}
-  - {fileID: 1449601711}
-  Lights:
-  - {fileID: 2050099397}
-  - {fileID: 145940115}
-  - {fileID: 1203790682}
-  FallingConnector:
-  - {fileID: 1180518363}
-  - {fileID: 1109432524}
-  Debris: {fileID: 1251806517, guid: be17b9d000755e647b4961ecff457b01, type: 3}
-  gm: {fileID: 1781316266}
-  Sloth: {fileID: 0}
-  EndManager: {fileID: 1358736598}
-  spawnHeight: 15
-  TrashDrop: {fileID: 4912261808173798278, guid: 956ce2107a1afba4b9ad8cc80e69ff37,
-    type: 3}
-  Fallspeed: 5
-  fallingtime: 30
-  SequenceCount: 12
-  Sequence: 010000000300000002000000030000000100000002000000010000000300000002000000030000000100000003000000
 --- !u!4 &419017871
 Transform:
   m_ObjectHideFlags: 0
@@ -477,6 +443,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419017872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419017869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240081c440a9354e98f6b155811cfdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Platforms:
+  - {fileID: 1082332324}
+  - {fileID: 1932512512}
+  - {fileID: 1449601711}
+  Lights:
+  - {fileID: 2050099397}
+  - {fileID: 145940115}
+  - {fileID: 1203790682}
+  FallingPlanks:
+  - {fileID: 1180518363}
+  - {fileID: 1109432524}
+  FirstStageDebris: {fileID: 1251806517, guid: be17b9d000755e647b4961ecff457b01, type: 3}
+  SecondStageDebris: {fileID: 1251806517, guid: be17b9d000755e647b4961ecff457b01,
+    type: 3}
+  gm: {fileID: 1781316266}
+  Sloth: {fileID: 1604777396}
+  EndManager: {fileID: 1358736598}
+  spawnHeight: 15
+  TrashDrop: {fileID: 4912261808173798278, guid: 956ce2107a1afba4b9ad8cc80e69ff37,
+    type: 3}
+  timeBetweenFalls: 3
+  firstStageTime: 12
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 1019326861}
   - component: {fileID: 1019326860}
   m_Layer: 0
-  m_Name: sloth boss
+  m_Name: sloth background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,9 +1433,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1604777398}
   - component: {fileID: 1604777397}
+  - component: {fileID: 1604777399}
+  - component: {fileID: 1604777400}
   m_Layer: 0
-  m_Name: SlothSpriterat_0
-  m_TagString: Untagged
+  m_Name: Sloth Sprite
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1504,6 +1506,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1604777399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604777396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.700449, y: 16.49}
+    newSize: {x: 23.700449, y: 16.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 23.700449, y: 16.49}
+  m_EdgeRadius: 0
+--- !u!114 &1604777400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604777396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d395519a11643243a32b3c0f1945219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &1610055321
 GameObject:
   m_ObjectHideFlags: 0
