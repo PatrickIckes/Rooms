@@ -33,6 +33,15 @@ public class Key : MonoBehaviour, IInventoryItem
     {
         // Add logic what happens when key is picked up by player for example unlock door
         gameObject.SetActive(false);
+        //jpost Audio
+        PlayKeyPickup();
+    }
+
+    //jpost Audio
+    public void PlayKeyPickup()
+    {
+        //play the FMOD event for door locked
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Keys/sx_game_int_key_pickup", GetComponent<Transform>().position);
     }
 
 }
