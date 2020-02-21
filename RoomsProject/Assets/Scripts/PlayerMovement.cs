@@ -181,7 +181,6 @@ public class PlayerMovement : MonoBehaviour
             gameManager.GameInProgress = false;
         }
         QuestItemCollection();
-        OpenDoor();
         PlayerThrow();
 
         //limit velocity
@@ -210,74 +209,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Figures out the situation and if the requirements are met it saves the game and goes to the next position
-    /// </summary>
-    public void OpenDoor()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
-        {
-            if (inventory.CheckObject("key"))
-            {
-                //jpost Audio
-                PlayDoorOpen();
-                
-                gameManager.SaveLevel();
-
-                //jpost Audio test delaying loading next scene to allow door open sfx to play properly
-                Invoke("LoadSceneSlothHallway", 1.01f);
-
-                //original scene loader
-                //SceneManager.LoadScene((int)Scenes.SlothHallway);
-                
-            } else
-            {
-                if (QuestCollectionText != null)
-                {
-                    QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
-
-                    //jpost Audio
-                    PlayDoorLocked();
-                } 
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.CurrentQuest != null) 
-        {
-            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest) && qm.DoneWithQuest())
-            {
-                gameManager.SaveLevel();
-                SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
-            }
-            if (qm.CurrentQuest.GetType() == typeof(BeatSloth) && qm.DoneWithQuest())
-            {
-                gameManager.SaveLevel();
-                SceneManager.LoadScene(((BeatSloth)qm.CurrentQuest).NextScene);
-            }
-        }
-    }
-
     //jpost Audio
     public void PlayFootstep()
     {
         //play the FMOD event for footsteps wood
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
-    }
-
-    public void PlayDoorLocked()
-    {
-        //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_locked", GetComponent<Transform>().position);
-    }
-
-    public void PlayDoorOpen()
-    {
-        //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
-    }
-
-    public void LoadSceneSlothHallway()
-    {
-        SceneManager.LoadScene((int)Scenes.SlothHallway);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -308,13 +244,6 @@ public class PlayerMovement : MonoBehaviour
                 inventory.AddItem(item);
             }
         }
-        
-        if (collision.name == "Door")
-        {
-            QuestCollectionText.enabled = true;
-            withinInteractable = true;
-            InteractionIndicator.SetActive(true);
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -326,10 +255,5 @@ public class PlayerMovement : MonoBehaviour
             QuestCollectionText.text = "Press F to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
-        if (collision.name == "Door")
-        {
-            Debug.Log("Out of interactable");
-            withinInteractable = false;
-        }
     }
 }
