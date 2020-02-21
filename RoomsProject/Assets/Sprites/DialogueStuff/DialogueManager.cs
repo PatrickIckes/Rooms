@@ -10,42 +10,38 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Text nameText;
     [SerializeField] private GameObject textBox;
     [SerializeField] private TextAsset textFile;
+    [SerializeField] private Image speaker;
+
 
     public string[] lines;
     public string[] textTextItems;
     public string[] nameTextItems;
-    private int endLine;
+    public Sprite[] speakerItems;
+    private int speakerProgress;
     private int progress; 
+
+
 
     void SetText()
     {
-        //string[] parts = lines[progress].Split(':');
-        //textText.text = lines[progress];
-        //nameText.text = parts[1];
-
-        textText.text = textTextItems[progress]; //sets text for each keypress
-        //nameText.text = nameTextItems[progress];
-
-
+        textText.text = textTextItems[progress + 1]; //sets text for each keypress
+        nameText.text = textTextItems[progress];
+        speaker.sprite = speakerItems[speakerProgress];
     }
+
     void Start()
     {
         progress = 0;
-        textTextItems = (textFile.text.Split('\n'));
-
-
-
+        char[] separators = { '\n', ':' };
+        textTextItems = (textFile.text.Split(separators));
         SetText();
-        
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
         
-
+        
         RunDialogue();   
        
     }
@@ -63,7 +59,8 @@ public class DialogueManager : MonoBehaviour
             textBox.SetActive(true); 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                progress++;
+                progress += 2;
+                speakerProgress++;
                 SetText();
             }
         }

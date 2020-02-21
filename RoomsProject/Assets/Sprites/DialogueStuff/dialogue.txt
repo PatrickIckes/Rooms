@@ -1,5 +1,3 @@
-Guy 1: sup
-Guy 2: yo
 Eve: H-hel?
 Eve: sniffs Eugh... What’s that horrible smell?
 Sloth: Unintelligible groaning. 
@@ -14,5 +12,5 @@ After the battle:
 Eve: Please… Just stop with this…
 Sloth: I'm.. Just going to…. Rest here for a bit
 Eve: Hey! Before you do that could you tell me where I am? Please! 
-Sloth goes limp in the background.
+:Sloth goes limp in the background.
 Eve: O-oh...
