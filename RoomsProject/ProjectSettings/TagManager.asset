@@ -49,6 +49,18 @@ TagManager:
   - name: Background
     uniqueID: 3595747845
     locked: 0
+  - name: PuzzleElement
+    uniqueID: 1344120647
+    locked: 0
+  - name: PuzzleElement2
+    uniqueID: 2138933899
+    locked: 0
+  - name: PuzzleElement3
+    uniqueID: 407745679
+    locked: 0
+  - name: PuzzleElement4
+    uniqueID: 3655015263
+    locked: 0
   - name: Stairs
     uniqueID: 623168897
     locked: 0
