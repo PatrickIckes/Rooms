@@ -18,10 +18,18 @@ public class PlayerAttack : MonoBehaviour
         if(timeBtwAttack <= 0)
         {
             //Then you can attack
-            if(Input.GetKey(KeyCode.F))
+            if(Input.GetKey(KeyCode.Mouse0))
             {
-                if (!this.GetComponent<SpriteRenderer>().flipX) FacingDirection = -1;
-                else FacingDirection = 1;
+                //if (!this.GetComponent<SpriteRenderer>().flipX)
+                //{
+                //    FacingDirection = -1;
+                //    attackPos 
+                //}
+                //else
+                //{
+                //    FacingDirection = 1;
+                //    //attackPos = attackPos;
+                //}
                 //Player attacking animation here
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)

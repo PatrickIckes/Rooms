@@ -158,11 +158,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (horizontalInput < 0)
         {
-            this.GetComponent<SpriteRenderer>().flipX = false;
+            //this.GetComponent<SpriteRenderer>().flipX = false;
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }//Flips left
         else if (horizontalInput > 0)
         {
-            this.GetComponent<SpriteRenderer>().flipX = true;
+            //this.GetComponent<SpriteRenderer>().flipX = true;
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
         }//flips right
     }
 
