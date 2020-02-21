@@ -108,6 +108,7 @@ public class SlothBossFight : MonoBehaviour
     {
         foreach (GameObject plank in FallingPlanks)
         {
+            plank.GetComponent<BoxCollider2D>().isTrigger = true;
             plank.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
     }
