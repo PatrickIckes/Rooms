@@ -214,34 +214,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
-      propertyPath: jumpSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1781316266}
     - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
-      propertyPath: PlayerGravityScale
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
       propertyPath: QuestCollectionText
       value: 
       objectReference: {fileID: 575890563}
-    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: ThrowableObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645019339603542042, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -296,16 +276,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645019339603542501, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.13723886
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645019339603542501, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.2125814
       objectReference: {fileID: 0}
     - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
@@ -477,7 +447,7 @@ MonoBehaviour:
   - {fileID: 1180518363}
   - {fileID: 1109432524}
   FirstStageDebris: {fileID: 1251806517, guid: be17b9d000755e647b4961ecff457b01, type: 3}
-  SecondStageDebris: {fileID: 1251806517, guid: be17b9d000755e647b4961ecff457b01,
+  SecondStageDebris: {fileID: 1251806517, guid: 349f791e99b767847bd4145aced3b128,
     type: 3}
   gm: {fileID: 1781316266}
   Sloth: {fileID: 1604777396}
@@ -485,8 +455,9 @@ MonoBehaviour:
   spawnHeight: 15
   TrashDrop: {fileID: 4912261808173798278, guid: 956ce2107a1afba4b9ad8cc80e69ff37,
     type: 3}
-  timeBetweenFalls: 3
-  firstStageTime: 12
+  timeBetweenFallsStageOne: 3
+  timeBetweenFallsStageTwo: 5
+  firstStageTime: 30
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,12 +944,12 @@ PrefabInstance:
     - target: {fileID: 3100200224096746233, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.14107165
+      value: 0.50990224
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746233, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7284233
+      value: 0.5039932
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746234, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
@@ -1004,7 +975,7 @@ PrefabInstance:
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.009
+      value: -0.95899993
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
@@ -1054,12 +1025,12 @@ PrefabInstance:
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.04773505
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.13577747
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746237, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
@@ -1210,12 +1181,12 @@ PrefabInstance:
     - target: {fileID: 3100200224096746233, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.52432114
+      value: 0.61496395
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746233, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7853869
+      value: 0.6041013
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746234, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
@@ -1241,7 +1212,7 @@ PrefabInstance:
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.989
+      value: -0.939
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
@@ -1291,12 +1262,12 @@ PrefabInstance:
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.07201036
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14069217
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3100200224096746235, guid: 1fcd3c040e17ded4ca268ccbbf0a0f14,
         type: 3}

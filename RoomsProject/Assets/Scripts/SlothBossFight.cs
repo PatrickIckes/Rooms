@@ -22,7 +22,9 @@ public class SlothBossFight : MonoBehaviour
     public static bool DropItem;
     public float spawnHeight;
     public GameObject TrashDrop;
-    public float timeBetweenFalls;
+    private float timeBetweenFalls;
+    public float timeBetweenFallsStageOne = 3;
+    public float timeBetweenFallsStageTwo = 6;
     public float firstStageTime;
     internal bool RoomDone;
     private int timesThrough;
@@ -30,6 +32,7 @@ public class SlothBossFight : MonoBehaviour
 
     void Start()
     {
+        timeBetweenFalls = timeBetweenFallsStageOne;
         timer = 0;
         rounds = BossFight.First;
         timesThrough = 0;
@@ -57,6 +60,7 @@ public class SlothBossFight : MonoBehaviour
         {
             PlanksFall();
             Debris = SecondStageDebris;
+            timeBetweenFalls = timeBetweenFallsStageTwo;
             rounds = BossFight.Second;
         }
 
@@ -79,10 +83,9 @@ public class SlothBossFight : MonoBehaviour
 
         if (fallingtimer > timeBetweenFalls)
         {
-            int safe = Random.Range(0, 3);
+            int targetPlatform = Random.Range(0, 3);
             fallingtimer = 0;
-            IndicateSafe(safe);
-            TriggerFall(safe);
+            TriggerFall(targetPlatform);
 
             if (rounds == BossFight.Second)
             {
@@ -113,33 +116,40 @@ public class SlothBossFight : MonoBehaviour
         }
     }
 
-    private void IndicateSafe(int safe)
+    private void TriggerFall(int targetPlatform)
     {
-        int i = 0;
-        Lights[safe].GetComponent<SpriteRenderer>().color = Color.green;
-        //jpost Audio
-        //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[safe].GetComponent<Transform>().position);
-        foreach (GameObject platform in Platforms)
+        if (rounds == BossFight.First)
         {
-            if (platform != Platforms[safe])
+            int i = 0;
+            Lights[targetPlatform].GetComponent<SpriteRenderer>().color = Color.green;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
+            foreach (GameObject platform in Platforms)
             {
-                Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+                if (platform != Platforms[targetPlatform])
+                {
+                    Vector3 p = platform.transform.position;
+                    Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+                }
+                i++;
             }
-            i++;
         }
-    }
-    private void TriggerFall(int safe)
-    {
-        int i = 0;
-        foreach (GameObject platform in Platforms)
+
+        if (rounds == BossFight.Second)
         {
-            if (platform != Platforms[safe])
+            int i = 0;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
+            foreach (GameObject platform in Platforms)
             {
-                Vector3 p = platform.transform.position;
-                GameObject temp = Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                Lights[i].GetComponent<SpriteRenderer>().color = Color.green;
+                if (platform == Platforms[targetPlatform])
+                {
+                    Vector3 p = platform.transform.position;
+                    Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+                }
+                i++;
             }
-            i++;
         }
     }
 
