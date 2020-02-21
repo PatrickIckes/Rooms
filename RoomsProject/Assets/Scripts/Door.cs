@@ -58,16 +58,26 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.tag == "Player")
         {
             withinInteractable = true;
+            QuestCollectionText.enabled = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             withinInteractable = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            withinInteractable = true;
+            QuestCollectionText.enabled = true;
         }
     }
 

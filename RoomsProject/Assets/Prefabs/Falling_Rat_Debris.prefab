@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1251806520}
   - component: {fileID: 1251806521}
   - component: {fileID: 1557651964599027260}
-  - component: {fileID: 28802290509679988}
+  - component: {fileID: -4497403213623469865}
+  - component: {fileID: -2422741933388264586}
   m_Layer: 0
-  m_Name: Falling_Debris
+  m_Name: Falling_Rat_Debris
   m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1251806517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.6225, y: 3.7466, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.37, z: 3.3884795}
+  m_LocalScale: {x: 0.16, y: 0.44, z: 3.3884795}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fa486c64be5922345a03bc154ac269f8, type: 3}
-  m_Color: {r: 0.7719147, g: 0.6745283, b: 1, a: 1}
+  m_Color: {r: 0.7378897, g: 0.9245283, b: 0.58873266, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,10 +131,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.901393}
+  m_Offset: {x: 0, y: -1.3020122}
   serializedVersion: 2
-  m_Radius: 1.5589817
---- !u!114 &28802290509679988
+  m_Radius: 1.3213149
+--- !u!114 &-4497403213623469865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,3 +148,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   getsDestroyedOnContact: 1
+--- !u!114 &-2422741933388264586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251806517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c631a6191db4bef40a62fb80e2887e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratPrefab: {fileID: 7343316645561293922, guid: fc7034c3f2f78474595ee604fde1167e,
+    type: 3}

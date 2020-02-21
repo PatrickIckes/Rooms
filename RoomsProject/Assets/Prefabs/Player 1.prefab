@@ -114,7 +114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -5066135068008178705, guid: 2723c3de0877a30488deba1ba55e5330,
     type: 3}
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1,
     type: 3}
@@ -252,18 +252,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2.4
-  jumpSpeed: 1
+  jumpSpeed: 4.5
   DistanceToGround: 0
   withinInteractable: 0
   canJump: 0
   GravityEnabled: 0
   Grounded: 0
+  Falling: 0
   inventory: {fileID: 6768777302839310364}
   gameManager: {fileID: 0}
   QuestCollectionText: {fileID: 0}
   InteractionIndicator: {fileID: 3529394729408210272}
   ThrowableObject: {fileID: 0}
-  PlayerGravityScale: 0.6
+  PlayerGravityScale: 0.4
 --- !u!61 &5645019339603542501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,7 +278,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03189528, y: -3.5982363}
+  m_Offset: {x: -0.13723886, y: -3.5982363}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -288,7 +289,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4232695, y: 0.47938967}
+  m_Size: {x: 2.2125814, y: 0.47938967}
   m_EdgeRadius: 0
 --- !u!61 &5645019339603542502
 BoxCollider2D:
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  startinghealth: 20
   health: 0
 --- !u!1 &7454150820322988052
 GameObject:
