@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class DialogueBoxManager : MonoBehaviour
 {
     public GameObject textBox;
-
+    public Image image;
     public Text theText;
+    public Text name;
+    public Sprite[] Character;
+    
 
     public TextAsset textFile;
     public string[] textLines;
+    public string[] currentSpeaker;
 
     public int currentLine;
     public int endAtLine;
@@ -25,9 +29,17 @@ public class DialogueBoxManager : MonoBehaviour
     void Start()
     {
         //imports txt file into Dialogue Manager
+                endAtLine = textLines.Length;
         if (textFile != null)
         {
-            textLines = (textFile.text.Split('\n'));
+            for (int i = 1; i < endAtLine; i++)
+            {
+                string[] parts = (textFile.text.Split(':'));
+                currentSpeaker[i] = parts[0];
+                textLines[i] = parts[1];
+
+            }
+            //splitter into name and dialogue
         }
 
         if (endAtLine == 0)
@@ -39,9 +51,17 @@ public class DialogueBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       RunDialogue();
+        
+        
+    }
 
-
-        theText.text = textLines[currentLine];
+    void RunDialogue()
+    {
+        //pause unpause, make it visible
+        theText.text = textLines[currentLine]; //Dialogue Text
+        name.text = textLines[currentLine]; // name text
+        //image.sprite = ImageSelector(name.text); 
         //start of dialogue,f to continue
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -54,4 +74,6 @@ public class DialogueBoxManager : MonoBehaviour
             textBox.SetActive(false);
         }
     }
+
+    
 }
