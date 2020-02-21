@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
         //Add animation
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(enemyHealth <= 0)
         {
