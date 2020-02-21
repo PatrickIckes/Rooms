@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (IInventoryItem item in mItems)
         {
-            if (name == "key")
+            if (name == item.Name)
             {
                 if (item.GetType() == typeof(Key))
                 {

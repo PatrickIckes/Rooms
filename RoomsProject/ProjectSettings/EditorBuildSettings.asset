@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SlolthBossRoom.unity
     guid: e768d18dd0884a443ac3758d2f111cde
   - enabled: 1
+    path: Assets/Scenes/EnvyHallway.unity
+    guid: c2f607f6a2de3094291d68ef952d9f03
+  - enabled: 1
+    path: Assets/Scenes/EnvyBossRoom.unity
+    guid: 1a7de2074da3a5245a4fbc8a3803813a
+  - enabled: 1
     path: Assets/Scenes/DemoWinScene.unity
     guid: 947e79f5379add746a9543444b56f247
   m_configObjects: {}
