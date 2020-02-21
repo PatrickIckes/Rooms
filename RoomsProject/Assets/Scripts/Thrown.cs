@@ -8,10 +8,10 @@ public class Thrown : MonoBehaviour
     public GameObject Enemy;
     //Throw Calculations
     public float power = 10;
-    Vector2 StartPosition;
     float Angle;
     public Rigidbody2D rigidBody;
     public int damage = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +38,11 @@ public class Thrown : MonoBehaviour
     {
         Angle = Vector2.Angle(Input.mousePosition, this.transform.position);
         thrown = true;
-        StartPosition = this.transform.position;
         rigidBody.bodyType = RigidbodyType2D.Dynamic;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Boss")
+        if (collision.gameObject.tag == "Boss" && thrown)
         {
             collision.gameObject.GetComponent<BossHealth>().Damage(damage);
             Destroy(this.gameObject);

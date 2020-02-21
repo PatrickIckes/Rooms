@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayer: 6
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 1b79968a7c3eeb549a9e39cbb0c5376f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3807533557685417163, guid: 5ae86dcdbec572a40ab8d236fee67551, type: 3}
-  power: 10
+  power: 20
   rigidBody: {fileID: 0}
   damage: 1
 --- !u!50 &-8558967328857665635

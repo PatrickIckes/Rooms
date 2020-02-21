@@ -15,11 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public bool GravityEnabled;
     public bool Grounded;
     public bool Falling;
-    bool isColliding;
     internal bool canCheckForObject;
     //IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
-    Collider2D colliderTrigger;
     Animator playerAnimator;
     QuestManager qm;
     //Used to track when items are picked up
@@ -36,9 +34,7 @@ public class PlayerMovement : MonoBehaviour
         CollidingObjects = new List<GameObject>();
         qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
-        colliderTrigger = GetComponent<Collider2D>();
         playerAnimator = GetComponent<Animator>();
-        isColliding = false;
         InteractionIndicator.SetActive(false);
         if (QuestCollectionText != null)
         {
@@ -61,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        isColliding = false;
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -71,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         CheckFalling();
         if (canJump && jumpInput != 0)
         {
-            PlayerJump(jumpInput, currentPos);
+            PlayerJump(jumpInput);
         }
         AnimatePlayer(horizontalInput, verticalInput);
     }
@@ -83,11 +78,13 @@ public class PlayerMovement : MonoBehaviour
         else Falling = false;
         prevY = this.transform.position.y;
     }
-    public virtual void PlayerJump(float jumpInput, Vector2 CurrentPos)
+
+    public virtual void PlayerJump(float jumpInput)
     {
-        rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
         canJump = false;
+        rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
     }
+
     /// <summary>
     /// Moves the player
     /// </summary>
@@ -186,8 +183,10 @@ public class PlayerMovement : MonoBehaviour
             gameManager.GameInProgress = false;
         }
         QuestItemCollection();
-        OpenDoor();
         PlayerThrow();
+
+        //limit velocity
+        rbody.velocity = new Vector2(rbody.velocity.x, Mathf.Clamp(rbody.velocity.y, -jumpSpeed * 5, jumpSpeed));
     }
 
     public void QuestItemCollection()
@@ -212,52 +211,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Figures out the situation and if the requirements are met it saves the game and goes to the next position
-    /// </summary>
-    public void OpenDoor()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
-        {
-            if (inventory.CheckObject("key"))
-            {
-                //jpost Audio
-                PlayDoorOpen();
-                
-                gameManager.SaveLevel();
-
-                //jpost Audio test delaying loading next scene to allow door open sfx to play properly
-                Invoke("LoadSceneSlothHallway", 1.01f);
-
-                //original scene loader
-                //SceneManager.LoadScene((int)Scenes.SlothHallway);
-                
-            } else
-            {
-                if (QuestCollectionText != null)
-                {
-                    QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
-
-                    //jpost Audio
-                    PlayDoorLocked();
-                } 
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable && qm.CurrentQuest != null) 
-        {
-            if (qm.CurrentQuest.GetType() == typeof(HallwayQuest) && qm.DoneWithQuest())
-            {
-                gameManager.SaveLevel();
-                SceneManager.LoadScene(((HallwayQuest)qm.CurrentQuest).NextScene);
-            }
-            if (qm.CurrentQuest.GetType() == typeof(BeatSloth) && qm.DoneWithQuest())
-            {
-                gameManager.SaveLevel();
-                SceneManager.LoadScene(((BeatSloth)qm.CurrentQuest).NextScene);
-            }
-        }
-    }
-
     //jpost Audio
     public void PlayFootstep()
     {
@@ -265,34 +218,19 @@ public class PlayerMovement : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
     }
 
-    public void PlayDoorLocked()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_locked", GetComponent<Transform>().position);
-    }
-
-    public void PlayDoorOpen()
-    {
-        //play the FMOD event for door locked
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
-    }
-
-    public void LoadSceneSlothHallway()
-    {
-        SceneManager.LoadScene((int)Scenes.SlothHallway);
+        if (GravityEnabled && collision.gameObject.tag == "Platform")
+        {
+            canJump = true;
+            playerAnimator.SetBool("isFalling", false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Stairway movement handled in stairmovement script
         CollidingObjects.Add(collision.gameObject);
-        //if (isColliding) return;//https://answers.unity.com/questions/738991/ontriggerenter-being-called-multiple-times-in-succ.html for some reason the collider is registering twice this is a solution i found
-        isColliding = true;
-        if(GravityEnabled && collision.tag == "Platform")
-        {
-            canJump = true;
-            playerAnimator.SetBool("isFalling", false);
-        }
         //Collision for HallwayQuest managed in hidingpoints
         IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
         if (item != null)
@@ -308,14 +246,6 @@ public class PlayerMovement : MonoBehaviour
                 inventory.AddItem(item);
             }
         }
-
-        
-        if (collision.name == "Door")
-        {
-            QuestCollectionText.enabled = true;
-            withinInteractable = true;
-            InteractionIndicator.SetActive(true);
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -327,10 +257,5 @@ public class PlayerMovement : MonoBehaviour
             QuestCollectionText.text = "Press F to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
-        if (collision.name == "Door")
-        {
-            Debug.Log("Out of interactable");
-            withinInteractable = false;
-        }
     }
 }
