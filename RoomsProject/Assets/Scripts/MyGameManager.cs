@@ -31,7 +31,7 @@ public class MyGameManager : MonoBehaviour
         {
             GameInProgress = true;
             restart = false;
-            SceneManager.LoadScene("HubWorld", LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {
