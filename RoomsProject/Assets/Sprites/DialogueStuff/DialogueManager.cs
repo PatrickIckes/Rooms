@@ -18,7 +18,9 @@ public class DialogueManager : MonoBehaviour
     public string[] nameTextItems;
     public Sprite[] speakerItems;
     private int speakerProgress;
-    private int progress; 
+    private int progress;
+    public static bool GameIsPaused = false;
+
 
 
 
@@ -40,13 +42,22 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        if (GameIsPaused)
+        { 
+             Pause();
+            RunDialogue();}
+        else
+        {
+             //working
+            Resume();
+        }
         
-        
-        RunDialogue();   
        
     }
 
-    void RunDialogue()
+    public void RunDialogue()
     {
         
 
@@ -64,5 +75,17 @@ public class DialogueManager : MonoBehaviour
                 SetText();
             }
         }
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 }

@@ -58,7 +58,7 @@ public class DialogueBoxManager : MonoBehaviour
 
     void RunDialogue()
     {
-        //pause unpause, make it visible
+        Time.timeScale = 0.0f;
         theText.text = textLines[currentLine]; //Dialogue Text
         name.text = textLines[currentLine]; // name text
         //image.sprite = ImageSelector(name.text); 
@@ -72,6 +72,7 @@ public class DialogueBoxManager : MonoBehaviour
         if (currentLine == endAtLine)
         {
             textBox.SetActive(false);
+            Time.timeScale = 1.0f;
         }
     }
 
