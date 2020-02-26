@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
 
         if (GameIsPaused)
         { 
-             Pause();
+            Pause();
             RunDialogue();}
         else
         {
@@ -86,6 +86,11 @@ public class DialogueManager : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
         GameIsPaused = true;
     }
 }
