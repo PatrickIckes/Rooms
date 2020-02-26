@@ -67,3 +67,15 @@ TagManager:
   - name: Angel
     uniqueID: 3743967279
     locked: 0
+  - name: Puzzle1
+    uniqueID: 2490760333
+    locked: 0
+  - name: Puzzle2
+    uniqueID: 2501431877
+    locked: 0
+  - name: Puzzle3
+    uniqueID: 2869431503
+    locked: 0
+  - name: Puzzle4
+    uniqueID: 2208977905
+    locked: 0
