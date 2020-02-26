@@ -129,7 +129,7 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
-                    Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+                    Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
             }
@@ -146,7 +146,7 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
-                    Lights[i].GetComponent<SpriteRenderer>().color = Color.magenta;
+                    Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
             }

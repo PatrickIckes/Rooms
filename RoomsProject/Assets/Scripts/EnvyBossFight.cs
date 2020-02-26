@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnvyBossFight : MonoBehaviour
 {
-    float noteFireTimer;
-    float sandBagTimer;
-    public float FireTime;
-    public float FallTime;
-    public SandbagManager manager;
+    private float noteTimer;
+    private float sandBagTimer;
+    public float noteFireTime;
+    public float sandbagFallTime;
+    public SandbagManager sandbagManager;
     public GameObject Note;
     public GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +21,27 @@ public class EnvyBossFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        noteFireTimer += Time.deltaTime;
-        sandBagTimer += Time.deltaTime;
-        if(noteFireTimer >= FireTime)
+        FireNotes();
+        DropSandbags();
+    }
+
+    private void FireNotes()
+    {
+        noteTimer += Time.deltaTime;
+        if (noteTimer >= noteFireTime)
         {
-            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x-0.75f,0,0),Quaternion.identity,this.transform);
+            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x - 0.75f, 0, 0), Quaternion.identity, this.transform);
             temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
-            noteFireTimer = 0;
+            noteTimer = 0;
         }
-        if(sandBagTimer >= FallTime)
+    }
+
+    private void DropSandbags()
+    {
+        sandBagTimer += Time.deltaTime;
+        if (sandBagTimer >= sandbagFallTime)
         {
-            manager.fall = true;
+            sandbagManager.fall = true;
             sandBagTimer = 0;
         }
     }

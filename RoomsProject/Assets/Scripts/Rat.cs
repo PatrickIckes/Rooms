@@ -15,7 +15,7 @@ public class Rat : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.velocity = rb.transform.right * speed * Time.deltaTime * (this.gameObject.transform.localScale.x / Mathf.Abs(this.gameObject.transform.localScale.x));
     }

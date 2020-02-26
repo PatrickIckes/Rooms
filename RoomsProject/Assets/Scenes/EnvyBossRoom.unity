@@ -414,9 +414,10 @@ MonoBehaviour:
   - {fileID: 1853675188}
   - {fileID: 1594621880}
   fall: 0
-  FallTime: 2
+  FallTime: 0.8
   min: {fileID: 14807392}
   max: {fileID: 1666319430}
+  sandbagSpeed: 0.5
 --- !u!4 &740677830
 Transform:
   m_ObjectHideFlags: 0
@@ -782,6 +783,11 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4334427013244524041, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
+        type: 3}
+      propertyPath: getsDestroyedOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5510867349794554042, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,6 +889,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4334427013244524041, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
+        type: 3}
+      propertyPath: getsDestroyedOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5510867349794554042, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1023,9 +1034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d6a7e48cc24c24a987029dd1373734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireTime: 5
-  FallTime: 10
-  manager: {fileID: 740677829}
+  noteFireTime: 3
+  sandbagFallTime: 2
+  sandbagManager: {fileID: 740677829}
   Note: {fileID: 7498940961652079139, guid: cb77d791571e2b24392e43ebbf16faee, type: 3}
   Player: {fileID: 1269773790}
 --- !u!61 &1602153879
@@ -1289,6 +1300,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4334427013244524041, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
+        type: 3}
+      propertyPath: getsDestroyedOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5510867349794554042, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1456,6 +1472,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4334427013244524041, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
+        type: 3}
+      propertyPath: getsDestroyedOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5510867349794554042, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1557,6 +1578,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4334427013244524041, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
+        type: 3}
+      propertyPath: getsDestroyedOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5510867349794554042, guid: 27d4bc9ba7a530c4eb922dcdb5026892,
         type: 3}
       propertyPath: m_LocalPosition.x
