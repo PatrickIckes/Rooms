@@ -7,7 +7,7 @@ public class SlothBossFight : MonoBehaviour
 {
     enum BossFight { First, Second, Dead }
 
-    BossFight rounds;
+    BossFight phase;
     public GameObject[] Platforms;
     public GameObject[] Lights;
     public GameObject[] FallingPlanks;
@@ -34,7 +34,7 @@ public class SlothBossFight : MonoBehaviour
     {
         timeBetweenFalls = timeBetweenFallsStageOne;
         timer = 0;
-        rounds = BossFight.First;
+        phase = BossFight.First;
         timesThrough = 0;
         Debris = FirstStageDebris;
         finished = false;
@@ -50,26 +50,26 @@ public class SlothBossFight : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (rounds == BossFight.First || rounds == BossFight.Second)
+        if (phase == BossFight.First || phase == BossFight.Second)
         {
             FallTrigger();
         }
 
         //first stage done
-        if (timer >= firstStageTime && rounds == BossFight.First)
+        if (timer >= firstStageTime && phase == BossFight.First)
         {
             PlanksFall();
             Debris = SecondStageDebris;
             timeBetweenFalls = timeBetweenFallsStageTwo;
-            rounds = BossFight.Second;
+            phase = BossFight.Second;
         }
 
         if (Sloth == null)
         {
-            rounds = BossFight.Dead;
+            phase = BossFight.Dead;
         }
 
-        if (rounds == BossFight.Dead && !finished)
+        if (phase == BossFight.Dead && !finished)
         {
             Dead();
             finished = true;
@@ -87,7 +87,7 @@ public class SlothBossFight : MonoBehaviour
             fallingtimer = 0;
             TriggerFall(targetPlatform);
 
-            if (rounds == BossFight.Second)
+            if (phase == BossFight.Second)
             {
                 timesThrough++;
 
@@ -118,7 +118,7 @@ public class SlothBossFight : MonoBehaviour
 
     private void TriggerFall(int targetPlatform)
     {
-        if (rounds == BossFight.First)
+        if (phase == BossFight.First)
         {
             int i = 0;
             Lights[targetPlatform].GetComponent<SpriteRenderer>().color = Color.green;
@@ -135,7 +135,7 @@ public class SlothBossFight : MonoBehaviour
             }
         }
 
-        if (rounds == BossFight.Second)
+        if (phase == BossFight.Second)
         {
             int i = 0;
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);

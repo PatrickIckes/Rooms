@@ -21,9 +21,10 @@ public class Fired : MonoBehaviour
             collision.GetComponent<PlayerData>().Damage(damage);
             Destroy(gameObject);
             Debug.Log("Hurt player");
-        } else if(collision.name == "EnvyManager")
+        }
+        if(collision.gameObject.tag == "Boss")
         {
-            collision.GetComponent<Enemy>().TakeDamage(damage);
+            collision.GetComponent<BossHealth>().Damage(damage);
             Destroy(gameObject);
             Debug.Log("Hurt Boss");
         }

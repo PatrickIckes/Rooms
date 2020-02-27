@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnvyBossFight : MonoBehaviour
 {
+    private enum BossFightPhase { First, Second, Dead }
+
+    private BossFightPhase phase;
     private float noteTimer;
     private float sandBagTimer;
     public float noteFireTime;
@@ -12,15 +15,32 @@ public class EnvyBossFight : MonoBehaviour
     public GameObject Note;
     public GameObject Player;
 
+    [SerializeField]
+    private BossHealth EnvysHealth;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        phase = BossFightPhase.First;
     }
 
     // Update is called once per frame
     void Update()
     {
+        switch (phase) 
+        {
+            case BossFightPhase.First:
+                FireNotes();
+                DropSandbags();
+                break;
+            case BossFightPhase.Second:
+
+                break;
+            case BossFightPhase.Dead:
+
+                break;
+        }
+
         FireNotes();
         DropSandbags();
     }

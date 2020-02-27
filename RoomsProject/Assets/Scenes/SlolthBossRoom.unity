@@ -457,7 +457,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenFallsStageOne: 3
   timeBetweenFallsStageTwo: 5
-  firstStageTime: 12
+  firstStageTime: 30
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1510,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3611393, y: 1.1594753}
+  m_Offset: {x: 5.6960926, y: 1.1594753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1521,7 +1521,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.937002, y: 14.171049}
+  m_Size: {x: 24.60691, y: 14.171049}
   m_EdgeRadius: 0
 --- !u!114 &1604777400
 MonoBehaviour:
@@ -1535,6 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d395519a11643243a32b3c0f1945219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
   health: 3
 --- !u!1 &1610055321
 GameObject:
