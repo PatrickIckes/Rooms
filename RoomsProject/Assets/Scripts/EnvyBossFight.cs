@@ -4,33 +4,64 @@ using UnityEngine;
 
 public class EnvyBossFight : MonoBehaviour
 {
-    float noteFireTimer;
-    float sandBagTimer;
-    public float FireTime;
-    public float FallTime;
-    public SandbagManager manager;
+    private enum BossFightPhase { First, Second, Dead }
+
+    private BossFightPhase phase;
+    private float noteTimer;
+    private float sandBagTimer;
+    public float noteFireTime;
+    public float sandbagFallTime;
+    public SandbagManager sandbagManager;
     public GameObject Note;
     public GameObject Player;
+
+    [SerializeField]
+    private BossHealth EnvysHealth;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        phase = BossFightPhase.First;
     }
 
     // Update is called once per frame
     void Update()
     {
-        noteFireTimer += Time.deltaTime;
-        sandBagTimer += Time.deltaTime;
-        if(noteFireTimer >= FireTime)
+        switch (phase) 
         {
-            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x-0.75f,0,0),Quaternion.identity,this.transform);
-            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
-            noteFireTimer = 0;
+            case BossFightPhase.First:
+                FireNotes();
+                DropSandbags();
+                break;
+            case BossFightPhase.Second:
+
+                break;
+            case BossFightPhase.Dead:
+
+                break;
         }
-        if(sandBagTimer >= FallTime)
+
+        FireNotes();
+        DropSandbags();
+    }
+
+    private void FireNotes()
+    {
+        noteTimer += Time.deltaTime;
+        if (noteTimer >= noteFireTime)
         {
-            manager.fall = true;
+            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x - 0.75f, 0, 0), Quaternion.identity, this.transform);
+            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
+            noteTimer = 0;
+        }
+    }
+
+    private void DropSandbags()
+    {
+        sandBagTimer += Time.deltaTime;
+        if (sandBagTimer >= sandbagFallTime)
+        {
+            sandbagManager.fall = true;
             sandBagTimer = 0;
         }
     }

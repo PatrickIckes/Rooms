@@ -4,21 +4,36 @@ using UnityEngine;
 
 public class SandbagManager : MonoBehaviour
 {
-    public Rigidbody2D[] SandBags;
+    [SerializeField]
+    private Rigidbody2D[] SandBags;
+    private List<Rigidbody2D> unfallenSandBags;
+
+    [HideInInspector]
     public bool fall;
-    bool fallen;
-    public float FallTime;//Time before the sandbags are retrieved
+    private bool fallen = false;
+
+    [Tooltip("Time before the sandbags are retrieved")]
+    public float FallTime;
+
     public GameObject min, max;
+    private float timer;
+    private bool Stopped;
+
+    [SerializeField]
+    private float sandbagSpeed = 1;
+
     // Start is called before the first frame update
     void Start()
     {
+        unfallenSandBags = new List<Rigidbody2D>();
+        PopulateUnfallenSandbags(SandBags[Random.Range(0,SandBags.Length)]);
+
         foreach (Rigidbody2D sandbag in SandBags)
         {
             sandbag.bodyType = RigidbodyType2D.Kinematic;
         }
     }
-    float timer;
-    bool Stopped;
+    
     // Update is called once per frame
     void Update()
     {
@@ -43,22 +58,22 @@ public class SandbagManager : MonoBehaviour
         {
             if(fall)
             {
-                foreach(Rigidbody2D sandbag in SandBags)
-                {
-                    sandbag.gravityScale = 1;
-                    sandbag.bodyType = RigidbodyType2D.Dynamic;
-                    fallen = true;
-                    Stopped = false;
-                }
+                Rigidbody2D sandbag = unfallenSandBags[Random.Range(0, unfallenSandBags.Count)];
+                unfallenSandBags.Clear();
+                PopulateUnfallenSandbags(sandbag);
+                sandbag.gravityScale = sandbagSpeed;
+                sandbag.bodyType = RigidbodyType2D.Dynamic;
+                fallen = true;
+                Stopped = false;
             }
-        } else
+        } 
+        else
         {
             if (timer > FallTime)
             {
                 foreach (Rigidbody2D sandbag in SandBags)
                 {
-
-                    sandbag.gravityScale = -1;
+                    sandbag.gravityScale = -sandbagSpeed;
                     sandbag.bodyType = RigidbodyType2D.Dynamic;
                     timer = 0;
                     fallen = false;
@@ -67,6 +82,17 @@ public class SandbagManager : MonoBehaviour
                 }
             }
             timer += Time.deltaTime;
+        }
+    }
+
+    private void PopulateUnfallenSandbags(Rigidbody2D fallenBag)
+    {
+        foreach(Rigidbody2D sandbag in SandBags)
+        {
+            if (sandbag != fallenBag)
+            {
+                unfallenSandBags.Add(sandbag);
+            }
         }
     }
 }

@@ -9,10 +9,13 @@ public class Damage : MonoBehaviour
     [SerializeField]
     private bool getsDestroyedOnContact = true;
 
+    private bool hasDamaged = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && !hasDamaged)
         {
+            hasDamaged = true;
             collision.GetComponent<PlayerData>().Damage(damage);
 
             if (getsDestroyedOnContact)
@@ -24,6 +27,14 @@ public class Damage : MonoBehaviour
         if(collision.tag == "Enemy")
         {
 
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            hasDamaged = false;
         }
     }
 }
