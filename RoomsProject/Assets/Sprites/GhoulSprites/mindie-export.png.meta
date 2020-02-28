@@ -1,0 +1,649 @@
+fileFormatVersion: 2
+guid: b2679bea4736df245987b13b21e45a5a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1417016836545881495
+    second: mindie-export_0
+  - first:
+      213: 3825208944218204619
+    second: mindie-export_1
+  - first:
+      213: -4888940550281162551
+    second: mindie-export_2
+  - first:
+      213: 3850671916996320765
+    second: mindie-export_3
+  - first:
+      213: -2880563031749492270
+    second: mindie-export_4
+  - first:
+      213: -1303258022844287471
+    second: mindie-export_5
+  - first:
+      213: 3294094819862608870
+    second: mindie-export_6
+  - first:
+      213: 2969434131446025763
+    second: mindie-export_7
+  - first:
+      213: -7862219239975414086
+    second: mindie-export_8
+  - first:
+      213: -810064335015256184
+    second: mindie-export_9
+  - first:
+      213: -1642206591583318587
+    second: mindie-export_10
+  - first:
+      213: 3798917595973791885
+    second: mindie-export_11
+  - first:
+      213: 7590593220967248553
+    second: mindie-export_12
+  - first:
+      213: 7736678291855181041
+    second: mindie-export_13
+  - first:
+      213: 9188773073239917270
+    second: mindie-export_14
+  - first:
+      213: 2982396928391874513
+    second: mindie-export_15
+  - first:
+      213: -7875664939878262477
+    second: mindie-export_16
+  - first:
+      213: 1441943368940042204
+    second: mindie-export_17
+  - first:
+      213: -1882733241788807451
+    second: mindie-export_18
+  - first:
+      213: -8768232240976999205
+    second: mindie-export_19
+  - first:
+      213: -674762185618492425
+    second: mindie-export_20
+  - first:
+      213: -8544532192782734844
+    second: mindie-export_21
+  - first:
+      213: -3323137084227290218
+    second: mindie-export_22
+  - first:
+      213: -2657741270463976753
+    second: mindie-export_23
+  - first:
+      213: 4993755192632892511
+    second: mindie-export_24
+  - first:
+      213: -7509420823820265445
+    second: mindie-export_25
+  - first:
+      213: 2080431213476359927
+    second: mindie-export_26
+  - first:
+      213: 5993147829225589176
+    second: mindie-export_27
+  - first:
+      213: 230555923274442476
+    second: mindie-export_28
+  - first:
+      213: -9031164383546223516
+    second: mindie-export_29
+  - first:
+      213: -2961756926751102317
+    second: mindie-export_30
+  - first:
+      213: -2352693762115790269
+    second: mindie-export_31
+  - first:
+      213: 6378967280598900618
+    second: mindie-export_32
+  - first:
+      213: 11587597247231377
+    second: mindie-export_33
+  - first:
+      213: 3891023440987829797
+    second: mindie-export_34
+  - first:
+      213: 1242576305885319556
+    second: mindie-export_35
+  - first:
+      213: 4988318488836122408
+    second: mindie-export_36
+  - first:
+      213: 3713703492483003148
+    second: mindie-export_37
+  - first:
+      213: 506050560674924017
+    second: mindie-export_38
+  - first:
+      213: -3795767750129704495
+    second: mindie-export_39
+  - first:
+      213: -7380761371188982236
+    second: mindie-export_40
+  - first:
+      213: 4181365739733208521
+    second: mindie-export_41
+  - first:
+      213: 574216310849939350
+    second: mindie-export_42
+  - first:
+      213: 6810119415172349128
+    second: mindie-export_43
+  - first:
+      213: 7720583579555684961
+    second: mindie-export_44
+  - first:
+      213: -1181787139489060582
+    second: mindie-export_45
+  - first:
+      213: -613044390101179425
+    second: mindie-export_46
+  - first:
+      213: 6721214277138200068
+    second: mindie-export_47
+  - first:
+      213: 6345746624059255889
+    second: mindie-export_48
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mindie-export_0
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 544
+        width: 222
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9feabdea0bca447ac0fa2c89047e1f
+      internalID: 1417016836545881495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_1
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 544
+        width: 166
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0787bb78ec71a45b222211be7040df
+      internalID: 3825208944218204619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_2
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 544
+        width: 185
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851e4c44dd0e61d4f960fcf9f2eecc0c
+      internalID: -4888940550281162551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_3
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 544
+        width: 192
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741542a6c57c6cd459729565322ed1f4
+      internalID: 3850671916996320765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_4
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 544
+        width: 222
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359986755479c824e84e03264a6de834
+      internalID: -2880563031749492270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_5
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 544
+        width: 220
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0ce80e22f0ea3409cc533a1cf432d2
+      internalID: -1303258022844287471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_6
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 544
+        width: 222
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048e38c3275a91f45b60b7f263a359db
+      internalID: 3294094819862608870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_8
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 544
+        width: 350
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62a93620fa35ff439a4c456c7bc7730
+      internalID: -7862219239975414086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_14
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 64
+        width: 222
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629b5a23ed995a84fbcc2b29cae150b6
+      internalID: 9188773073239917270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_18
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 64
+        width: 189
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20891ddf7e15f947bf2ed3cefc6945f
+      internalID: -1882733241788807451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_19
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 64
+        width: 214
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9f3a8c3df276f44a84e4d2faf11881
+      internalID: -8768232240976999205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_24
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 64
+        width: 192
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e145a4de8123e6a4da6e39dee2a9055e
+      internalID: 4993755192632892511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_34
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 64
+        width: 204
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e494b5d5e5b9454fabeb0e915986b38
+      internalID: 3891023440987829797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_36
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 64
+        width: 292
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56dcfbce40763d448cb418ad2cbcd77
+      internalID: 4988318488836122408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_39
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 62
+        width: 434
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b270a6d217ca69b45aa084e2c9adf167
+      internalID: -3795767750129704495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_44
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 64
+        width: 436
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904a3d4e8f2a7b44cb758e284797f9dc
+      internalID: 7720583579555684961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_46
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 64
+        width: 464
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2086af1f0aead9a448a3435e78f6865e
+      internalID: -613044390101179425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_47
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 64
+        width: 112
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e8a577b9a94342b7ef782579d6bb9
+      internalID: 6721214277138200068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mindie-export_48
+      rect:
+        serializedVersion: 2
+        x: 4126
+        y: 64
+        width: 112
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184fa839d8b31bd49980b42bda1ece79
+      internalID: 6345746624059255889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
