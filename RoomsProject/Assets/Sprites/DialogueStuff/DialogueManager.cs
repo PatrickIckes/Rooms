@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     public Sprite[] speakerItems;
     private int speakerProgress;
     private int progress;
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
 
 
 
@@ -44,15 +44,7 @@ public class DialogueManager : MonoBehaviour
     {
 
 
-        if (GameIsPaused)
-        { 
-            Pause();
-            RunDialogue();}
-        else
-        {
-             //working
-            Resume();
-        }
+        RunDialogue();
         
        
     }
@@ -64,9 +56,11 @@ public class DialogueManager : MonoBehaviour
         if (progress >= textTextItems.Length - 1)
         {
             textBox.SetActive(false);
+            Resume();
         }
         else
         {
+            
             textBox.SetActive(true); 
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -89,8 +83,5 @@ public class DialogueManager : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        GameIsPaused = true;
-    }
+    
 }
