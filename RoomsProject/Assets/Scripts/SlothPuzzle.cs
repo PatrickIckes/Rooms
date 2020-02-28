@@ -8,7 +8,6 @@ public class SlothPuzzle : MonoBehaviour
     public int layerIndex;
 
 
-
     void Start()
     {
         layerIndex = 0;
@@ -38,5 +37,5 @@ public class SlothPuzzle : MonoBehaviour
     {
         layerItems[layerIndex].transform.Rotate(0, 0, -120);
     }
-
+    
 }

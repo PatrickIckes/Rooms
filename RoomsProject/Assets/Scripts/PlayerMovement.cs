@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public bool Grounded;
     public bool Falling;
     internal bool canCheckForObject;
+    internal bool canMove;
     //IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
     Animator playerAnimator;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     //Called upon initialization of the object.
     private void Awake()
     {
+        canMove = true;
         CollidingObjects = new List<GameObject>();
         qm = GetComponentInChildren<QuestManager>();
         rbody = GetComponent<Rigidbody2D>();
@@ -57,18 +59,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        float jumpInput = Input.GetAxis("Jump");
-        flipPlayer(horizontalInput);
-        MovePlayer(horizontalInput, verticalInput, currentPos);
-        CheckFalling();
-        if (canJump && jumpInput != 0)
+        if (canMove)
         {
-            PlayerJump(jumpInput);
+            Vector2 currentPos = rbody.position;
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            float jumpInput = Input.GetAxis("Jump");
+            flipPlayer(horizontalInput);
+            MovePlayer(horizontalInput, verticalInput, currentPos);
+            CheckFalling();
+            if (canJump && jumpInput != 0)
+            {
+                PlayerJump(jumpInput);
+            }
+            AnimatePlayer(horizontalInput, verticalInput);
         }
-        AnimatePlayer(horizontalInput, verticalInput);
     }
     float prevY;
     public void CheckFalling()

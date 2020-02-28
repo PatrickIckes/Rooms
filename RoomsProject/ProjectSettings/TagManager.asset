@@ -61,9 +61,6 @@ TagManager:
   - name: GarbageFront
     uniqueID: 1836959899
     locked: 0
-  - name: Player
-    uniqueID: 4109254511
-    locked: 0
   - name: Angel
     uniqueID: 3743967279
     locked: 0
@@ -78,4 +75,7 @@ TagManager:
     locked: 0
   - name: Puzzle4
     uniqueID: 2208977905
+    locked: 0
+  - name: Player
+    uniqueID: 4109254511
     locked: 0
