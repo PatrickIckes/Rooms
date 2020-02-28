@@ -30,7 +30,7 @@ public class MainMenuController : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene((int)Scenes.HubWorld);
+        SceneManager.LoadScene((int)Scenes.Tutorial);
     }
 
     void Story()
