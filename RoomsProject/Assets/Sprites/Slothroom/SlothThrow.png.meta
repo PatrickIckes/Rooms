@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: bfcc7b9cda85e754d9d1ebc155be2edc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3009336211517240879
+    second: SlothThrow_0
+  - first:
+      213: -5504331704035711739
+    second: SlothThrow_1
+  - first:
+      213: -4626789775879703647
+    second: SlothThrow_2
+  - first:
+      213: -9108209844479759898
+    second: SlothThrow_3
+  - first:
+      213: 7889564355569189041
+    second: SlothThrow_4
+  - first:
+      213: -8237521115788787326
+    second: SlothThrow_5
+  - first:
+      213: 6705014596894397240
+    second: SlothThrow_6
+  - first:
+      213: 9219503069294454726
+    second: SlothThrow_7
+  - first:
+      213: -3941166033422221706
+    second: SlothThrow_8
+  - first:
+      213: 7197112764435275305
+    second: SlothThrow_9
+  - first:
+      213: -4580322416263975382
+    second: SlothThrow_10
+  - first:
+      213: 1313231888721481002
+    second: SlothThrow_11
+  - first:
+      213: 7950888607444808970
+    second: SlothThrow_12
+  - first:
+      213: -240701177680879924
+    second: SlothThrow_13
+  - first:
+      213: 1039254135217594412
+    second: SlothThrow_14
+  - first:
+      213: 1031266439157271516
+    second: SlothThrow_15
+  - first:
+      213: -2421001526175165890
+    second: SlothThrow_16
+  - first:
+      213: -7933271034173326865
+    second: SlothThrow_17
+  - first:
+      213: -196031615543675145
+    second: SlothThrow_18
+  - first:
+      213: 4562643506492062820
+    second: SlothThrow_19
+  - first:
+      213: 8460173263784091347
+    second: SlothThrow_20
+  - first:
+      213: -4432392000913171291
+    second: SlothThrow_21
+  - first:
+      213: 4967367743027873820
+    second: SlothThrow_22
+  - first:
+      213: 7100271581728425472
+    second: SlothThrow_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SlothThrow_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 14055
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad8fcfb07710f548a6b75c403e56ee6
+      internalID: -3009336211517240879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_1
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 14055
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c669a9eb106ce3a418b0fd5602b161f4
+      internalID: -5504331704035711739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_2
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 14055
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3216492ae6a15845b5590a67a6e7f90
+      internalID: -4626789775879703647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 12051
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f3a173d245b474aafd468ae7535c85
+      internalID: -9108209844479759898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_4
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 12051
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd5715ebbbbab9409d465699c3715dc
+      internalID: 7889564355569189041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_5
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 12051
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8906be22ef32c3e47b40b41b15b73ce3
+      internalID: -8237521115788787326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 10047
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244b271ed31799642b2db6194c55394b
+      internalID: 6705014596894397240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_7
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 10047
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae405213d6ce4744b7eb851f223a620
+      internalID: 9219503069294454726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_8
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 10047
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8880752d3cec8e24a804d8810cdeec8c
+      internalID: -3941166033422221706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 8043
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5b93a4594cfd43ab656b645b453d8
+      internalID: 7197112764435275305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_10
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 8043
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f564fde3b6a4e3c4ea26d1188cc40304
+      internalID: -4580322416263975382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_11
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 8043
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d053584b720021a4db06229271209001
+      internalID: 1313231888721481002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 6039
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b05fecbf6851c9499bfda04b0e34c3c
+      internalID: 7950888607444808970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_13
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 6039
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fcb2bf730f74d4190826fa4f6c4a69
+      internalID: -240701177680879924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_14
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 6039
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db57ebc1a5a8fc24b88663980400fecc
+      internalID: 1039254135217594412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_15
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 4035
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf17afa7b0692244e8586c5ade91d7ab
+      internalID: 1031266439157271516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_16
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 4035
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd7ab873e77bad499b807529dbea3fc
+      internalID: -2421001526175165890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_17
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 4035
+        width: 2380
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa68ddf09b9378945b59b0b01d465d98
+      internalID: -7933271034173326865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2031
+        width: 2387
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf48c0a7c4057e47bf02f4b07d57efc
+      internalID: -196031615543675145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_19
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 2031
+        width: 2386
+        height: 1840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907c0209bd1a5734f8ef19bcf58e86c4
+      internalID: 4562643506492062820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_20
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 2031
+        width: 2380
+        height: 1863
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0201d220fc1827459692874b1989c8c
+      internalID: 8460173263784091347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_21
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 27
+        width: 2387
+        height: 1683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0137fe3c6a38e0a4da1ba303be44cc3c
+      internalID: -4432392000913171291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_22
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 27
+        width: 2386
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714c623cfd39c4048800cc121af5ee74
+      internalID: 4967367743027873820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlothThrow_23
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 27
+        width: 2380
+        height: 1668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c747fbe0fd08f7489bc42263b12b358
+      internalID: 7100271581728425472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
