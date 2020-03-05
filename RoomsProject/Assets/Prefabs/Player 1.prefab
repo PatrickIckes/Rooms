@@ -114,7 +114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 6
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -5066135068008178705, guid: 2723c3de0877a30488deba1ba55e5330,
     type: 3}
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 6
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1,
     type: 3}
@@ -348,9 +348,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c794e24228d6c41899d827a7087693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHurtAmount: 0
   gameManager: {fileID: 0}
   startinghealth: 20
   health: 0
+  deathAnimation: {fileID: 0}
+  playerAnimator: {fileID: 6437135073513213895}
 --- !u!1 &7454150820322988052
 GameObject:
   m_ObjectHideFlags: 0

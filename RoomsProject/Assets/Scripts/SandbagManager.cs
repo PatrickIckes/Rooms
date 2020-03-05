@@ -15,6 +15,8 @@ public class SandbagManager : MonoBehaviour
     [Tooltip("Time before the sandbags are retrieved")]
     public float FallTime;
 
+    private float fallPause = 1;
+
     public GameObject min, max;
     private float timer;
     private bool Stopped;
@@ -35,7 +37,7 @@ public class SandbagManager : MonoBehaviour
     }
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!Stopped) {
             foreach (Rigidbody2D rb in SandBags)
@@ -75,11 +77,14 @@ public class SandbagManager : MonoBehaviour
                 {
                     sandbag.gravityScale = -sandbagSpeed;
                     sandbag.bodyType = RigidbodyType2D.Dynamic;
-                    timer = 0;
-                    fallen = false;
                     fall = false;
                     Stopped = false;
                 }
+            }
+            if (timer > FallTime + fallPause)
+            {
+                timer = 0;
+                fallen = false;
             }
             timer += Time.deltaTime;
         }
