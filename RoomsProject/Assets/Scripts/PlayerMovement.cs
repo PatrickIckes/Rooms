@@ -153,7 +153,6 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("isJumping", false);
             playerAnimator.SetBool("isFalling", true);
         }
-
     }
     /// <summary>
     /// Flips the player sprite based on the horizontalInput
