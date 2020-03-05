@@ -1427,7 +1427,6 @@ GameObject:
   - component: {fileID: 1604777399}
   - component: {fileID: 1604777400}
   - component: {fileID: 1604777402}
-  - component: {fileID: 1604777401}
   m_Layer: 0
   m_Name: Sloth Sprite
   m_TagString: Boss
@@ -1539,21 +1538,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 3
---- !u!111 &1604777401
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604777396}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d6f17078d30b509488c7e64bd572c51a, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &1604777402
 Animator:
   serializedVersion: 3
@@ -1564,7 +1548,7 @@ Animator:
   m_GameObject: {fileID: 1604777396}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e87fe720ebf54a54890a716b67d2a53a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 387c50da6de6ea444b966908f0ef28b6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
