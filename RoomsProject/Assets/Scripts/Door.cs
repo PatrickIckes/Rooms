@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
         {
-            if (Key != null && inventory.CheckObject(Key.name))
+           if (Key != null && inventory.CheckObject(Key.name))
             {
                 LoadScene();
             }

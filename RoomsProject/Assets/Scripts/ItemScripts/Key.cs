@@ -15,7 +15,7 @@ public class Key : MonoBehaviour, IInventoryItem
     {
         get
         {
-            return "Key";
+            return gameObject.name;
         }
     }
 
