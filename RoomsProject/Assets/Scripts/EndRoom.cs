@@ -15,7 +15,7 @@ public class EndRoom : MonoBehaviour
     void Start()
     {
         doorAnimator = Door.GetComponent<Animator>();
-        Door.SetActive(false);
+        Door.gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class EndRoom : MonoBehaviour
     }
     public void RoomOver()
     {
-        Door.SetActive(true);
+        Door.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         doorAnimator.SetBool("Fall", true);
         Instantiate(Sword, Spawner.transform);
         GameObject temp = Instantiate(QuestReward);

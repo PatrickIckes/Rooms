@@ -171,11 +171,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.73
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20330468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.786, y: -3.91, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -492,7 +492,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5502272159159147965}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098693167}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58b8a1d32d7d10b4481f599f1d744f1c, type: 3}
@@ -1191,8 +1191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa884500b934bf84c8e81ce29054ca28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1828255038}
-  PuzzleUI: {fileID: 2098693167}
 --- !u!1 &1017782512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1732,7 @@ PrefabInstance:
     - target: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: scene
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -2275,12 +2273,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &2098693167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8390238702988325050, guid: 58d4ee2b53834454cb30d5996420f081,
-    type: 3}
-  m_PrefabInstance: {fileID: 5502272159159147965}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5502272159159147965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2512,7 +2504,7 @@ PrefabInstance:
     - target: {fileID: 8390238702988325050, guid: 58d4ee2b53834454cb30d5996420f081,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8683870058344658531, guid: 58d4ee2b53834454cb30d5996420f081,
         type: 3}

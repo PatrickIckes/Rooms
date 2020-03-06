@@ -391,7 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa145278ad50787408e8f30612049694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrashDrop: {fileID: 0}
 --- !u!1 &419017869
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,12 +574,12 @@ PrefabInstance:
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.805
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.503
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -1515,7 +1514,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 23.873724, y: 16.6}
+    oldSize: {x: 23.87, y: 16.601738}
     newSize: {x: 23.700449, y: 16.49}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1706,6 +1705,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697728127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6768777302839310364, guid: 4aaaef29d9813ea4db8d430495a8192f,
+    type: 3}
+  m_PrefabInstance: {fileID: 322320301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c3c1424771ff54fbbb97c1cb29804c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721032677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8594665210356318533, guid: 5c4834efdf13f3b4db832c4154e22959,
@@ -1942,6 +1953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881297346}
   - component: {fileID: 1881297347}
+  - component: {fileID: 1881297348}
   m_Layer: 0
   m_Name: Doorway
   m_TagString: Untagged
@@ -1976,7 +1988,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.56114054}
+  m_Offset: {x: -0.20037675, y: 0.56114054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1987,8 +1999,26 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.122281}
+  m_Size: {x: 0.5992465, y: 2.122281}
   m_EdgeRadius: 0
+--- !u!114 &1881297348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881297345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withinInteractable: 0
+  Key: {fileID: 0}
+  scene: 0
+  gameManager: {fileID: 1781316266}
+  inventory: {fileID: 1697728127}
+  QuestCollectionText: {fileID: 1772483459}
 --- !u!1 &1932512512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151567435624231489, guid: 9478d301df90b5046b70f3dbcb98dba3,
