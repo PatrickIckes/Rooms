@@ -128,6 +128,7 @@ public class SlothBossFight : MonoBehaviour
         {
             int i = 0;
             Lights[targetPlatform].GetComponent<SpriteRenderer>().color = Color.green;
+            //jpost Audio
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
             foreach (GameObject platform in Platforms)
             {
@@ -135,6 +136,8 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    //jpost audio
+                    Invoke("PlayTrashFall", 1f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -144,6 +147,7 @@ public class SlothBossFight : MonoBehaviour
         if (phase == BossFight.Second)
         {
             int i = 0;
+            //jpost Audio
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
             foreach (GameObject platform in Platforms)
             {
@@ -152,6 +156,8 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    //jpost Audio
+                    Invoke("PlayTrashFall", 1f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -168,7 +174,16 @@ public class SlothBossFight : MonoBehaviour
             i++;
         }
     }
-
+    //jpost Audio
+    private void PlayTrashFall()
+    {
+        GameObject[] hazards;
+        hazards = GameObject.FindGameObjectsWithTag("Hazard");
+        foreach (GameObject h in hazards)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Trashbags/sx_game_env_trashbag_fall", h.transform.position);
+        }
+    }
     //jpost Audio
     public void PlaySpotlightTurnOn()
     {
