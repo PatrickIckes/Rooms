@@ -55,7 +55,7 @@
 			<destination>{ac0e4fa7-a564-48af-a3ad-ec2969090904}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{338b2cba-9551-42ae-9c48-c6e96cdd59df}</destination>
+			<destination>{76eb37cc-eba0-494f-a02e-0576e956e441}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{78c661dc-fefe-4cb9-a527-773702dc70b8}" />
@@ -162,10 +162,10 @@
 			<value>4</value>
 		</property>
 		<property name="minimumScatterDistance">
-			<value>15</value>
+			<value>9.60000038</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>100</value>
+			<value>55</value>
 		</property>
 		<property name="volumeRandomization">
 			<value>-4</value>
