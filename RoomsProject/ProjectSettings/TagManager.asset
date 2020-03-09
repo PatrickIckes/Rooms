@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Note
   - Boss
+  - Trash
   layers:
   - Default
   - TransparentFX

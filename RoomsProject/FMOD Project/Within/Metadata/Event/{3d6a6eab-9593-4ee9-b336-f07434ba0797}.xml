@@ -147,7 +147,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>7.5</value>
+			<value>4</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{fd55ffde-e09d-444b-a1a4-0a37ba67dccf}">
