@@ -29,6 +29,7 @@ public class SlothBossFight : MonoBehaviour
     internal bool RoomDone;
     private int timesThrough;
     private bool finished;
+    Animator slothAnimator;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class SlothBossFight : MonoBehaviour
         timesThrough = 0;
         Debris = FirstStageDebris;
         finished = false;
+        slothAnimator = Sloth.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -81,12 +83,15 @@ public class SlothBossFight : MonoBehaviour
     {
         fallingtimer += Time.deltaTime;
 
+        if(fallingtimer > timeBetweenFalls - 1.55f)
+            slothAnimator.SetBool("isThrowing", true);
         if (fallingtimer > timeBetweenFalls)
         {
+            
             int targetPlatform = Random.Range(0, 3);
             fallingtimer = 0;
             TriggerFall(targetPlatform);
-
+            
             if (phase == BossFight.Second)
             {
                 timesThrough++;
@@ -99,6 +104,7 @@ public class SlothBossFight : MonoBehaviour
                     Instantiate(TrashDrop, Platforms[rand].transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
                 }
             }
+            slothAnimator.SetBool("isThrowing", false);
         }
     }
 
