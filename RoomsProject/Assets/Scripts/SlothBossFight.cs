@@ -137,7 +137,7 @@ public class SlothBossFight : MonoBehaviour
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
                     //jpost audio
-                    Invoke("PlayTrashFall", 1f);
+                    Invoke("PlayTrashFall", 2f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -157,7 +157,7 @@ public class SlothBossFight : MonoBehaviour
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
                     //jpost Audio
-                    Invoke("PlayTrashFall", 1f);
+                    Invoke("PlayTrashFall", 2f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -177,11 +177,13 @@ public class SlothBossFight : MonoBehaviour
     //jpost Audio
     private void PlayTrashFall()
     {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
         GameObject[] hazards;
         hazards = GameObject.FindGameObjectsWithTag("Hazard");
         foreach (GameObject h in hazards)
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Trashbags/sx_game_env_trashbag_fall", h.transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Trash/sx_game_env_trashbag_fall", h.transform.position);
+
         }
     }
     //jpost Audio
