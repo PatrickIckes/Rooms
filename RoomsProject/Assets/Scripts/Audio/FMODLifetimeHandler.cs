@@ -21,6 +21,7 @@ public class FMODLifetimeHandler : MonoBehaviour
     {
         //makes sure that the mainCamera is NOT destroyed during scene loading/changes so that audio can continue playback without interruption
         DontDestroyOnLoad(mainCamera);
+
         //check to see if mainCamera already has an FMOD studio listener and add one if it does not
         if (!mainCamera.GetComponentInChildren<FMODUnity.StudioListener>())
         {
