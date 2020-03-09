@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{536f4c56-ae0e-42b2-bc48-4b8ae3e1fac0}">
+		<property name="assetPath">
+			<value>sx_game_amb_leaves_rustling_ 02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>3.6280000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{520db17b-7a8a-4164-b6dd-8458644edfb8}</destination>
+		</relationship>
+	</object>
+</objects>
