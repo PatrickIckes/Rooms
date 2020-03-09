@@ -46,7 +46,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Ambience/sx_game_amb_mainmenu
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
