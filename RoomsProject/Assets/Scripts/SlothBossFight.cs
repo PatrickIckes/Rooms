@@ -119,6 +119,8 @@ public class SlothBossFight : MonoBehaviour
         {
             plank.GetComponent<BoxCollider2D>().isTrigger = true;
             plank.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            //jpost Audio
+            PlayPlatformFall();
         }
     }
 
@@ -177,18 +179,17 @@ public class SlothBossFight : MonoBehaviour
     //jpost Audio
     private void PlayTrashFall()
     {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
+        //WaitForSeconds wait = new WaitForSeconds(.25f);
         GameObject[] hazards;
         hazards = GameObject.FindGameObjectsWithTag("Hazard");
         foreach (GameObject h in hazards)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Trash/sx_game_env_trashbag_fall", h.transform.position);
-
         }
     }
     //jpost Audio
-    public void PlaySpotlightTurnOn()
+    public void PlayPlatformFall()
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Floorboards/sx_game_env_slothfight_platforms_fall", GameObject.Find("Planks").transform.position);
     }
 }
