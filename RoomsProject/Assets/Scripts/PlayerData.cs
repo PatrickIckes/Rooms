@@ -36,10 +36,17 @@ public class PlayerData : MonoBehaviour
     internal void Damage(int damage)
     {
         pa.health -= damage;
+        //jpost Audio
+        PlayTakeDamage();
         if (pa.health <= 0)
         {
             ResetPlayer();
             gameManager.GetComponent<MyGameManager>().GameInProgress = false;
         }
+    }
+    //jpost Audio
+    public void PlayTakeDamage()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_grunt", GetComponent<Transform>().position);
     }
 }

@@ -8,6 +8,10 @@ public class ThrowableTrashSFX : MonoBehaviour
     ///a class to handle some of the SFX involved with the throwable trash prefab
     ///
 
+    private void Start()
+    {
+        PlayThrowableTrashAppear();
+    }
     //jpost Audio
     public void PlayThrowableTrashAppear()
     {

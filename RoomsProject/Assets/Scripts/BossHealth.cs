@@ -22,6 +22,7 @@ public class BossHealth : MonoBehaviour
         health -= damage;
         //jpost Audio
         slothSFX.PlaySlothTakeDamage();
+        slothSFX.PlaySlothHit();
         if (health <= 0)
         {
             //jpost Audio

@@ -38,6 +38,11 @@ public class SlothSFX : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Sloth/sx_game_npc_sloth_takedamage", GetComponent<Transform>().position);
     }
     //jpost Audio
+    public void PlaySlothHit()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_hit_sloth", GetComponent<Transform>().position);
+    }
+    //jpost Audio
     public void PlaySlothDie()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Sloth/sx_game_npc_sloth_die", GetComponent<Transform>().position);

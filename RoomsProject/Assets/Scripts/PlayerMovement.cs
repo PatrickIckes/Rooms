@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             if (canJump && jumpInput != 0)
             {
                 PlayerJump(jumpInput);
+                
             }
             AnimatePlayer(horizontalInput, verticalInput);
         }
@@ -86,8 +87,11 @@ public class PlayerMovement : MonoBehaviour
 
     public virtual void PlayerJump(float jumpInput)
     {
+        //jpost Audio
+        //PlayPlayerJump(); //currently disabled due to sound playing twice, can't figure out exactly why as of right now...
         canJump = false;
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
+        
     }
 
     /// <summary>
@@ -234,6 +238,15 @@ public class PlayerMovement : MonoBehaviour
     {
         //play the FMOD event for footsteps wood
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_throw", GetComponent<Transform>().position);
+    }
+    //jpost Audio
+    public void PlayPlayerJump()
+    {
+        if (canJump)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
+        }
+            
     }
 
     private void OnCollisionStay2D(Collision2D collision)
