@@ -15,7 +15,13 @@ public class PickUp : MonoBehaviour
             {
                 collision.gameObject.GetComponent<PlayerMovement>().ThrowableObject = this.gameObject;
                 Connected = true;
+                PlayPickup();
             }
         }
+    }
+    //jpost Audio
+    private void PlayPickup()
+    {        
+         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_pickup", GetComponent<Transform>().position);       
     }
 }

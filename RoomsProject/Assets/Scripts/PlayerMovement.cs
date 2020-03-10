@@ -123,6 +123,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && ThrowableObject != null)
         {
+            //jpost Audio
+            PlayThrowTrashBag();
             ThrowableObject.GetComponent<Thrown>().Throw();
             //Calculate Angle between two vectors
             ThrowableObject = null;
@@ -226,6 +228,12 @@ public class PlayerMovement : MonoBehaviour
     private void PlayTrashCollision()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Collisions/sx_game_int_collide_trash", GetComponent<Transform>().position);
+    }
+    //jpost Audio
+    public void PlayThrowTrashBag()
+    {
+        //play the FMOD event for footsteps wood
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_throw", GetComponent<Transform>().position);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
