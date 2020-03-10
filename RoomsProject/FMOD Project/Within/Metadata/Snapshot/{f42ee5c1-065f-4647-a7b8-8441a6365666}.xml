@@ -127,7 +127,7 @@
 			<value>lowShelfGain</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-19.5</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{b6dcfbae-1f29-4ef4-9c35-73555ebcc574}</destination>
