@@ -17,4 +17,9 @@ public class SlothSFX : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Sloth/sx_game_npc_sloth_breathing_exhale", GetComponent<Transform>().position);
     }
+    //jpost Audio
+    public void PlaySlothLaugh()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Sloth/sx_game_npc_sloth_laugh", GetComponent<Transform>().position);
+    }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{06646838-2f7b-4a83-9434-7dd3ba6019ed}">
+		<property name="assetPath">
+			<value>sx_game_npc_sloth_laugh_ 01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.92106250000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{520db17b-7a8a-4164-b6dd-8458644edfb8}</destination>
+		</relationship>
+	</object>
+</objects>

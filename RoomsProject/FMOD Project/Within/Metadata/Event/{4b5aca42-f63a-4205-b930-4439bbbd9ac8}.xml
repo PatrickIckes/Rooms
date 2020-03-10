@@ -89,6 +89,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{01874dc1-1ad9-4a51-bd76-3fca045e2ac4}" />
 	<object class="MultiSound" id="{7131a35d-bac0-4de0-9887-2f886d1828e8}">
+		<property name="startOffset">
+			<value>49.5</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{3d889ad3-b175-4ec2-86df-067ce5bd42fd}</destination>
 			<destination>{7dc70191-3c62-4167-ac1b-eeafd69df168}</destination>
@@ -101,6 +104,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d8622811-38d3-466f-b410-855e18d9f4ca}">
+		<property name="volume">
+			<value>-2</value>
+		</property>
 		<property name="name">
 			<value>Breathing Exhale</value>
 		</property>
