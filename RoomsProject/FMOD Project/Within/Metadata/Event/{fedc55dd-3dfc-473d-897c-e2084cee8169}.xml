@@ -121,6 +121,9 @@
 		<property name="length">
 			<value>2</value>
 		</property>
+		<property name="spawnRate">
+			<value>50</value>
+		</property>
 		<property name="minimumScatterDistance">
 			<value>6.4000001</value>
 		</property>
@@ -224,7 +227,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>14</value>
+			<value>5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{4f288fa9-c18d-439e-ba63-694df5d16c04}</destination>
