@@ -28,6 +28,9 @@ public class Door : MonoBehaviour
         {
            if (Key != null && inventory.CheckObject(Key.name))
             {
+                //jpost Audio
+                PlayDoorOpen();
+
                 LoadScene();
             }
             else if (Key == null)
@@ -41,7 +44,7 @@ public class Door : MonoBehaviour
                     QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
 
                     //jpost Audio
-                    //PlayDoorLocked();
+                    PlayDoorLocked();
                 }
             }
         }
