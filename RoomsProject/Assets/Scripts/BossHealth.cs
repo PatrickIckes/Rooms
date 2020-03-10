@@ -26,6 +26,7 @@ public class BossHealth : MonoBehaviour
         {
             //jpost Audio
             slothSFX.PlaySlothDie();
+
             Destroy(gameObject);
         }
     }

@@ -54,6 +54,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8957442003274016911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194481731777829
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8884951248277899697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +105,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/UI.bank
   SubDir: 
   lastModified: 637193629265447217
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8779072589342836861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194450827946470
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -306,6 +342,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8358817227677135384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194448487302051
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8340990417687532948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +483,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_play
   guid: 860d0c2b412a7d4abc8826f02c9eb977
   Banks:
-  - {fileID: -5365459927511321672}
+  - {fileID: -8957442003274016911}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -491,6 +545,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7992198848829869109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194450829599704
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7949332761779007982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +581,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7948085018966659013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194395473793634
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7946353279754528753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +653,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7786752870932710004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194468011829086
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7782504473350055167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +743,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7667380738933234947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194481728834285
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7600093169323776007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,6 +812,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637194369861301808
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7444297408360002520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194395475392276
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -776,7 +920,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_hub
   guid: dd55dcfefc3d3d47897ce2084cee8169
   Banks:
-  - {fileID: 4177243298343711382}
+  - {fileID: -7667380738933234947}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1054,6 +1198,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6320448563283563510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194448491430858
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-6305814588962058222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,7 +1231,7 @@ MonoBehaviour:
   Path: event:/Interactible/Collisions/sx_game_int_collide_trash
   guid: ab6e6a3d9395e94eb336f07434ba0797
   Banks:
-  - {fileID: -1077802253157240750}
+  - {fileID: 8617490129548959689}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1077,6 +1239,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-6204596941093831357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194395474888906
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-6115690420395140458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1272,7 @@ MonoBehaviour:
   Path: event:/Environment/Trash/sx_game_env_trashbag_fall
   guid: 3dda27aa5bf0154ea8160506dd7b704f
   Banks:
-  - {fileID: -5079282795224830006}
+  - {fileID: -719270007097388303}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1118,6 +1298,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6089842930169243382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194448492192077
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-6027024467995607362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,7 +1421,7 @@ MonoBehaviour:
   Path: snapshot:/No Reverb
   guid: f6a4c1dd67ddae489f74ffe581ad12a3
   Banks:
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1411,6 +1609,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5378281118955152676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Floorboards/sx_game_env_slothfight_platforms_fall
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Floorboards/sx_game_env_slothfight_platforms_fall
+  guid: 37441f76e341a84d83cd46ab59b1b95a
+  Banks:
+  - {fileID: -719270007097388303}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3093
 --- !u!114 &-5365459927511321672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,6 +1740,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5040278535203716357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194481731206312
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4998107328236887852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1534,6 +1773,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Ambience.bank
   SubDir: 
   lastModified: 637194387232582172
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4853942852891918766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194468009178643
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -1715,7 +1972,7 @@ MonoBehaviour:
   guid: 44d2200beaae1244910cd1d0107aae23
   Banks:
   - {fileID: 8496866599463326157}
-  - {fileID: -7835428971133636512}
+  - {fileID: 5682790790850176341}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1831,6 +2088,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4236432985860391184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194395474582008
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-4236054425156954481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,7 +2158,7 @@ MonoBehaviour:
   guid: 73583c65c0d2be4bacc71708789d0d55
   Banks:
   - {fileID: 8496866599463326157}
-  - {fileID: -7835428971133636512}
+  - {fileID: 5682790790850176341}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2090,7 +2365,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Large
   guid: c1e52ef45f064746a7b88441a6365666
   Banks:
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2131,7 +2406,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_rummage_under_belly
   guid: 110caa31231b8f449ca77ae9bd11a866
   Banks:
-  - {fileID: -4674797334727851953}
+  - {fileID: -5040278535203716357}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2172,6 +2447,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Ambience.bank
   SubDir: 
   lastModified: 637193671998649803
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3314325039886936398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194450829001190
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -2244,6 +2537,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Environment.bank
   SubDir: 
   lastModified: 637193560154908153
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3092617992942185795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194450828551976
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -2409,6 +2720,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2681327334134996759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194448489080758
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2658331366601710028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2501,6 +2830,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Ambience.bank
   SubDir: 
   lastModified: 637193563822122376
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2546037863745359260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194454853893591
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -2959,6 +3306,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-719270007097388303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194481729891336
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-712858612272992080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2974,7 +3339,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_throw_trash
   guid: 201576c5157cf2499763e35a3ae03f1d
   Banks:
-  - {fileID: -4674797334727851953}
+  - {fileID: -5040278535203716357}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3090,6 +3455,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-509746102873454964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194454851319481
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-501132629448180300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194454852360186
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-445654001746523239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3237,7 +3638,7 @@ MonoBehaviour:
   guid: 47e3a52d18f23c48942c344104563bd3
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: -1077802253157240750}
+  - {fileID: 8617490129548959689}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3245,6 +3646,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-30566876348326910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194468009833017
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-21891348424325054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,13 +3714,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 1793763361134788574}
-  - {fileID: 4177243298343711382}
-  - {fileID: -5079282795224830006}
-  - {fileID: -1077802253157240750}
-  - {fileID: -1606522743030696516}
-  - {fileID: -4674797334727851953}
-  - {fileID: -7835428971133636512}
-  - {fileID: -5365459927511321672}
+  - {fileID: -7667380738933234947}
+  - {fileID: -719270007097388303}
+  - {fileID: 8617490129548959689}
+  - {fileID: 2395724269164930712}
+  - {fileID: -5040278535203716357}
+  - {fileID: 5682790790850176341}
+  - {fileID: -8957442003274016911}
   EditorEvents:
   - {fileID: 5336323607592846241}
   - {fileID: -4196634747074765506}
@@ -3327,12 +3746,15 @@ MonoBehaviour:
   - {fileID: 8917459085823633948}
   - {fileID: -3330040153398668028}
   - {fileID: -712858612272992080}
+  - {fileID: 8588713728795939548}
+  - {fileID: 2771592889954673413}
+  - {fileID: -5378281118955152676}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   StringsBanks:
   - {fileID: 1793763361134788574}
-  stringsBankWriteTime: 637194394268945569
+  stringsBankWriteTime: 637194481730693385
   cacheVersion: 3
 --- !u!114 &152732989105835874
 MonoBehaviour:
@@ -3406,6 +3828,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &245116862196897123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194454851961833
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &313827405316259257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194454851631646
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &393608146966008980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,7 +3897,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_sloth_bossroom
   guid: ec79c13064690546a82bdd63be97e9a7
   Banks:
-  - {fileID: 4177243298343711382}
+  - {fileID: -7667380738933234947}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3462,7 +3920,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Small
   guid: 9aa7bae46cdc3441a11849b79171e7ed
   Banks:
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -3560,6 +4018,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &963503356326605250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194448490643905
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &996118356225943343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,7 +4051,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_breathing_inhale
   guid: b04838be6909bf429e9168afa8143ba4
   Banks:
-  - {fileID: -4674797334727851953}
+  - {fileID: -5040278535203716357}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3601,6 +4077,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1030385997419517973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194448488353074
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &1052799868247848889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3670,6 +4164,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Environment.bank
   SubDir: 
   lastModified: 637175361798227005
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1194255179940862631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194448486436215
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -3781,6 +4293,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1669747496861298346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194468012104525
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &1704192818037030715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3867,12 +4397,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Within/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637194394268945569
+  lastModified: 637194481730693385
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2338
+    Value: 2504
   Exists: 1
+--- !u!114 &1818759217839742991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194450830171420
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &1992258930887170144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4107,6 +4655,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2395724269164930712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194481730630360
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2422530916422634266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4212,6 +4778,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
   SubDir: 
   lastModified: 637176348494014490
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2487405331629816273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194395473483679
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -4323,6 +4907,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &2771592889954673413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Sloth/sx_game_npc_sloth_die
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Sloth/sx_game_npc_sloth_die
+  guid: 320cb3717c624442bf49f700e27b2ed2
+  Banks:
+  - {fileID: -5040278535203716357}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 5.0499997
+  MaxDistance: 75
+  Length: 4200
 --- !u!114 &2878001493414622588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,7 +4999,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_back
   guid: ab0ab0290cd003448184c159a3ea1305
   Banks:
-  - {fileID: -5365459927511321672}
+  - {fileID: -8957442003274016911}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4436,6 +5043,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3208826623750948973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637194395473180498
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3245572556491763514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4472,6 +5097,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &3277556863161763286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637194454854164404
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3299806474905259061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4506,7 +5149,7 @@ MonoBehaviour:
   guid: 1806443f112d864bab5f8eec739b75e2
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: -1077802253157240750}
+  - {fileID: 8617490129548959689}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4622,6 +5265,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4087790732182792621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194450829894963
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4094610471337131301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4658,6 +5319,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &4158561899846815710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194395474207237
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4171127186465798640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4730,6 +5409,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &4208876636802928383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194468009492472
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4230121304120364513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4979,7 +5676,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_breathing_exhale
   guid: 42ca5a4b3af60542b9304439bbbd9ac8
   Banks:
-  - {fileID: -4674797334727851953}
+  - {fileID: -5040278535203716357}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5075,7 +5772,7 @@ MonoBehaviour:
   guid: 181ff1ab84dc294cbfd3e044d469ceff
   Banks:
   - {fileID: -5443650354547336499}
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5191,6 +5888,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5682790790850176341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637194481731489573
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5766599615822744658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5515,6 +6230,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6687087809735610938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637194468010268435
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6703407628212499665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5780,7 +6513,7 @@ MonoBehaviour:
   guid: 8334939e4bcb73419308ccad84e41ce2
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: -1077802253157240750}
+  - {fileID: 8617490129548959689}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5839,7 +6572,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_mainmenu
   guid: adb33d13aac8554098bee3296b2adf14
   Banks:
-  - {fileID: 4177243298343711382}
+  - {fileID: -7667380738933234947}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -5862,6 +6595,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637194361446415719
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7250622791194174956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194468011520152
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -5898,7 +6649,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_through
   guid: c174c45a8ac58243ad22e0bed8a87d20
   Banks:
-  - {fileID: -5365459927511321672}
+  - {fileID: -8957442003274016911}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6011,6 +6762,24 @@ MonoBehaviour:
   Path: FMOD Project/Within/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637193692357138656
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7506969657657623853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637194450828233770
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -6504,6 +7273,47 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8588713728795939548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/Sloth/sx_game_npc_sloth_takedamage
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/Sloth/sx_game_npc_sloth_takedamage
+  guid: c02503a411bcff438c4fd650e148782f
+  Banks:
+  - {fileID: -5040278535203716357}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &8617490129548959689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637194481730222868
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8634419751210243465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6663,7 +7473,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_laugh
   guid: 26d9d54ba113d0438970eadfbe2c4d22
   Banks:
-  - {fileID: -4674797334727851953}
+  - {fileID: -5040278535203716357}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6686,7 +7496,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Medium
   guid: aefef0747fa6ca409c95c0b7855e3f4c
   Banks:
-  - {fileID: -1606522743030696516}
+  - {fileID: 2395724269164930712}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -6694,6 +7504,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &9008755382411570638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637194454853592878
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &9150760114731223336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6728,7 +7556,7 @@ MonoBehaviour:
   guid: 29cdcf7acd661a46a2ca4fbb04eea45c
   Banks:
   - {fileID: 4208593305198940009}
-  - {fileID: -5079282795224830006}
+  - {fileID: -719270007097388303}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
