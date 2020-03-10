@@ -82,6 +82,7 @@ MonoBehaviour:
   - Ambience
   - Environment
   - Interactibles
+  - NPC
   - Player
   - UI
   BanksToLoad: []
