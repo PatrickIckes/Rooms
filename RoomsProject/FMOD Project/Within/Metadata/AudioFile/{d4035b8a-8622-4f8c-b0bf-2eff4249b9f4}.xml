@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{d4035b8a-8622-4f8c-b0bf-2eff4249b9f4}">
+		<property name="assetPath">
+			<value>sx_game_int_slothfight_pickup_trashbag_ 02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.23633333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{520db17b-7a8a-4164-b6dd-8458644edfb8}</destination>
+		</relationship>
+	</object>
+</objects>

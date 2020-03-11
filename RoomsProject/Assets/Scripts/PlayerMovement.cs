@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             if (canJump && jumpInput != 0)
             {
                 PlayerJump(jumpInput);
+                
             }
             AnimatePlayer(horizontalInput, verticalInput);
         }
@@ -86,8 +87,11 @@ public class PlayerMovement : MonoBehaviour
 
     public virtual void PlayerJump(float jumpInput)
     {
+        //jpost Audio
+        //PlayPlayerJump(); //currently disabled due to sound playing twice, can't figure out exactly why as of right now...
         canJump = false;
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
+        
     }
 
     /// <summary>
@@ -123,6 +127,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && ThrowableObject != null)
         {
+            //jpost Audio
+            PlayThrowTrashBag();
             ThrowableObject.GetComponent<Thrown>().Throw();
             //Calculate Angle between two vectors
             ThrowableObject = null;
@@ -222,6 +228,26 @@ public class PlayerMovement : MonoBehaviour
         //play the FMOD event for footsteps wood
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/sx_game_plr_footsteps_wood", GetComponent<Transform>().position);
     }
+    //play trash pile collision sfx
+    private void PlayTrashCollision()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Collisions/sx_game_int_collide_trash", GetComponent<Transform>().position);
+    }
+    //jpost Audio
+    public void PlayThrowTrashBag()
+    {
+        //play the FMOD event for footsteps wood
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_throw", GetComponent<Transform>().position);
+    }
+    //jpost Audio
+    public void PlayPlayerJump()
+    {
+        if (canJump)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
+        }
+            
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -250,6 +276,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 inventory.AddItem(item);
             }
+        }
+        //jpost Audio
+        if(collision.tag == "Trash")
+        {
+            PlayTrashCollision();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

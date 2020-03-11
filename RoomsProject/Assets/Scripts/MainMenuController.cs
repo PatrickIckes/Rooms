@@ -30,36 +30,70 @@ public class MainMenuController : MonoBehaviour
 
     void StartGame()
     {
+        //jpost Audio
+        PlayUIClickPlay();
+
         SceneManager.LoadScene((int)Scenes.Tutorial);
     }
 
     void Story()
     {
+        //jpost Audio
+        PlayUIClickThrough();
+
         MainMenuCanvas.SetActive(false);
         StoryCanvas.SetActive(true);
     }
 
     void Credits()
     {
+        //jpost Audio
+        PlayUIClickThrough();
+
         MainMenuCanvas.SetActive(false);
         CreditsCanvas.SetActive(true);
     }
 
     void CreditsBack()
     {
+        //jpost Audio
+        PlayUIClickBack();
+
         CreditsCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
     }
 
     void Settings()
     {
+        //jpost Audio
+        PlayUIClickThrough();
+
         MainMenuCanvas.SetActive(false);
         SettingsCanvas.SetActive(true);
     }
 
     void SettingsBack()
     {
+        //jpost Audio
+        PlayUIClickBack();
+
         SettingsCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
+    }
+
+    //jpost audio
+    void PlayUIClickThrough()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_through", gameObject.transform.position);
+    }
+    //jpost audio
+    void PlayUIClickBack()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_back", gameObject.transform.position);
+    }
+    //jpost audio
+    void PlayUIClickPlay()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_play", gameObject.transform.position);
     }
 }
