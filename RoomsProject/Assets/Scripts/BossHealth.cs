@@ -21,12 +21,18 @@ public class BossHealth : MonoBehaviour
     {
         health -= damage;
         //jpost Audio
-        slothSFX.PlaySlothTakeDamage();
-        slothSFX.PlaySlothHit();
+        if (slothSFX != null)
+        {
+            slothSFX.PlaySlothTakeDamage();
+            slothSFX.PlaySlothHit();
+        }
         if (health <= 0)
         {
-            //jpost Audio
-            slothSFX.PlaySlothDie();
+            if (slothSFX != null)
+            {
+                //jpost Audio
+                slothSFX.PlaySlothDie();
+            }
 
             Destroy(gameObject);
         }
