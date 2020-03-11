@@ -32,9 +32,13 @@ public class Key : MonoBehaviour, IInventoryItem
     public void OnPickup()
     {
         // Add logic what happens when key is picked up by player for example unlock door
+        
         gameObject.SetActive(false);
+       
+
         //jpost Audio
         PlayKeyPickup();
+        
     }
 
     //jpost Audio
