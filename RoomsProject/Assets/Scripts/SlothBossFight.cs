@@ -83,8 +83,10 @@ public class SlothBossFight : MonoBehaviour
     {
         fallingtimer += Time.deltaTime;
 
-        if(fallingtimer > timeBetweenFalls - 1.55f)
+        if(fallingtimer > timeBetweenFalls - 1.55f) 
             slothAnimator.SetBool("isThrowing", true);
+            
+            
         if (fallingtimer > timeBetweenFalls)
         {
             
