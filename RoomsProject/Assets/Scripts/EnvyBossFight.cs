@@ -9,19 +9,38 @@ public class EnvyBossFight : MonoBehaviour
     private BossFightPhase phase;
     private float noteTimer;
     private float sandBagTimer;
+    private float phase2AttackTimer;
     public float noteFireTime;
     public float sandbagFallTime;
+    public float phase2AttackTime;
     public SandbagManager sandbagManager;
     public GameObject Note;
     public GameObject Player;
 
+    private float phase1Timer;
+    public float phase1Time;
+
+    [SerializeField]
+    private Transform phase1NoteSpawner, phase2NoteSpawner;
+    private Transform noteSpawner;
+
     [SerializeField]
     private BossHealth EnvysHealth;
+
+    [SerializeField]
+    private GameObject[] windows = new GameObject[3];
+
+    [SerializeField]
+    private GameObject envyPhase2Sprite, envyPhase2Hitbox;
 
     // Start is called before the first frame update
     void Start()
     {
         phase = BossFightPhase.First;
+        noteSpawner = phase1NoteSpawner;
+
+        envyPhase2Hitbox.SetActive(false);
+        envyPhase2Sprite.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,15 +53,33 @@ public class EnvyBossFight : MonoBehaviour
                 DropSandbags();
                 break;
             case BossFightPhase.Second:
-
+                noteSpawner = phase2NoteSpawner;
+                FireNotes();
+                Phase2Attack();
                 break;
             case BossFightPhase.Dead:
 
                 break;
         }
 
-        FireNotes();
-        DropSandbags();
+        phase1Timer += Time.deltaTime;
+        if (phase1Timer >= phase1Time && phase != BossFightPhase.Dead)
+        {
+            sandbagManager.DisableSandbags();
+            phase = BossFightPhase.Second;
+        }
+    }
+
+    private void Phase2Attack()
+    {
+        phase2AttackTimer += Time.deltaTime;
+        if (phase2AttackTimer >= phase2AttackTime)
+        {
+            envyPhase2Sprite.transform.position = windows[Random.Range(0, 3)].transform.position; //random window
+
+            StartCoroutine(Phase2AttackInstance());
+            phase2AttackTimer = 0;
+        }
     }
 
     private void FireNotes()
@@ -50,7 +87,7 @@ public class EnvyBossFight : MonoBehaviour
         noteTimer += Time.deltaTime;
         if (noteTimer >= noteFireTime)
         {
-            GameObject temp = Instantiate(Note, new Vector3(this.transform.position.x - 0.75f, 0, 0), Quaternion.identity, this.transform);
+            GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
             temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
             noteTimer = 0;
         }
@@ -64,5 +101,16 @@ public class EnvyBossFight : MonoBehaviour
             sandbagManager.fall = true;
             sandBagTimer = 0;
         }
+    }
+
+    private IEnumerator Phase2AttackInstance()
+    {
+        envyPhase2Sprite.SetActive(true);//start attack wind up animation
+        yield return new WaitForSeconds(1f);
+        envyPhase2Hitbox.SetActive(true);//attack and sit for a sec for the player to hit
+        yield return new WaitForSeconds(1f);
+        envyPhase2Hitbox.SetActive(false);//start moving back out window
+        yield return new WaitForSeconds(1f);
+        envyPhase2Sprite.SetActive(false);//disapear
     }
 }

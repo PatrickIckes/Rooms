@@ -100,4 +100,12 @@ public class SandbagManager : MonoBehaviour
             }
         }
     }
+
+    public void DisableSandbags()
+    {
+        foreach (Rigidbody2D sandbag in SandBags)
+        {
+            sandbag.gameObject.SetActive(false);
+        }
+    }
 }
