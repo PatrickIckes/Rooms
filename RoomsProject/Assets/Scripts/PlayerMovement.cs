@@ -205,6 +205,13 @@ public class PlayerMovement : MonoBehaviour
         PlayerThrow();
         CheckFallingOrJumping();
 
+        if (withinInteractable)
+        {
+            InteractionIndicator.SetActive(true);
+        }
+        else
+            InteractionIndicator.SetActive(false);
+
         //limit velocity
         rbody.velocity = new Vector2(rbody.velocity.x, Mathf.Clamp(rbody.velocity.y, -jumpSpeed * 5, jumpSpeed));
     }
@@ -298,9 +305,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (QuestCollectionText != null)
         {
-            InteractionIndicator.SetActive(false);
             QuestCollectionText.enabled = false;
-            QuestCollectionText.text = "Press F to interact.";
+            QuestCollectionText.text = "Press E to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
     }
