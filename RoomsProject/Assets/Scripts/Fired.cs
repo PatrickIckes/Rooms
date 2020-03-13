@@ -22,7 +22,7 @@ public class Fired : MonoBehaviour
         this.transform.position = Vector2.MoveTowards(transform.position,Direction,bulletSpeed*Time.smoothDeltaTime);
         if (this.transform.position == Direction)
         {
-            Direction += Direction * 0.2f;
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
