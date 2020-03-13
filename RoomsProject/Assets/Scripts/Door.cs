@@ -24,7 +24,7 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         //jpost Audio test delaying loading next scene to allow door open sfx to play properly
         //Invoke("LoadSceneSlothHallway", 1.01f);
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
+        if (Input.GetButtonDown("Interact") && withinInteractable)
         {
            if (Key != null && inventory.CheckObject(Key.name))
             {

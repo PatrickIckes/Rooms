@@ -63,7 +63,7 @@ public class DialogueBoxManager : MonoBehaviour
         name.text = textLines[currentLine]; // name text
         //image.sprite = ImageSelector(name.text); 
         //start of dialogue,f to continue
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Interact"))
         {
             currentLine += 1;
 

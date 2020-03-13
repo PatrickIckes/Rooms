@@ -212,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
     public void QuestItemCollection()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && canCheckForObject) 
+        if (Input.GetButtonDown("Interact") && canCheckForObject) 
         {
             List <GameObject> RemoveObjects = new List<GameObject>();
             foreach (GameObject collidingObject in CollidingObjects)
@@ -251,10 +251,11 @@ public class PlayerMovement : MonoBehaviour
     //jpost Audio
     public void PlayPlayerJump()
     {
-        if (canJump)
+        if (Grounded)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
         }
+        
             
     }
 

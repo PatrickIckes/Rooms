@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         textBox.SetActive(true);
         Pause();
         //KEYPRESS TO INCREMENT PROGRESS NOT WORKING
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Interact"))
         {
 
             progress += 2;
@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClick()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Interact"))
         {
             progress += 2;
             speakerProgress++;
