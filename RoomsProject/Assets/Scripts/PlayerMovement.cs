@@ -251,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
     //jpost Audio
     public void PlayPlayerJump()
     {
-        if (canJump)
+        if (Grounded)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
         }
