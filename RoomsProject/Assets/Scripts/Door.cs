@@ -26,8 +26,11 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
         {
-            if (Key != null && inventory.CheckObject(Key.name))
+           if (Key != null && inventory.CheckObject(Key.name))
             {
+                //jpost Audio
+                PlayDoorOpen();
+
                 LoadScene();
             }
             else if (Key == null)
@@ -41,7 +44,7 @@ public class Door : MonoBehaviour
                     QuestCollectionText.text = "You cannot unlock the door, it appears you need something to open it.";
 
                     //jpost Audio
-                    //PlayDoorLocked();
+                    PlayDoorLocked();
                 }
             }
         }

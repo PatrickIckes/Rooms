@@ -28,7 +28,7 @@ public class InventoryMenu
                 Pause();
             }
         }
-        Debug.Log(Time.timeScale);
+        //Debug.Log(Time.timeScale);
 
     }
 

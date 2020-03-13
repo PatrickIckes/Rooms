@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
+
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private Text textText;
     [SerializeField] private Text nameText;
     [SerializeField] private GameObject textBox;
-    [SerializeField] private TextAsset textFile;
+    public TextAsset textFile;
     [SerializeField] private Image speaker;
 
 
@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     private int progress;
     public bool GameIsPaused = false;
 
+    public bool StartDialogue = false;
 
 
 
@@ -42,15 +43,25 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (StartDialogue == true)
+            RunDialogue();
+     
 
-
-        RunDialogue();
-        
-       
     }
 
     public void RunDialogue()
     {
+        textBox.SetActive(true);
+        Pause();
+        //KEYPRESS TO INCREMENT PROGRESS NOT WORKING
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+
+            progress += 2;
+            speakerProgress++;
+            SetText();
+        }
+
         
 
         if (progress >= textTextItems.Length - 1)
@@ -58,16 +69,16 @@ public class DialogueManager : MonoBehaviour
             textBox.SetActive(false);
             Resume();
         }
-        else
+        
+    }
+
+    public void OnClick()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            
-            textBox.SetActive(true); 
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                progress += 2;
-                speakerProgress++;
-                SetText();
-            }
+            progress += 2;
+            speakerProgress++;
+            SetText();
         }
     }
 

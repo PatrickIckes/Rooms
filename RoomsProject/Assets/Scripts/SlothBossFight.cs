@@ -29,6 +29,7 @@ public class SlothBossFight : MonoBehaviour
     internal bool RoomDone;
     private int timesThrough;
     private bool finished;
+    Animator slothAnimator;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class SlothBossFight : MonoBehaviour
         timesThrough = 0;
         Debris = FirstStageDebris;
         finished = false;
+        slothAnimator = Sloth.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -81,12 +83,17 @@ public class SlothBossFight : MonoBehaviour
     {
         fallingtimer += Time.deltaTime;
 
+        if(fallingtimer > timeBetweenFalls - 1.55f) 
+            slothAnimator.SetBool("isThrowing", true);
+            
+            
         if (fallingtimer > timeBetweenFalls)
         {
+            
             int targetPlatform = Random.Range(0, 3);
             fallingtimer = 0;
             TriggerFall(targetPlatform);
-
+            
             if (phase == BossFight.Second)
             {
                 timesThrough++;
@@ -99,6 +106,7 @@ public class SlothBossFight : MonoBehaviour
                     Instantiate(TrashDrop, Platforms[rand].transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
                 }
             }
+            slothAnimator.SetBool("isThrowing", false);
         }
     }
 
@@ -113,6 +121,8 @@ public class SlothBossFight : MonoBehaviour
         {
             plank.GetComponent<BoxCollider2D>().isTrigger = true;
             plank.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            //jpost Audio
+            PlayPlatformFall();
         }
     }
 
@@ -122,6 +132,7 @@ public class SlothBossFight : MonoBehaviour
         {
             int i = 0;
             Lights[targetPlatform].GetComponent<SpriteRenderer>().color = Color.green;
+            //jpost Audio
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
             foreach (GameObject platform in Platforms)
             {
@@ -129,6 +140,8 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    //jpost audio
+                    Invoke("PlayTrashFall", 2f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -138,6 +151,7 @@ public class SlothBossFight : MonoBehaviour
         if (phase == BossFight.Second)
         {
             int i = 0;
+            //jpost Audio
             FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Lights/sx_game_env_spotlight_on", Lights[targetPlatform].GetComponent<Transform>().position);
             foreach (GameObject platform in Platforms)
             {
@@ -146,6 +160,8 @@ public class SlothBossFight : MonoBehaviour
                 {
                     Vector3 p = platform.transform.position;
                     Instantiate(Debris, new Vector3(p.x, p.y + spawnHeight, p.z), Quaternion.identity);
+                    //jpost Audio
+                    Invoke("PlayTrashFall", 2f);
                     Lights[i].GetComponent<SpriteRenderer>().color = Color.red;
                 }
                 i++;
@@ -162,10 +178,20 @@ public class SlothBossFight : MonoBehaviour
             i++;
         }
     }
-
     //jpost Audio
-    public void PlaySpotlightTurnOn()
+    private void PlayTrashFall()
     {
-
+        //WaitForSeconds wait = new WaitForSeconds(.25f);
+        GameObject[] hazards;
+        hazards = GameObject.FindGameObjectsWithTag("Hazard");
+        foreach (GameObject h in hazards)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Trash/sx_game_env_trashbag_fall", h.transform.position);
+        }
+    }
+    //jpost Audio
+    public void PlayPlatformFall()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Environment/Floorboards/sx_game_env_slothfight_platforms_fall", GameObject.Find("Planks").transform.position);
     }
 }

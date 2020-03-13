@@ -63,7 +63,6 @@ public class PlayerData : MonoBehaviour
                 playerHurtAmount = PlayerHurtAmount.oneHealth;
                 break;
         }
-
         if (pa.health <= 0)
         {
             playerHurtAmount = PlayerHurtAmount.dead;
@@ -74,6 +73,7 @@ public class PlayerData : MonoBehaviour
     internal void Damage(int damage)
     {
         pa.health -= damage;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_grunt", GetComponent<Transform>().position);
     }
 
     private IEnumerator Death()
@@ -84,5 +84,4 @@ public class PlayerData : MonoBehaviour
 
         ResetPlayer();
         gameManager.GetComponent<MyGameManager>().GameInProgress = false;
-    }
 }

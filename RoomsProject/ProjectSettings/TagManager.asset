@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Note
   - Boss
+  - Trash
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Trash
+    uniqueID: 1096180279
+    locked: 0
   - name: Background
     uniqueID: 3595747845
     locked: 0
@@ -61,21 +65,9 @@ TagManager:
   - name: GarbageFront
     uniqueID: 1836959899
     locked: 0
-  - name: Angel
-    uniqueID: 3743967279
-    locked: 0
-  - name: Puzzle1
-    uniqueID: 2490760333
-    locked: 0
-  - name: Puzzle2
-    uniqueID: 2501431877
-    locked: 0
-  - name: Puzzle3
-    uniqueID: 2869431503
-    locked: 0
-  - name: Puzzle4
-    uniqueID: 2208977905
-    locked: 0
   - name: Player
     uniqueID: 4109254511
+    locked: 0
+  - name: Angel
+    uniqueID: 3743967279
     locked: 0

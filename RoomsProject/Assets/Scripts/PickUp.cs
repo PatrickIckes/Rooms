@@ -8,14 +8,20 @@ public class PickUp : MonoBehaviour
     bool Connected;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!Connected) {
-        //this.transform.position = Player.transform.position;
-        //this.transform.parent = Player.transform;
+        Debug.Log(Player.gameObject.GetComponent<PlayerMovement>().ThrowableObject);
+        if (Player.gameObject.GetComponent<PlayerMovement>().ThrowableObject == null)
+        {
             if (collision.gameObject.name == Player.name)
             {
                 collision.gameObject.GetComponent<PlayerMovement>().ThrowableObject = this.gameObject;
                 Connected = true;
+                PlayPickup();
             }
         }
+    }
+    //jpost Audio
+    private void PlayPickup()
+    {        
+         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Trash/sx_game_int_slothfight_trashbag_pickup", GetComponent<Transform>().position);       
     }
 }
