@@ -17,7 +17,7 @@ public class PlayerData : MonoBehaviour
     private int startinghealth = 20;
 
     //[HideInInspector]
-    public int health;
+    int health;
 
     private int previoushealth = 0;
     public static PlayerData SavePoint;
