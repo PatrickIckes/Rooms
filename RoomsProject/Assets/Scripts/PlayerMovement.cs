@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
     private PlayerData playerData;
-
     //Called upon initialization of the object.
     private void Awake()
     {

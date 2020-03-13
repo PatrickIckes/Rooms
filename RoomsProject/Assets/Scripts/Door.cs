@@ -64,6 +64,7 @@ public class Door : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = true;
+            withinInteractable = true;
             QuestCollectionText.enabled = true;
         }
     }
@@ -72,6 +73,7 @@ public class Door : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = false;
+            withinInteractable = false;
         }
     }
 
@@ -80,6 +82,7 @@ public class Door : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = true;
+            withinInteractable = true;
             QuestCollectionText.enabled = true;
         }
     }
