@@ -7,26 +7,41 @@ public class Fired : MonoBehaviour
     public Vector3 Direction;
     public float bulletSpeed;
     public int damage = 1;
+    [SerializeField]
+    private float LifeTime;
+    private float timer;
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"position {Direction}");
+        timer += Time.deltaTime;
+        if(timer >= LifeTime)
+        {
+            Destroy(this.gameObject);
+        }
+
         this.transform.position = Vector2.MoveTowards(transform.position,Direction,bulletSpeed*Time.smoothDeltaTime);
+        if (this.transform.position == Direction)
+        {
+            Direction += Direction * 0.2f;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         if (collision.tag == "Player")
         {
             collision.GetComponent<PlayerData>().Damage(damage);
             Destroy(gameObject);
             Debug.Log("Hurt player");
         }
-        if(collision.gameObject.tag == "Boss")
+        if(collision.gameObject.tag == "Boss" && collision.name == "Envy")
         {
             collision.GetComponent<BossHealth>().Damage(damage);
             Destroy(gameObject);
             Debug.Log("Hurt Boss");
+        }
+        if(collision.gameObject.tag == "Platform")
+        {
+            Destroy(gameObject);
         }
     }
 }
