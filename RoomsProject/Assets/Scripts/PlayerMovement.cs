@@ -11,10 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public float DistanceToGround;
     public bool withinInteractable;
     //When in grounded areas
-    public bool canJump;
-    public bool GravityEnabled;
     public bool Grounded;
+    public bool GravityEnabled;
     public bool Falling;
+    public bool isJumping;
     internal bool canCheckForObject;
     internal bool canMove;
     //IsometricCharacterRenderer isoRenderer;
@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject ThrowableObject;
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
+    private PlayerData playerData;
+
     //Called upon initialization of the object.
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             QuestCollectionText.enabled = false;
         }
+        playerData = GetComponent<PlayerData>();
     }
     //Called on the frame the script is enabled right before update is called the first time
     private void Start()
@@ -59,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (canMove)
+        if (canMove && playerData.playerHurtAmount != PlayerData.PlayerHurtAmount.dead)
         {
             Vector2 currentPos = rbody.position;
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -67,8 +70,8 @@ public class PlayerMovement : MonoBehaviour
             float jumpInput = Input.GetAxis("Jump");
             flipPlayer(horizontalInput);
             MovePlayer(horizontalInput, verticalInput, currentPos);
-            CheckFalling();
-            if (canJump && jumpInput != 0)
+            
+            if (Grounded && jumpInput != 0)
             {
                 PlayerJump(jumpInput);
                 
@@ -76,20 +79,35 @@ public class PlayerMovement : MonoBehaviour
             AnimatePlayer(horizontalInput, verticalInput);
         }
     }
-    float prevY;
-    public void CheckFalling()
+    public void CheckFallingOrJumping()
     {
+        if (!Grounded && this.rbody.velocity.y <= 0)
+        {
+            Falling = true;
+        }
+        else
+        {
+            Falling = false;
+        }
         
-        if (prevY > this.transform.position.y) Falling = true;
-        else Falling = false;
-        prevY = this.transform.position.y;
+        if (!Grounded && this.rbody.velocity.y > 0)
+        {
+            isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
+        }
+
+        playerAnimator.SetBool("isFalling", Falling);
+        playerAnimator.SetBool("isJumping", isJumping);
     }
 
     public virtual void PlayerJump(float jumpInput)
     {
-        //jpost Audio
+        Grounded = false;
         //PlayPlayerJump(); //currently disabled due to sound playing twice, can't figure out exactly why as of right now...
-        canJump = false;
+        
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
         
     }
@@ -150,16 +168,6 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("isWalking", false);
         }//Idle Anim if not moving
-        if(!canJump && !playerAnimator.GetBool("isJumping"))
-        {
-            playerAnimator.SetBool("isJumping", true);
-        }
-        if(playerAnimator.GetBool("isJumping") && Falling)
-        {
-            playerAnimator.SetBool("isJumping", false);
-            playerAnimator.SetBool("isFalling", true);
-        }
-
     }
     /// <summary>
     /// Flips the player sprite based on the horizontalInput
@@ -195,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
         }
         QuestItemCollection();
         PlayerThrow();
+        CheckFallingOrJumping();
 
         //limit velocity
         rbody.velocity = new Vector2(rbody.velocity.x, Mathf.Clamp(rbody.velocity.y, -jumpSpeed * 5, jumpSpeed));
@@ -253,7 +262,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GravityEnabled && collision.gameObject.tag == "Platform")
         {
-            canJump = true;
+            Grounded = true;
             playerAnimator.SetBool("isFalling", false);
         }
     }
