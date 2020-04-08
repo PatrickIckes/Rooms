@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
+    [SerializeField]
     float basespeed;
+    private PlayerMovement player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -17,13 +19,16 @@ public class Trap : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.transform.position = new Vector3(this.transform.position.x,this.transform.position.y+0.25f);
-            
-            basespeed = collision.gameObject.GetComponent<PlayerMovement>().movementSpeed;
-            collision.gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
+            player = collision.gameObject.GetComponent<PlayerMovement>();
+            if (player.movementSpeed != 0)
+            {
+                basespeed = player.movementSpeed;
+                collision.gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
+            }
         }
-        else
-        {
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = basespeed;
-        }
+    }
+    internal void Break()
+    {
+        player.movementSpeed = basespeed;
     }
 }

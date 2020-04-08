@@ -6,13 +6,18 @@ using UnityEngine;
 public class PrideFight : MonoBehaviour
 {
     private float FireAtPlayerTimer;
+    private float TrapAtPlayerTimer;
     private float SummonDeerTimer;
     [SerializeField]
-    private float FireCooldown;
+    private float FireCooldown;  
+    [SerializeField]
+    private float TrapCooldown;
     [SerializeField]
     private float SummonCooldown;
     [SerializeField]
     private GameObject Deer;
+    [SerializeField]
+    private GameObject Trap;
     [SerializeField]
     private GameObject Pride;
     [SerializeField]
@@ -49,7 +54,16 @@ public class PrideFight : MonoBehaviour
     private void FireUpdate()
     {
         FireAtPlayerTimer += Time.deltaTime;
-        if (FireAtPlayerTimer >= FireCooldown)
+        if (FireAtPlayerTimer >= FireCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
+        {
+            Pride.GetComponent<PrideFireGun>().Fire();
+            FireAtPlayerTimer = 0;
+        }
+    }
+    private void ThrowTraps()
+    {
+        FireAtPlayerTimer += Time.deltaTime;
+        if (FireAtPlayerTimer >= FireCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
         {
             Pride.GetComponent<PrideFireGun>().Fire();
             FireAtPlayerTimer = 0;

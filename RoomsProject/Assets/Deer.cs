@@ -27,7 +27,7 @@ public class Deer : MonoBehaviour
         Debug.Log($"Collided with {collision.gameObject.name}");
         if (collision.gameObject.tag == "Boss")
         {
-            collision.GetComponent<BossHealth>().Damage(1);
+            collision.GetComponent<pride_comes_before_the_fall>().fall = true;
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")
