@@ -99,6 +99,12 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
 
+        if (!GravityEnabled)
+        {
+            Falling = false;
+            isJumping = false;
+        }
+
         playerAnimator.SetBool("isFalling", Falling);
         playerAnimator.SetBool("isJumping", isJumping);
     }
