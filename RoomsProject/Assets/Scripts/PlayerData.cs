@@ -84,4 +84,5 @@ public class PlayerData : MonoBehaviour
 
         ResetPlayer();
         gameManager.GetComponent<MyGameManager>().GameInProgress = false;
+    }
 }
