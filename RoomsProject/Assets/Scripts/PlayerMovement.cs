@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
     private PlayerData playerData;
-
     //Called upon initialization of the object.
     private void Awake()
     {
@@ -212,6 +211,13 @@ public class PlayerMovement : MonoBehaviour
         PlayerThrow();
         CheckFallingOrJumping();
 
+        if (withinInteractable)
+        {
+            InteractionIndicator.SetActive(true);
+        }
+        else
+            InteractionIndicator.SetActive(false);
+
         //limit velocity
         rbody.velocity = new Vector2(rbody.velocity.x, Mathf.Clamp(rbody.velocity.y, -jumpSpeed * 5, jumpSpeed));
     }
@@ -219,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
     public void QuestItemCollection()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && canCheckForObject) 
+        if (Input.GetButtonDown("Interact") && canCheckForObject) 
         {
             List <GameObject> RemoveObjects = new List<GameObject>();
             foreach (GameObject collidingObject in CollidingObjects)
@@ -262,6 +268,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
         }
+        
             
     }
 
@@ -304,9 +311,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (QuestCollectionText != null)
         {
-            InteractionIndicator.SetActive(false);
             QuestCollectionText.enabled = false;
-            QuestCollectionText.text = "Press F to interact.";
+            QuestCollectionText.text = "Press E to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
     }
