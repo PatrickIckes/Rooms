@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
+    /// <summary>
+    /// Animtor variables for scene transitions.
+    /// </summary>
+    public Animator transition;
+    public float transitionTime;
+
     public bool withinInteractable;
     public GameObject Key;
     public Scenes scene;
@@ -97,5 +103,12 @@ public class Door : MonoBehaviour
     {
         //play the FMOD event for door locked
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
+    }
+
+    IEnumerator LoadLevel(int scene)
+    {
+        transition.SetTrigger("Start");
+        
+
     }
 }
