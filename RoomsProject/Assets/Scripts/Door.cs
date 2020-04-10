@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
     /// Animtor variables for scene transitions.
     /// </summary>
     public Animator transition;
-    private float transitionTime = 1f;
+    public float transitionTime;
 
     public bool withinInteractable;
     public GameObject Key;
@@ -37,11 +37,11 @@ public class Door : MonoBehaviour
                 //jpost Audio
                 PlayDoorOpen();
 
-                LoadLevel();
+                LoadScene();
             }
             else if (Key == null)
             {
-                LoadLevel();
+                LoadScene();
             }
             else
             {
@@ -105,12 +105,10 @@ public class Door : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
     }
 
-    IEnumerator LoadLevel()
+    IEnumerator LoadLevel(int scene)
     {
         transition.SetTrigger("Start");
+        
 
-        yield return new WaitForSeconds(transitionTime);
-
-        LoadScene();
     }
 }
