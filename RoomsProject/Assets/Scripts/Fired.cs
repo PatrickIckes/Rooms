@@ -10,6 +10,10 @@ public class Fired : MonoBehaviour
     [SerializeField]
     private float LifeTime;
     private float timer;
+    [SerializeField]
+    private bool HurtPlayer;
+    [SerializeField]
+    private bool DestroyOnHit;
     // Update is called once per frame
     void Update()
     {
@@ -20,14 +24,17 @@ public class Fired : MonoBehaviour
         }
 
         this.transform.position = Vector2.MoveTowards(transform.position,Direction,bulletSpeed*Time.smoothDeltaTime);
-        if (this.transform.position == Direction)
+        if (this.transform.position == Direction && DestroyOnHit)
         {
             Destroy(gameObject);
+        } else if(this.transform.position == Direction)
+        {
+            this.tag = "Trap";
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" &&  HurtPlayer)
         {
             collision.GetComponent<PlayerData>().Damage(damage);
             Destroy(gameObject);

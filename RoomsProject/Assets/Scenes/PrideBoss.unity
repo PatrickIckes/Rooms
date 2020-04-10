@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236d7b675ad01b0498af5fba08eec62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0
+  startTimeBtwAttack: 1
   attackPos: {fileID: 996953822}
   whatIsEnemies:
     serializedVersion: 2
@@ -590,11 +590,11 @@ MonoBehaviour:
   TrapCooldown: 3
   SummonCooldown: 5
   Deer: {fileID: 5099051099810926263, guid: 949ad448d17b40b4cb6736d4654d0123, type: 3}
-  Trap: {fileID: 1629686726}
+  Trap: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587, type: 3}
   Pride: {fileID: 1157129193}
+  Player: {fileID: 996953813}
   SpawnPoints:
   - {fileID: 1863027455}
-  - {fileID: 0}
 --- !u!4 &1104642597
 Transform:
   m_ObjectHideFlags: 0
@@ -708,12 +708,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1629686726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587,
-    type: 3}
-  m_PrefabInstance: {fileID: 3801920186470363193}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1680830212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,11 +885,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1744913120}
   - component: {fileID: 1744913119}
-  - component: {fileID: 1744913121}
   - component: {fileID: 1744913123}
   - component: {fileID: 1744913124}
   - component: {fileID: 1744913122}
   - component: {fileID: 1744913125}
+  - component: {fileID: 1744913121}
   m_Layer: 9
   m_Name: Pride
   m_TagString: Boss
@@ -973,9 +967,8 @@ Transform:
 --- !u!61 &1744913121
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1452830044310064296, guid: 44d36303959ae3f4cbb8eb80d621b94e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1452830043907329609}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744913118}
   m_Enabled: 1
@@ -984,7 +977,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.254943}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -995,7 +988,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.72, y: 5.349886}
+  m_Size: {x: 0.72, y: 0.84}
   m_EdgeRadius: 0
 --- !u!114 &1744913122
 MonoBehaviour:
@@ -1009,8 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d677b05e2ae9e3344a552c02e933530f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall: 0
-  fallTime: 3
+  fallTime: 10
+  HitsToFall: 2
 --- !u!50 &1744913123
 Rigidbody2D:
   serializedVersion: 4
@@ -1031,7 +1024,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!114 &1744913124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5314d73cf727df43b7d8a02905f8145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 3
+  enemyHealth: 10
   bloodEffect: {fileID: 0}
 --- !u!61 &1744913125
 BoxCollider2D:
@@ -1355,6 +1348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bear Trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b0ffb57b631f94da842dc1157b0587, type: 3}

@@ -98,6 +98,8 @@ MonoBehaviour:
   bulletSpeed: 10
   damage: 1
   LifeTime: 5
+  HurtPlayer: 1
+  DestroyOnHit: 1
 --- !u!58 &-6462011682544558932
 CircleCollider2D:
   m_ObjectHideFlags: 0

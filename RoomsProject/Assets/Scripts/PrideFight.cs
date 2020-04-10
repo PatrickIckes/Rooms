@@ -21,6 +21,8 @@ public class PrideFight : MonoBehaviour
     [SerializeField]
     private GameObject Pride;
     [SerializeField]
+    private GameObject Player;
+    [SerializeField]
     private GameObject[] SpawnPoints;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class PrideFight : MonoBehaviour
         {
             FireUpdate();
             SummonUpdate();
+            ThrowTraps();
         }
     }
 
@@ -62,11 +65,13 @@ public class PrideFight : MonoBehaviour
     }
     private void ThrowTraps()
     {
-        FireAtPlayerTimer += Time.deltaTime;
-        if (FireAtPlayerTimer >= FireCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
+        TrapAtPlayerTimer += Time.deltaTime;
+        if (TrapAtPlayerTimer >= TrapCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
         {
-            Pride.GetComponent<PrideFireGun>().Fire();
-            FireAtPlayerTimer = 0;
+            GameObject tempTrap = Instantiate(Trap, Pride.transform.position,Quaternion.identity);
+            tempTrap.GetComponent<Fired>().bulletSpeed = 7;
+            tempTrap.GetComponent<Fired>().Direction = Player.transform.position - new Vector3(0, 0.1f);
+            TrapAtPlayerTimer = 0;
         }
     }
 }

@@ -41,8 +41,8 @@ public class PlayerAttack : MonoBehaviour
                     }
                     Debug.Log(enemiesToDamage[i].name);
                 }
+                timeBtwAttack = startTimeBtwAttack;
             }
-            timeBtwAttack = startTimeBtwAttack;
         }
         else
         {
