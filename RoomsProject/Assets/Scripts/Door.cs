@@ -64,7 +64,7 @@ public class Door : MonoBehaviour
         if (collision.tag == "Player")
         {
             withinInteractable = true;
-            QuestCollectionText.enabled = true;
+            //QuestCollectionText.enabled = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -27,9 +27,12 @@ public class DialogueManager : MonoBehaviour
 
     void SetText()
     {
-        textText.text = textTextItems[progress + 1]; //sets text for each keypress
-        nameText.text = textTextItems[progress];
-        speaker.sprite = speakerItems[speakerProgress];
+        if (progress > 1 && progress+1 < textTextItems.Length)
+        {
+            textText.text = textTextItems[progress + 1]; //sets text for each keypress
+            nameText.text = textTextItems[progress];
+            speaker.sprite = speakerItems[speakerProgress];
+        }
     }
 
     void Start()

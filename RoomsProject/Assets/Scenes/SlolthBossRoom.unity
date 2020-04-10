@@ -456,7 +456,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenFallsStageOne: 3
   timeBetweenFallsStageTwo: 5
-  firstStageTime: 30
+  firstStageTime: 0
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +651,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1358736601}
     m_Modifications:
+    - target: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1488,7 +1493,7 @@ MonoBehaviour:
   Spawner: {fileID: 477743945}
   Door: {fileID: 1721032677}
   Sword: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339, type: 3}
-  QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
+  QuestReward: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
     type: 3}
   Player: {fileID: 945091990}
 --- !u!114 &1358736600
@@ -1657,8 +1662,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604777396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.29, y: 1.28, z: 0}
-  m_LocalScale: {x: 0.078674614, y: 0.078674614, z: 0.078674614}
+  m_LocalPosition: {x: 4.74, y: 1.57, z: 0}
+  m_LocalScale: {x: 0.14584635, y: 0.14584635, z: 0.14584635}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2110,7 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   withinInteractable: 0
   Key: {fileID: 0}
-  scene: 0
+  scene: 3
   gameManager: {fileID: 1781316266}
   inventory: {fileID: 1697728127}
   QuestCollectionText: {fileID: 1772483459}

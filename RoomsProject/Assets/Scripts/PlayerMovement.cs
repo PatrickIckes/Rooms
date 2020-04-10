@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        bool test = true;
         if (canMove && playerData.playerHurtAmount != PlayerData.PlayerHurtAmount.dead)
         {
             Vector2 currentPos = rbody.position;
