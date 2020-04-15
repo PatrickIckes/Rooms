@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ public class Door : MonoBehaviour
     /// Animtor variables for scene transitions.
     /// </summary>
     public Animator transition;
-    public float transitionTime;
+    private float transitionTime = 1f;
 
     public bool withinInteractable;
     public GameObject Key;
@@ -35,13 +36,13 @@ public class Door : MonoBehaviour
            if (Key != null && inventory.CheckObject(Key.name))
             {
                 //jpost Audio
-                PlayDoorOpen();
+                //PlayDoorOpen();
 
-                LoadScene();
+                StartCoroutine(LoadLevel());
             }
             else if (Key == null)
             {
-                LoadScene();
+                StartCoroutine(LoadLevel());
             }
             else
             {
@@ -105,10 +106,14 @@ public class Door : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
     }
 
-    IEnumerator LoadLevel(int scene)
+    IEnumerator LoadLevel()
     {
-        transition.SetTrigger("Start");
-        
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+        }
+        yield return new WaitForSeconds(transitionTime);
 
+        LoadScene();
     }
 }

@@ -481,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477743945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.98, y: -4.42, z: 0}
+  m_LocalPosition: {x: 1.98, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1358736601}
@@ -1469,7 +1469,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358736601}
-  - component: {fileID: 1358736600}
   - component: {fileID: 1358736599}
   m_Layer: 0
   m_Name: EndManager
@@ -1496,18 +1495,6 @@ MonoBehaviour:
   QuestReward: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
     type: 3}
   Player: {fileID: 945091990}
---- !u!114 &1358736600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358736598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab009d303335d334eb557e079273ef8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1358736601
 Transform:
   m_ObjectHideFlags: 0
@@ -2113,6 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
   withinInteractable: 0
   Key: {fileID: 0}
   scene: 3

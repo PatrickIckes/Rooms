@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -283,27 +284,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Stairway movement handled in stairmovement script
-        CollidingObjects.Add(collision.gameObject);
-        //Collision for HallwayQuest managed in hidingpoints
-        IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
-        if (item != null)
+        List<Collider2D> colliders = this.GetComponents<Collider2D>().ToList();
+        Collider2D colliderCheck = colliders.Find(l => l.isTrigger);
+        if (collision.IsTouching(colliderCheck))
         {
-            QuestCollectionText.enabled = true;
-            InteractionIndicator.SetActive(true);
-            if (item.IsQuestItem)
+            //Stairway movement handled in stairmovement script
+            CollidingObjects.Add(collision.gameObject);
+            //Collision for HallwayQuest managed in hidingpoints
+            IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
+            if (item != null)
             {
-                qm.CollectedQuestItem(item);
+                QuestCollectionText.enabled = true;
+                InteractionIndicator.SetActive(true);
+                if (item.IsQuestItem)
+                {
+                    qm.CollectedQuestItem(item);
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
+                    inventory.AddItem(item);
+                }
             }
-            else
+            //jpost Audio
+            if (collision.tag == "Trash")
             {
-                inventory.AddItem(item);
+                PlayTrashCollision();
             }
-        }
-        //jpost Audio
-        if(collision.tag == "Trash")
-        {
-            PlayTrashCollision();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

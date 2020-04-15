@@ -14,6 +14,7 @@ public class Fired : MonoBehaviour
     private bool HurtPlayer;
     [SerializeField]
     private bool DestroyOnHit;
+    float angle;
     // Update is called once per frame
     void Update()
     {
@@ -22,14 +23,22 @@ public class Fired : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        this.transform.position = Vector2.MoveTowards(transform.position,Direction,bulletSpeed*Time.smoothDeltaTime);
-        if (this.transform.position == Direction && DestroyOnHit)
+        if (angle == 0)
         {
-            Destroy(gameObject);
-        } else if(this.transform.position == Direction)
+            angle = Vector2.Angle(this.transform.position, Direction);
+        }
+        else
         {
-            this.tag = "Trap";
+            this.transform.position = Vector2.MoveTowards(transform.position, Direction, bulletSpeed * Time.smoothDeltaTime);
+            if (this.transform.position == Direction && DestroyOnHit)
+            {
+                float x = angle / 180;
+                Direction += new Vector3(-x, -1f, 0);
+            }
+            else if (this.transform.position == Direction)
+            {
+                this.tag = "Trap";
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
