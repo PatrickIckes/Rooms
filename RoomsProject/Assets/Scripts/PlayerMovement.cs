@@ -116,7 +116,6 @@ public class PlayerMovement : MonoBehaviour
         //PlayPlayerJump(); //currently disabled due to sound playing twice, can't figure out exactly why as of right now...
         
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
-        
     }
 
     /// <summary>

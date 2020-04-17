@@ -33,7 +33,7 @@ public class PrideFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Pride != null)
+        if (Pride != null && Player.GetComponent<PlayerData>().playerHurtAmount != PlayerData.PlayerHurtAmount.dead)
         {
             FireUpdate();
             SummonUpdate();

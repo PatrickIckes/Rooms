@@ -456,7 +456,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenFallsStageOne: 3
   timeBetweenFallsStageTwo: 5
-  firstStageTime: 0
+  firstStageTime: 30
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class Fired : MonoBehaviour
     private bool HurtPlayer;
     [SerializeField]
     private bool DestroyOnHit;
-    float angle;
+    Vector3 angle;
     // Update is called once per frame
     void Update()
     {
@@ -23,21 +23,29 @@ public class Fired : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (angle == 0)
+        if (angle.x == 0)
         {
-            angle = Vector2.Angle(this.transform.position, Direction);
+            this.angle = new Vector3(1, (Direction.y - this.transform.position.y) / (Direction.x - this.transform.position.x));
+            float x = Direction.x;
+            float y = Direction.y;
+            Direction = new Vector3(x, y);
         }
         else
         {
-            this.transform.position = Vector2.MoveTowards(transform.position, Direction, bulletSpeed * Time.smoothDeltaTime);
+            this.transform.position = Vector3.MoveTowards(transform.position, Direction, bulletSpeed * Time.smoothDeltaTime);
             if (this.transform.position == Direction && DestroyOnHit)
             {
-                float x = angle / 180;
-                Direction += new Vector3(-x, -1f, 0);
+                Direction -= angle;
             }
             else if (this.transform.position == Direction)
             {
-                this.tag = "Trap";
+                if (!(this.transform.position.y <= -4.1))
+                {
+                    Direction -= angle;
+                } else
+                {
+                    this.tag = "Trap";
+                }
             }
         }
     }
@@ -47,13 +55,11 @@ public class Fired : MonoBehaviour
         {
             collision.GetComponent<PlayerData>().Damage(damage);
             Destroy(gameObject);
-            Debug.Log("Hurt player");
         }
         if(collision.gameObject.tag == "Boss" && collision.name == "Envy")
         {
             collision.GetComponent<BossHealth>().Damage(damage);
             Destroy(gameObject);
-            Debug.Log("Hurt Boss");
         }
         if(collision.gameObject.tag == "Platform")
         {

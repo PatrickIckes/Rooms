@@ -33,7 +33,7 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         if (Input.GetButtonDown("Interact") && withinInteractable)
         {
-           if (Key != null && inventory.CheckObject(Key.name))
+           if (Key != null && (inventory.CheckObject(Key.name) || inventory.CheckObject(Key.name + "(Clone)")))
             {
                 //jpost Audio
                 //PlayDoorOpen();

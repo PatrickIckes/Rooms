@@ -39,7 +39,6 @@ public class PlayerAttack : MonoBehaviour
                     {
                         enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                     }
-                    Debug.Log(enemiesToDamage[i].name);
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }
