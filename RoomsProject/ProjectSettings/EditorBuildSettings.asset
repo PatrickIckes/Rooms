@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EnvyBossRoom.unity
     guid: 1a7de2074da3a5245a4fbc8a3803813a
   - enabled: 1
+    path: Assets/Scenes/PrideBoss.unity
+    guid: f2cd405aca094e5408b4b9f11874ca63
+  - enabled: 1
     path: Assets/Scenes/DemoWinScene.unity
     guid: 947e79f5379add746a9543444b56f247
   m_configObjects: {}
