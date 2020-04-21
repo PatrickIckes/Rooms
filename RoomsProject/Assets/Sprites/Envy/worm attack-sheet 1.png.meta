@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 27e181f12ac2c2041923f2db91db22bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6146038876753107908
+    second: worm attack-sheet_0
+  - first:
+      213: 8522068457690520231
+    second: worm attack-sheet_1
+  - first:
+      213: 6393191052471679762
+    second: worm attack-sheet_2
+  - first:
+      213: -6807709152135200255
+    second: worm attack-sheet_3
+  - first:
+      213: 5854258967687101041
+    second: worm attack-sheet 1_0
+  - first:
+      213: -2398065216654948000
+    second: worm attack-sheet 1_1
+  - first:
+      213: -8934101637172292727
+    second: worm attack-sheet 1_2
+  - first:
+      213: 7944548565993109138
+    second: worm attack-sheet 1_3
+  - first:
+      213: 2973569918636069610
+    second: worm attack-sheet 1_4
+  - first:
+      213: 8640366118448201535
+    second: worm attack-sheet 1_5
+  - first:
+      213: 7282118232057191081
+    second: worm attack-sheet 1_6
+  - first:
+      213: 8701998054414030467
+    second: worm attack-sheet 1_7
+  - first:
+      213: 3164504489377620204
+    second: worm attack-sheet 1_8
+  - first:
+      213: 7780018587535082012
+    second: worm attack-sheet 1_9
+  - first:
+      213: 71005109340011141
+    second: worm attack-sheet 1_10
+  - first:
+      213: 2060166886013978263
+    second: worm attack-sheet 1_11
+  - first:
+      213: -3091319296719862593
+    second: worm attack-sheet 1_12
+  - first:
+      213: 3652699615662846742
+    second: worm attack-sheet 1_13
+  - first:
+      213: 5780740715490966196
+    second: worm attack-sheet 1_14
+  - first:
+      213: 1945577792809767415
+    second: worm attack-sheet 1_15
+  - first:
+      213: 1574600277767010381
+    second: worm attack-sheet 1_16
+  - first:
+      213: 1023528939417755230
+    second: worm attack-sheet 1_17
+  - first:
+      213: -1235657350794887078
+    second: worm attack-sheet 1_18
+  - first:
+      213: -4687868560525179048
+    second: worm attack-sheet 1_19
+  - first:
+      213: 1757986917553132120
+    second: worm attack-sheet 1_20
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: worm attack-sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d5655fae7d1f84c9f152dc2007dd8d
+      internalID: 5854258967687101041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe07e0c6a9305b848a1b092aa5e8bff6
+      internalID: -2398065216654948000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40d4118afa542748bc3f173f721a716
+      internalID: -8934101637172292727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c749180e1d29b84428b9315d5fc57179
+      internalID: 7944548565993109138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36404d4d8b915d4881a4e2b44944bb1
+      internalID: 2973569918636069610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 1069
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ea69e07bdda034a9a12f38f36cdeac
+      internalID: 8640366118448201535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e961eb5699227c4d92527faad7d080b
+      internalID: 7282118232057191081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85374de91f520a43adce7707eea2a59
+      internalID: 8701998054414030467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68aaa6e309a122347985c3801f0aec00
+      internalID: 3164504489377620204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c728e11f0e2e904bbdffe9d56d4679f
+      internalID: 7780018587535082012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c833beaaaa3b6d41871c6b6d92b0b84
+      internalID: 71005109340011141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 720
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4370edbbf38120347b385abf95bfadb2
+      internalID: 2060166886013978263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381662393a3834949b6ef8f03c021232
+      internalID: -3091319296719862593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaf0acaad08c9345bd8e9edcc051d85
+      internalID: 3652699615662846742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d86aa665ecb564cb0cdfd299be9644
+      internalID: 5780740715490966196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c779aa91d5f8734aa1dd1ddcb5bddfe
+      internalID: 1945577792809767415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e476be05626885244bd15e6a93238274
+      internalID: 1574600277767010381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 372
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c19787e3c058846b02d19cca682741
+      internalID: 1023528939417755230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 23
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6101e2eb051b544b93ad42f45ccb63
+      internalID: -1235657350794887078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 23
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbbc93f45a13ef48810581f3f7cc9c2
+      internalID: -4687868560525179048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: worm attack-sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 23
+        width: 394
+        height: 331
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a67a9dc162cec449b5e3606e493dc4f
+      internalID: 1757986917553132120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
