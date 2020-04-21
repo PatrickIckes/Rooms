@@ -49,7 +49,6 @@ public class DialogueManager : MonoBehaviour
         if (StartDialogue == true)
             RunDialogue();
      
-
     }
 
     public void RunDialogue()
@@ -59,23 +58,34 @@ public class DialogueManager : MonoBehaviour
         //KEYPRESS TO INCREMENT PROGRESS NOT WORKING
         if (Input.GetButtonDown("Interact"))
         {
+            Pause();
+            //RunDialogue();
+            textBox.SetActive(true);
+         
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                progress += 2;
+                speakerProgress++;
+                SetText();
+            }
 
-            progress += 2;
-            speakerProgress++;
-            SetText();
+
+            if (progress >= textTextItems.Length - 1)
+            {
+                textBox.SetActive(false);
+                Resume();
+                gameObject.SetActive(false);
+            }
         }
 
-        
-
-        if (progress >= textTextItems.Length - 1)
+        else 
         {
             textBox.SetActive(false);
             Resume();
         }
-        
     }
 
-    public void OnClick()
+    public void RunDialogue()
     {
         if (Input.GetButtonDown("Interact"))
         {
