@@ -27,9 +27,12 @@ public class DialogueManager : MonoBehaviour
 
     void SetText()
     {
-        textText.text = textTextItems[progress + 1]; //sets text for each keypress
-        nameText.text = textTextItems[progress];
-        speaker.sprite = speakerItems[speakerProgress];
+        if (progress > 1 && progress+1 < textTextItems.Length)
+        {
+            textText.text = textTextItems[progress + 1]; //sets text for each keypress
+            nameText.text = textTextItems[progress];
+            speaker.sprite = speakerItems[speakerProgress];
+        }
     }
 
     void Start()
@@ -54,7 +57,7 @@ public class DialogueManager : MonoBehaviour
         textBox.SetActive(true);
         Pause();
         //KEYPRESS TO INCREMENT PROGRESS NOT WORKING
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Interact"))
         {
 
             progress += 2;
@@ -74,7 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClick()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Interact"))
         {
             progress += 2;
             speakerProgress++;

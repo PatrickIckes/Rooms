@@ -43,10 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c3c1424771ff54fbbb97c1cb29804c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SLOTS: 5
-  InventoryUI: {fileID: 0}
-  PrefabImage: {fileID: 0}
-  CurrentLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &3529394729408210272
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +110,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 11
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -5066135068008178705, guid: 2723c3de0877a30488deba1ba55e5330,
     type: 3}
@@ -204,7 +200,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -185712785
-  m_SortingLayer: 11
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1,
     type: 3}
@@ -255,10 +251,10 @@ MonoBehaviour:
   jumpSpeed: 4.5
   DistanceToGround: 0
   withinInteractable: 0
-  canJump: 0
-  GravityEnabled: 0
   Grounded: 0
+  GravityEnabled: 0
   Falling: 0
+  isJumping: 0
   inventory: {fileID: 6768777302839310364}
   gameManager: {fileID: 0}
   QuestCollectionText: {fileID: 0}
@@ -351,8 +347,6 @@ MonoBehaviour:
   playerHurtAmount: 0
   gameManager: {fileID: 0}
   startinghealth: 20
-  health: 0
-  deathAnimation: {fileID: 0}
   playerAnimator: {fileID: 6437135073513213895}
 --- !u!1 &7454150820322988052
 GameObject:

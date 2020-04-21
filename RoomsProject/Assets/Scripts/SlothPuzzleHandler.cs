@@ -21,7 +21,7 @@ public class PuzzleHandler : MonoBehaviour
     {
         if (InPuzzle)
         {
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetButtonDown("Interact"))
             {
                 if (!PuzzleActive)
                 {

@@ -14,10 +14,10 @@ public class PlayerData : MonoBehaviour
 
     internal PlayerAttributes pa;
     [SerializeField]
-    private int startinghealth = 20;
+    private int startinghealth;
 
     //[HideInInspector]
-    public int health;
+    int health;
 
     private int previoushealth = 0;
     public static PlayerData SavePoint;

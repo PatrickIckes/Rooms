@@ -22,7 +22,7 @@ public class StairMovement : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.F)&& withinStairway)
+        if(Input.GetButtonDown("Interact")&& withinStairway)
         {
             if (stairway.activeInHierarchy)
             {
