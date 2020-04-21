@@ -14,11 +14,11 @@ public class PlayerData : MonoBehaviour
 
     internal PlayerAttributes pa;
     [SerializeField]
-    private int startinghealth = 20;
+    private int startinghealth;
 
     //[HideInInspector]
     public int health;
-
+    public Health healthScript;
     private int previoushealth = 0;
     public static PlayerData SavePoint;
 
@@ -36,6 +36,10 @@ public class PlayerData : MonoBehaviour
     {
         pa = new PlayerAttributes(startinghealth,SceneManager.GetActiveScene().buildIndex,new List<GameObject>(), this.transform.position);
         playerHurtAmount = PlayerHurtAmount.unhurt;
+        //calls and sets health in healthSript to 3 total hp and 3 current
+        healthScript = GetComponent<Health>();
+        healthScript.numOFHearts = 3;
+        healthScript.health = 3;
     }
 
     // Update is called once per frame
@@ -55,12 +59,15 @@ public class PlayerData : MonoBehaviour
         {
             case 3:
                 playerHurtAmount = PlayerHurtAmount.unhurt;
+                
                 break;
             case 2:
                 playerHurtAmount = PlayerHurtAmount.twoHealth;
+                
                 break;
             case 1:
                 playerHurtAmount = PlayerHurtAmount.oneHealth;
+                
                 break;
         }
         if (pa.health <= 0)
@@ -73,6 +80,7 @@ public class PlayerData : MonoBehaviour
     internal void Damage(int damage)
     {
         pa.health -= damage;
+        healthScript.health--;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_grunt", GetComponent<Transform>().position);
     }
 

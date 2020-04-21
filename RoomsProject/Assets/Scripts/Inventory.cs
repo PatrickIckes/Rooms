@@ -21,10 +21,16 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(IInventoryItem item)
     {
-        inventory.AddItem(item);
+        GameObject tempItem = Instantiate(((MonoBehaviour)item).gameObject, new Vector3(), Quaternion.identity);
+        DontDestroyOnLoad(tempItem);
+        tempItem.SetActive(false);
+        tempItem.name = tempItem.name.Substring(0, tempItem.name.Length - 7);
+        inventory.AddItem(tempItem.GetComponent<IInventoryItem>());
+
     }
     public bool CheckObject(string name)
     {
+        if (inventory == null) inventory = SingletonInventory.Inventory;
         return inventory.CheckObject(name);
     }
 }

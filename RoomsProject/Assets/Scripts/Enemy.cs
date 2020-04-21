@@ -21,8 +21,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        //Play hurt sound of enemy here
-        Instantiate(bloodEffect, transform.position, Quaternion.identity);
+        if (bloodEffect != null)
+        {
+            //Play hurt sound of enemy here
+            Instantiate(bloodEffect, transform.position, Quaternion.identity);
+        }
         enemyHealth -= damage;
         Debug.Log("Damage TAKEN!");
     }
