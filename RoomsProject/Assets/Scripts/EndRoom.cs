@@ -30,8 +30,8 @@ public class EndRoom : MonoBehaviour
     {
         Door.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         doorAnimator.SetBool("Fall", true);
-        Instantiate(Sword, Spawner.transform);
-        GameObject temp = Instantiate(QuestReward);
+        Instantiate(Sword, Spawner.transform.position, Quaternion.identity);
+        GameObject temp = Instantiate(QuestReward, Spawner.transform.position, Quaternion.identity);
         PlayerQuest.CollectedItem(temp.GetComponentInChildren<IInventoryItem>());
     }
 }

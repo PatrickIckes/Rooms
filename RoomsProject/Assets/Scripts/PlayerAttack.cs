@@ -15,35 +15,33 @@ public class PlayerAttack : MonoBehaviour
     int FacingDirection;
     void Update()
     {
-        if(timeBtwAttack <= 0)
+        if (timeBtwAttack <= 0)
         {
             //Then you can attack
-            if(Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                //if (!this.GetComponent<SpriteRenderer>().flipX)
-                //{
-                //    FacingDirection = -1;
-                //    attackPos 
-                //}
-                //else
-                //{
-                //    FacingDirection = 1;
-                //    //attackPos = attackPos;
-                //}
                 //Player attacking animation here
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     if (enemiesToDamage[i].tag == "Note")
                         enemiesToDamage[i].GetComponent<Fired>().Direction = GameObject.FindGameObjectWithTag("Boss").transform.position;
+                    else if (enemiesToDamage[i].tag == "Trap")
+                    {
+                        enemiesToDamage[i].GetComponent<Trap>().Break();
+                        Destroy(enemiesToDamage[i].gameObject);
+                    }
+                    else if (enemiesToDamage[i].tag == "Boss")
+                    {
+                        enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    }
                     else
                     {
                         enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                     }
-                    Debug.Log(enemiesToDamage[i].name);
                 }
+                timeBtwAttack = startTimeBtwAttack;
             }
-            timeBtwAttack = startTimeBtwAttack;
         }
         else
         {

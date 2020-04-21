@@ -24,10 +24,9 @@ public class Deer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"Collided with {collision.gameObject.name}");
         if (collision.gameObject.tag == "Boss")
         {
-            collision.GetComponent<BossHealth>().Damage(1);
+            collision.GetComponent<pride_comes_before_the_fall>().Hit();
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")

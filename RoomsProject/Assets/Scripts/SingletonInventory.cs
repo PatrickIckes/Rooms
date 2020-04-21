@@ -11,8 +11,8 @@ namespace Assets.Scripts
     public class SingletonInventory
     {
         private static SingletonInventory inventory;
-        
-        public static SingletonInventory Inventory 
+
+        public static SingletonInventory Inventory
         {
             get
             {
@@ -47,19 +47,13 @@ namespace Assets.Scripts
         {
             if (mItems.Count < SLOTS)
             {
-                Collider2D collider = (item as MonoBehaviour).GetComponent<Collider2D>();
-                if (collider.enabled)
+                mItems.Add(item);
+
+                item.OnPickup();
+
+                if (ItemAdded != null)
                 {
-                    collider.enabled = false;
-
-                    mItems.Add(item);
-
-                    item.OnPickup();
-
-                    if (ItemAdded != null)
-                    {
-                        ItemAdded(this, new InventoryEventArgs(item));
-                    }
+                    ItemAdded(this, new InventoryEventArgs(item));
                 }
             }
         }
@@ -71,17 +65,20 @@ namespace Assets.Scripts
         {
             foreach (IInventoryItem item in mItems)
             {
-                if (name == item.Name)
+                if (item.GetType().Name != "null")
                 {
-                    if (item.GetType() == typeof(Key))
+                    if (name == item.Name)
                     {
-                        return true;
-                    }
-                    else
-                    {
-                        //This should not be a thing that happens.
-                        Debug.Log("Wrong Implementation Exception");
-                        return false;
+                        if (item.GetType() == typeof(Key))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            //This should not be a thing that happens.
+                            Debug.Log("Wrong Implementation Exception");
+                            return false;
+                        }
                     }
                 }
                 else
