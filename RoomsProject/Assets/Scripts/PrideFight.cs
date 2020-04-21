@@ -6,15 +6,22 @@ using UnityEngine;
 public class PrideFight : MonoBehaviour
 {
     private float FireAtPlayerTimer;
+    private float TrapAtPlayerTimer;
     private float SummonDeerTimer;
     [SerializeField]
-    private float FireCooldown;
+    private float FireCooldown;  
+    [SerializeField]
+    private float TrapCooldown;
     [SerializeField]
     private float SummonCooldown;
     [SerializeField]
     private GameObject Deer;
     [SerializeField]
+    private GameObject Trap;
+    [SerializeField]
     private GameObject Pride;
+    [SerializeField]
+    private GameObject Player;
     [SerializeField]
     private GameObject[] SpawnPoints;
     // Start is called before the first frame update
@@ -26,10 +33,11 @@ public class PrideFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Pride != null)
+        if (Pride != null && Player.GetComponent<PlayerData>().playerHurtAmount != PlayerData.PlayerHurtAmount.dead)
         {
             FireUpdate();
             SummonUpdate();
+            ThrowTraps();
         }
     }
 
@@ -49,10 +57,21 @@ public class PrideFight : MonoBehaviour
     private void FireUpdate()
     {
         FireAtPlayerTimer += Time.deltaTime;
-        if (FireAtPlayerTimer >= FireCooldown)
+        if (FireAtPlayerTimer >= FireCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
         {
             Pride.GetComponent<PrideFireGun>().Fire();
             FireAtPlayerTimer = 0;
+        }
+    }
+    private void ThrowTraps()
+    {
+        TrapAtPlayerTimer += Time.deltaTime;
+        if (TrapAtPlayerTimer >= TrapCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
+        {
+            GameObject tempTrap = Instantiate(Trap, Pride.transform.position,Quaternion.identity);
+            tempTrap.GetComponent<Fired>().bulletSpeed = 7;
+            tempTrap.GetComponent<Fired>().Direction = Player.transform.position - new Vector3(0, 0.1f);
+            TrapAtPlayerTimer = 0;
         }
     }
 }

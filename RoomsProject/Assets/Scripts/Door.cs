@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,12 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
+    /// <summary>
+    /// Animtor variables for scene transitions.
+    /// </summary>
+    public Animator transition;
+    private float transitionTime = 1f;
+
     public bool withinInteractable;
     public GameObject Key;
     public Scenes scene;
@@ -24,18 +31,18 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         //jpost Audio test delaying loading next scene to allow door open sfx to play properly
         //Invoke("LoadSceneSlothHallway", 1.01f);
-        if (Input.GetKeyDown(KeyCode.F) && withinInteractable)
+        if (Input.GetButtonDown("Interact") && withinInteractable)
         {
-           if (Key != null && inventory.CheckObject(Key.name))
+           if (Key != null && (inventory.CheckObject(Key.name) || inventory.CheckObject(Key.name + "(Clone)")))
             {
                 //jpost Audio
-                PlayDoorOpen();
+                //PlayDoorOpen();
 
-                LoadScene();
+                StartCoroutine(LoadLevel());
             }
             else if (Key == null)
             {
-                LoadScene();
+                StartCoroutine(LoadLevel());
             }
             else
             {
@@ -63,14 +70,16 @@ public class Door : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = true;
             withinInteractable = true;
-            QuestCollectionText.enabled = true;
+            //QuestCollectionText.enabled = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = false;
             withinInteractable = false;
         }
     }
@@ -79,6 +88,7 @@ public class Door : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            collision.gameObject.GetComponent<PlayerMovement>().withinInteractable = true;
             withinInteractable = true;
             QuestCollectionText.enabled = true;
         }
@@ -94,5 +104,17 @@ public class Door : MonoBehaviour
     {
         //play the FMOD event for door locked
         FMODUnity.RuntimeManager.PlayOneShot("event:/Interactible/Doors/sx_game_int_door_open", GetComponent<Transform>().position);
+    }
+
+    IEnumerator LoadLevel()
+    {
+        if (transition != null)
+        {
+            transition.SetBool("UnitySucks", true);
+            transition.SetTrigger("Start");
+        }
+        yield return new WaitForSeconds(transitionTime);
+
+        LoadScene();
     }
 }

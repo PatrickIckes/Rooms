@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -30,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     List<GameObject> CollidingObjects;
     public float PlayerGravityScale; //Only set at start
     private PlayerData playerData;
-
     //Called upon initialization of the object.
     private void Awake()
     {
@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        bool test = true;
         if (canMove && playerData.playerHurtAmount != PlayerData.PlayerHurtAmount.dead)
         {
             Vector2 currentPos = rbody.position;
@@ -115,7 +116,6 @@ public class PlayerMovement : MonoBehaviour
         //PlayPlayerJump(); //currently disabled due to sound playing twice, can't figure out exactly why as of right now...
         
         rbody.AddForce(new Vector2(0, jumpInput*jumpSpeed),ForceMode2D.Impulse);
-        
     }
 
     /// <summary>
@@ -211,6 +211,13 @@ public class PlayerMovement : MonoBehaviour
         PlayerThrow();
         CheckFallingOrJumping();
 
+        if (withinInteractable)
+        {
+            InteractionIndicator.SetActive(true);
+        }
+        else
+            InteractionIndicator.SetActive(false);
+
         //limit velocity
         rbody.velocity = new Vector2(rbody.velocity.x, Mathf.Clamp(rbody.velocity.y, -jumpSpeed * 5, jumpSpeed));
     }
@@ -218,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
     public void QuestItemCollection()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && canCheckForObject) 
+        if (Input.GetButtonDown("Interact") && canCheckForObject) 
         {
             List <GameObject> RemoveObjects = new List<GameObject>();
             foreach (GameObject collidingObject in CollidingObjects)
@@ -261,6 +268,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
         }
+        
             
     }
 
@@ -275,27 +283,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Stairway movement handled in stairmovement script
-        CollidingObjects.Add(collision.gameObject);
-        //Collision for HallwayQuest managed in hidingpoints
-        IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
-        if (item != null)
+        List<Collider2D> colliders = this.GetComponents<Collider2D>().ToList();
+        Collider2D colliderCheck = colliders.Find(l => l.isTrigger);
+        if (collision.IsTouching(colliderCheck))
         {
-            QuestCollectionText.enabled = true;
-            InteractionIndicator.SetActive(true);
-            if (item.IsQuestItem)
+            //Stairway movement handled in stairmovement script
+            CollidingObjects.Add(collision.gameObject);
+            //Collision for HallwayQuest managed in hidingpoints
+            IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
+            if (item != null)
             {
-                qm.CollectedQuestItem(item);
+                QuestCollectionText.enabled = true;
+                InteractionIndicator.SetActive(true);
+                if (item.IsQuestItem)
+                {
+                    qm.CollectedQuestItem(item);
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
+                    inventory.AddItem(item);
+                }
             }
-            else
+            //jpost Audio
+            if (collision.tag == "Trash")
             {
-                inventory.AddItem(item);
+                PlayTrashCollision();
             }
-        }
-        //jpost Audio
-        if(collision.tag == "Trash")
-        {
-            PlayTrashCollision();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -303,9 +317,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (QuestCollectionText != null)
         {
-            InteractionIndicator.SetActive(false);
             QuestCollectionText.enabled = false;
-            QuestCollectionText.text = "Press F to interact.";
+            QuestCollectionText.text = "Press E to interact.";
         }
         CollidingObjects.Remove(collision.gameObject);
     }
