@@ -17,6 +17,9 @@ public class EnvyBossFight : MonoBehaviour
     public GameObject Note;
     public GameObject Player;
 
+    private float minionSpawnTimer;
+    public float minionSpawnTime;
+
     private float phase1Timer;
     public float phase1Time;
 
@@ -54,7 +57,7 @@ public class EnvyBossFight : MonoBehaviour
                 break;
             case BossFightPhase.Second:
                 noteSpawner = phase2NoteSpawner;
-                FireNotes();
+                SpawnMinions();
                 Phase2Attack();
                 break;
             case BossFightPhase.Dead:
@@ -75,7 +78,7 @@ public class EnvyBossFight : MonoBehaviour
         phase2AttackTimer += Time.deltaTime;
         if (phase2AttackTimer >= phase2AttackTime)
         {
-            envyPhase2Sprite.transform.position = windows[Random.Range(0, 3)].transform.position; //random window
+            envyPhase2Sprite.transform.position = windows[Random.Range(0, 2)].transform.position; //random window
 
             StartCoroutine(Phase2AttackInstance());
             phase2AttackTimer = 0;
@@ -87,9 +90,23 @@ public class EnvyBossFight : MonoBehaviour
         noteTimer += Time.deltaTime;
         if (noteTimer >= noteFireTime)
         {
+            Debug.Log("Fire Note");
             GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
             temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
             noteTimer = 0;
+        }
+    }
+    
+    //TODO: Edit once minion sprites exist
+    private void SpawnMinions()
+    {
+        minionSpawnTimer += Time.deltaTime;
+        if (minionSpawnTimer >= minionSpawnTime)
+        {
+            Debug.Log("Spawn Minion");
+            GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
+            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
+            minionSpawnTimer = 0;
         }
     }
 
@@ -106,11 +123,11 @@ public class EnvyBossFight : MonoBehaviour
     private IEnumerator Phase2AttackInstance()
     {
         envyPhase2Sprite.SetActive(true);//start attack wind up animation
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         envyPhase2Hitbox.SetActive(true);//attack and sit for a sec for the player to hit
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.7f);
         envyPhase2Hitbox.SetActive(false);//start moving back out window
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         envyPhase2Sprite.SetActive(false);//disapear
     }
 }
