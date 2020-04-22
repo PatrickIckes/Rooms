@@ -85,7 +85,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void RunDialogue()
+    /*public void RunDialogue()
     {
         if (Input.GetButtonDown("Interact"))
         {
@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
             speakerProgress++;
             SetText();
         }
-    }
+    }*/
 
     public void Resume()
     {
@@ -106,6 +106,4 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-
-    
 }

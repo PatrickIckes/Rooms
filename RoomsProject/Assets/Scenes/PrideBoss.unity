@@ -586,8 +586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2146cb731e11fd41af0897d600994a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireCooldown: 1
-  TrapCooldown: 3
+  FireCooldown: 2
+  TrapCooldown: 10
   SummonCooldown: 5
   Deer: {fileID: 5099051099810926263, guid: 949ad448d17b40b4cb6736d4654d0123, type: 3}
   Trap: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587, type: 3}
@@ -1203,6 +1203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrossfadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143236401052892433, guid: fd519a1857cab2043a60be1e2e56e47a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3143236401052892439, guid: fd519a1857cab2043a60be1e2e56e47a,
         type: 3}
