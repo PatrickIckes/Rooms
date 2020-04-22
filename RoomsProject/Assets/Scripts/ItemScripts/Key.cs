@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +29,13 @@ public class Key : MonoBehaviour, IInventoryItem
             return _Image;
         }
     }
-
+    private void Start()
+    {
+        if (SingletonInventory.Inventory.CheckObject(Name))
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
     public void OnPickup()
     {
         // Add logic what happens when key is picked up by player for example unlock door
