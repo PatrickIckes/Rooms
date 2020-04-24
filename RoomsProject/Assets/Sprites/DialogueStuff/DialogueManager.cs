@@ -24,9 +24,9 @@ public class DialogueManager : MonoBehaviour
 
 
 
-    void SetText()
+    public void SetText()
     {
-        if (progress > 1 && progress+1 < textTextItems.Length)
+        //if (progress > 1 && progress+1 < textTextItems.Length)
         {
             textText.text = textTextItems[progress + 1]; //sets text for each keypress
             nameText.text = textTextItems[progress];
@@ -86,9 +86,8 @@ public class DialogueManager : MonoBehaviour
 
     public void RunDialogue()
     {
-            SetText();
-        Debug.Log(progress);
-            //Pause();
+         //Debug.Log(progress);
+            Pause();
             textBox.SetActive(true);
          
             if (Input.GetKeyDown(KeyCode.E))
@@ -103,7 +102,8 @@ public class DialogueManager : MonoBehaviour
             {
                 textBox.SetActive(false);
                 Resume();
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                this.enabled = false;
             }
         
     }
