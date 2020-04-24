@@ -83,11 +83,12 @@ public class DialogueManager : MonoBehaviour
             Resume();
         }
     }*/
-
+    
     public void RunDialogue()
     {
-         //Debug.Log(progress);
-            Pause();
+        //Debug.Log(progress);
+       
+           Pause();
             textBox.SetActive(true);
          
             if (Input.GetKeyDown(KeyCode.E))
