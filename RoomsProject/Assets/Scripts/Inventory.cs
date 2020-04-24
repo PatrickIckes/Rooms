@@ -26,7 +26,6 @@ public class Inventory : MonoBehaviour
         tempItem.SetActive(false);
         tempItem.name = tempItem.name.Substring(0, tempItem.name.Length - 7);
         inventory.AddItem(tempItem.GetComponent<IInventoryItem>());
-
     }
     public bool CheckObject(string name)
     {

@@ -1,9 +1,13 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Assets.Scripts.ItemScripts
 {
-    class SlothReward : MonoBehaviour, IInventoryItem
+    class PrideReward : MonoBehaviour, IInventoryItem
     {
         public bool IsQuestItem { get { return true; } }
 
@@ -12,7 +16,7 @@ namespace Assets.Scripts.ItemScripts
         {
             get
             {
-                return "Sloth Reward";
+                return "Pride Reward";
             }
         }
 

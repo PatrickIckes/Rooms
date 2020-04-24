@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +34,15 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         if (Input.GetButtonDown("Interact") && withinInteractable)
         {
-           if (Key != null && (inventory.CheckObject(Key.name) || inventory.CheckObject(Key.name + "(Clone)")))
+            OpenDoor(true);
+        }
+    }
+
+    internal void OpenDoor(bool endRoom)
+    {
+        if (endRoom)
+        {
+            if (Key != null && (inventory.CheckObject(Key.name) || inventory.CheckObject(Key.name + "(Clone)")))
             {
                 //jpost Audio
                 //PlayDoorOpen();

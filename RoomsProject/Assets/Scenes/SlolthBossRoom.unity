@@ -717,7 +717,7 @@ Transform:
   m_LocalScale: {x: 0.14228904, y: 0.14228904, z: 0.14228904}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575890561
 GameObject:
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   Spawner: {fileID: 477743945}
   Door: {fileID: 1721032677}
   Sword: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339, type: 3}
-  QuestReward: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+  QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
     type: 3}
   Player: {fileID: 945091990}
 --- !u!4 &1358736601

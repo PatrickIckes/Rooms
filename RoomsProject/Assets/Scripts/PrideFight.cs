@@ -24,6 +24,8 @@ public class PrideFight : MonoBehaviour
     private GameObject Player;
     [SerializeField]
     private GameObject[] SpawnPoints;
+    [SerializeField]
+    private ExitManager exit;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,10 @@ public class PrideFight : MonoBehaviour
             FireUpdate();
             SummonUpdate();
             ThrowTraps();
+        } 
+        else if(Pride == null)
+        {
+            exit.EndRoom();
         }
     }
 
