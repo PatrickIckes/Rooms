@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTime: 10
-  HitsToFall: 1
+  HitsToFall: 2
 --- !u!50 &1744913123
 Rigidbody2D:
   serializedVersion: 4
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5314d73cf727df43b7d8a02905f8145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 1
+  enemyHealth: 5
   bloodEffect: {fileID: 0}
 --- !u!61 &1744913125
 BoxCollider2D:
