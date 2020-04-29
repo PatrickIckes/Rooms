@@ -28,7 +28,7 @@ public class EndRoom : MonoBehaviour
     }
     public void RoomOver()
     {
-        Door.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        Door.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         doorAnimator.SetBool("Fall", true);
         Instantiate(Sword, Spawner.transform.position, Quaternion.identity);
         GameObject temp = Instantiate(QuestReward, Spawner.transform.position, Quaternion.identity);
