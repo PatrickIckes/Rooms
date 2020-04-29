@@ -1966,6 +1966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6faf86eaef6ae44284742acf2fdbb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stairs: {fileID: 1613053548}
+  Garbagebags: {fileID: 752644182}
   playerInventory: {fileID: 1421066235988371704}
   keys:
   - {fileID: 1902597438}
@@ -2934,12 +2936,12 @@ PrefabInstance:
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.858265
+      value: -2.16
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9554596
+      value: 5.46
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -2985,6 +2987,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594665210356318531, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594665210356318532, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.5881929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594665210356318532, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.176386
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594665210356318532, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.66743743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594665210356318532, guid: 5c4834efdf13f3b4db832c4154e22959,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.3348746
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318533, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -3235,12 +3262,12 @@ PrefabInstance:
     - target: {fileID: 6418722166418990549, guid: 37a2f5c044a216f408f36e7985dae1a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.86
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 6418722166418990549, guid: 37a2f5c044a216f408f36e7985dae1a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.52
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 6418722166418990549, guid: 37a2f5c044a216f408f36e7985dae1a5,
         type: 3}
@@ -4481,6 +4508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrossfadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143236401052892433, guid: fd519a1857cab2043a60be1e2e56e47a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3143236401052892439, guid: fd519a1857cab2043a60be1e2e56e47a,
         type: 3}
