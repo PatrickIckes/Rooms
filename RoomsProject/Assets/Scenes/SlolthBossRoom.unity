@@ -732,7 +732,7 @@ Transform:
   m_LocalScale: {x: 0.14228904, y: 0.14228904, z: 0.14228904}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575890561
 GameObject:
@@ -1904,6 +1904,7 @@ MonoBehaviour:
   QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
     type: 3}
   Player: {fileID: 945091990}
+  slothRoomAnim: {fileID: 1768006317}
 --- !u!4 &1358736601
 Transform:
   m_ObjectHideFlags: 0
@@ -3146,7 +3147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &1106528938417133481
 CanvasRenderer:
