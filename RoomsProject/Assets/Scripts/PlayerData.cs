@@ -80,7 +80,7 @@ public class PlayerData : MonoBehaviour
     internal void Damage(int damage)
     {
         pa.health -= damage;
-        //healthScript.health--;
+        healthScript.health--;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_grunt", GetComponent<Transform>().position);
     }
 

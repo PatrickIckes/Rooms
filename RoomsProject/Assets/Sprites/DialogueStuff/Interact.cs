@@ -22,6 +22,7 @@ public class Interact : MonoBehaviour
     {
         if(inCollider && Input.GetKeyDown(KeyCode.E))
         {
+            dm.SetText();
             dm.StartDialogue = true;
             this.enabled = false;
         }
@@ -29,9 +30,12 @@ public class Interact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Notification.SetActive(true);
-        NotificationText.enabled = true;
-        inCollider = true;
+        if(collision.CompareTag("Player"))
+        {
+            Notification.SetActive(true);
+            NotificationText.enabled = true;
+            inCollider = true;
+        }
     }
 
 
