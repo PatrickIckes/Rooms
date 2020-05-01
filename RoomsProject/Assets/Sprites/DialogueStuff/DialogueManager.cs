@@ -19,15 +19,14 @@ public class DialogueManager : MonoBehaviour
     public Sprite[] speakerItems;
     private int speakerProgress;
     private int progress;
-    public bool GameIsPaused = false;
 
     public bool StartDialogue = false;
 
 
 
-    void SetText()
+    public void SetText()
     {
-        if (progress > 1 && progress+1 < textTextItems.Length)
+        //if (progress > 1 && progress+1 < textTextItems.Length)
         {
             textText.text = textTextItems[progress + 1]; //sets text for each keypress
             nameText.text = textTextItems[progress];
@@ -51,7 +50,7 @@ public class DialogueManager : MonoBehaviour
      
     }
 
-    public void RunDialogue()
+    /*public void RunDialogue()
     {
         textBox.SetActive(true);
         Pause();
@@ -83,27 +82,39 @@ public class DialogueManager : MonoBehaviour
             textBox.SetActive(false);
             Resume();
         }
-    }
-
-    /*public void RunDialogue()
-    {
-        if (Input.GetButtonDown("Interact"))
-        {
-            progress += 2;
-            speakerProgress++;
-            SetText();
-        }
     }*/
+    
+    public void RunDialogue()
+    {
+        //Debug.Log(progress);
+           Pause();
+            textBox.SetActive(true);
+         
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                progress += 2;
+                speakerProgress++;
+                SetText();
+            }
+
+
+            if (progress >= textTextItems.Length - 1)
+            {
+                textBox.SetActive(false);
+                Resume();
+                //gameObject.SetActive(false);
+                this.enabled = false;
+            }
+        
+    }
 
     public void Resume()
     {
         Time.timeScale = 1f;
-        GameIsPaused = false;
     }
 
     public void Pause()
     {
         Time.timeScale = 0f;
-        GameIsPaused = true;
     }
 }
