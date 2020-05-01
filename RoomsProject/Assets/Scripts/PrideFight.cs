@@ -21,9 +21,14 @@ public class PrideFight : MonoBehaviour
     [SerializeField]
     private GameObject Pride;
     [SerializeField]
+    private GameObject PridePivot;
+    [SerializeField]
     private GameObject Player;
     [SerializeField]
     private GameObject[] SpawnPoints;
+    [SerializeField]
+    private ExitManager exit;
+    float lastAngle;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +43,10 @@ public class PrideFight : MonoBehaviour
             FireUpdate();
             SummonUpdate();
             ThrowTraps();
+        } 
+        else if(Pride == null)
+        {
+            exit.EndRoom();
         }
     }
 
@@ -59,8 +68,15 @@ public class PrideFight : MonoBehaviour
         FireAtPlayerTimer += Time.deltaTime;
         if (FireAtPlayerTimer >= FireCooldown && !Pride.GetComponentInParent<pride_comes_before_the_fall>().fall)
         {
+            float angle = Vector3.Angle(PridePivot.transform.position, Player.transform.position);
+            angle = 140-angle;
+            float rotation = angle - lastAngle;
+            PridePivot.transform.Rotate(new Vector3(0, 0, 1),rotation);
             Pride.GetComponent<PrideFireGun>().Fire();
             FireAtPlayerTimer = 0;
+            print($"angle:{angle} last angle{lastAngle} rotation:{rotation}");
+            lastAngle = angle;
+            
         }
     }
     private void ThrowTraps()

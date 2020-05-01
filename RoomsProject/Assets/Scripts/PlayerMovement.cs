@@ -232,9 +232,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 if(collidingObject.GetComponentInChildren<DoorKnobPieces>() != null)
                 {
+                    collidingObject.gameObject.SetActive(false);
                     qm.CollectedQuestItem(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject.GetComponent<IInventoryItem>());
                     RemoveObjects.Add(collidingObject.GetComponentInChildren<DoorKnobPieces>().gameObject);
-
                 }
             }
             for (int i = 0; i < RemoveObjects.Count; i++)
@@ -293,11 +293,15 @@ public class PlayerMovement : MonoBehaviour
             IInventoryItem item = collision.gameObject.GetComponent<IInventoryItem>();
             if (item != null)
             {
-                QuestCollectionText.enabled = true;
+                if (QuestCollectionText != null)
+                {
+                    QuestCollectionText.enabled = true;
+                }
                 InteractionIndicator.SetActive(true);
-                if (item.IsQuestItem)
+                if (item.IsQuestItem && qm.CurrentQuest != null)
                 {
                     qm.CollectedQuestItem(item);
+                    inventory.AddItem(item);
                 }
                 else
                 {

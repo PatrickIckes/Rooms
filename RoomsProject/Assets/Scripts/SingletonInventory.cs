@@ -67,7 +67,7 @@ namespace Assets.Scripts
             {
                 if (item.GetType().Name != "null")
                 {
-                    if (name == item.Name)
+                    if (name == item.Name || item.GetType().Name == name)
                     {
                         if (item.GetType() == typeof(Key))
                         {
@@ -75,9 +75,7 @@ namespace Assets.Scripts
                         }
                         else
                         {
-                            //This should not be a thing that happens.
-                            Debug.Log("Wrong Implementation Exception");
-                            return false;
+                            return true;
                         }
                     }
                 }
