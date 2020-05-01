@@ -1310,6 +1310,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1137333206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116201396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116201399}
+  - component: {fileID: 1116201398}
+  - component: {fileID: 1116201397}
+  m_Layer: 5
+  m_Name: CharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1116201397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116201396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1116201398
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116201396}
+  m_CullTransparentMesh: 0
+--- !u!224 &1116201399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116201396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.347, y: 4, z: 1.347}
+  m_Children: []
+  m_Father: {fileID: 1106528937265608265}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3, y: -59}
+  m_SizeDelta: {x: 514.4, y: 93.2}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1137333206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2699,6 +2772,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3765234526598760418}
+  - {fileID: 1116201399}
   - {fileID: 3765234525520383903}
   - {fileID: 3765234526024178799}
   - {fileID: 1106528938417133487}
@@ -2823,7 +2897,7 @@ MonoBehaviour:
   nameText: {fileID: 3765234525716170473}
   textBox: {fileID: 1106528937265608269}
   textFile: {fileID: 4900000, guid: bbca29d1a6b8cda4f84e8529c49f4c16, type: 3}
-  speaker: {fileID: 3765234525520383897}
+  speaker: {fileID: 1116201397}
   lines: []
   textTextItems:
   - 'guy '
@@ -2834,16 +2908,16 @@ MonoBehaviour:
   - sup
   - wassup
   speakerItems:
-  - {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
-  - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
+  - {fileID: 21300000, guid: dfdf56c49a594e2419042618de02c51f, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
+  - {fileID: 21300000, guid: dfdf56c49a594e2419042618de02c51f, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
+  - {fileID: 21300000, guid: dfdf56c49a594e2419042618de02c51f, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
+  - {fileID: 21300000, guid: dfdf56c49a594e2419042618de02c51f, type: 3}
+  - {fileID: 21300000, guid: 07b8b40c7559c3642a4ca2ca2a873457, type: 3}
   - {fileID: 0}
   - {fileID: -4526094072666738523, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
   - {fileID: -5138191614559104333, guid: ed02dabddafbd684095a15e6f04710a1, type: 3}
@@ -2937,7 +3011,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106528937265608265}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3192,7 +3266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &3765234525520383902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3213,7 +3287,7 @@ RectTransform:
   m_LocalScale: {x: 1.347, y: 1.8016125, z: 1.347}
   m_Children: []
   m_Father: {fileID: 1106528937265608265}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3272,7 +3346,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106528937265608265}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3363,7 +3437,7 @@ RectTransform:
   m_LocalScale: {x: 7.2262, y: 3.6131, z: 3.6131}
   m_Children: []
   m_Father: {fileID: 1106528937265608265}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3406,7 +3480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &3765234526598760444
 CanvasRenderer:
   m_ObjectHideFlags: 0

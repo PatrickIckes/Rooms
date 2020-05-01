@@ -87,7 +87,6 @@ public class DialogueManager : MonoBehaviour
     public void RunDialogue()
     {
         //Debug.Log(progress);
-       
            Pause();
             textBox.SetActive(true);
          

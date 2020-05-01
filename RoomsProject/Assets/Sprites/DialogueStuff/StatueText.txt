@@ -1,3 +1,5 @@
+
+
 Statue: The statue has seven empty slots on it and has some engraving written on it. 
 Statue: 'Reflections of the past are what you seek, symbols on the wall will guide your feet .'
 Statue: 'Doing nothing may be your first sin, but what else shall you find Within.'
