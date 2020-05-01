@@ -596,7 +596,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenFallsStageOne: 3
   timeBetweenFallsStageTwo: 5
-  firstStageTime: 30
+  firstStageTime: 0
 --- !u!1 &477743945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawner: {fileID: 477743945}
   Door: {fileID: 1721032677}
-  Sword: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339, type: 3}
+  Sword: {fileID: 4234296845400896663, guid: 9728d4e44a67c9040bf5d39ad2b5a3c5, type: 3}
   QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
     type: 3}
   Player: {fileID: 945091990}
