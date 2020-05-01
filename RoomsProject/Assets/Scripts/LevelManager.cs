@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
 
             if (SceneManager.GetActiveScene().buildIndex == HallwayQuest.CurrentScene)
             {
-                levelQuest = new HallwayQuest();
+                //levelQuest = new HallwayQuest();
             }
             else if (SceneManager.GetActiveScene().buildIndex == BeatSloth.CurrentScene)
             {
