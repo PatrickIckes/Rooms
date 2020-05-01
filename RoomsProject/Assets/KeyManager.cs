@@ -30,7 +30,7 @@ public class KeyManager : MonoBehaviour
         {
             Garbagebags.SetActive(false);
             stairs.SetActive(true);
-            if ((!playerInventory.CheckObject("PrideKey") || !playerInventory.CheckObject("PrideKey(Clone)")))
+            if (!playerInventory.CheckObject("PrideKey"))
                 keys[2].SetActive(true);
         }
     }

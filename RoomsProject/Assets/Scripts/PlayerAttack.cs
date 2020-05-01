@@ -13,12 +13,15 @@ public class PlayerAttack : MonoBehaviour
     public float attackRangeY;
     public int damage;
     int FacingDirection;
+    [SerializeField]
+    Inventory playerinventory;
     void Update()
     {
+        
         if (timeBtwAttack <= 0)
         {
             //Then you can attack
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0) && playerinventory.CheckObject("Sword"))
             {
                 //Player attacking animation here
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
