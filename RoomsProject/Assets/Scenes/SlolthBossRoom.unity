@@ -1811,6 +1811,7 @@ MonoBehaviour:
   QuestReward: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
     type: 3}
   Player: {fileID: 945091990}
+  slothRoomAnim: {fileID: 1768006317}
 --- !u!4 &1358736601
 Transform:
   m_ObjectHideFlags: 0
