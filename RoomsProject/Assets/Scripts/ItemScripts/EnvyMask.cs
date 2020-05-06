@@ -33,7 +33,6 @@ namespace Assets.Scripts.ItemScripts
         {
             // Add logic what happens when key is picked up by player for example unlock door
             gameObject.SetActive(false);
-            Destroy(gameObject);
         }
     }
 }

@@ -27,6 +27,6 @@ public class Enemy : MonoBehaviour
             Instantiate(bloodEffect, transform.position, Quaternion.identity);
         }
         enemyHealth -= damage;
-        Debug.Log("Damage TAKEN!");
+        //Debug.Log("Damage TAKEN!");
     }
 }

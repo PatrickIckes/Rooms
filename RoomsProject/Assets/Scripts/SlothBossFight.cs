@@ -112,7 +112,7 @@ public class SlothBossFight : MonoBehaviour
 
     private void Dead()
     {
-        EndManager.GetComponent<EndRoom>().RoomOver();
+        EndManager.GetComponent<EndSlothRoom>().RoomOver();
     }
 
     private void PlanksFall()

@@ -118,7 +118,7 @@ public class PlatformManager : MonoBehaviour
 
     private void Dead()
     {
-        EndManager.GetComponent<EndRoom>().RoomOver();
+        EndManager.GetComponent<EndSlothRoom>().RoomOver();
         rounds = BossFight.Done;
     }
 

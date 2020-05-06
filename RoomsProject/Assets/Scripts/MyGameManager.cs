@@ -19,7 +19,6 @@ public class MyGameManager : MonoBehaviour
     void Start()
     {
         AllQuests = new List<Quest>();
-        AllQuests.Add(new HallwayQuest());
         AllQuests.Add(new BeatSloth());//Solve adding quests later
         player.GetComponent<PlayerMovement>().gameManager = this;
         GameInProgress = true;
@@ -35,7 +34,6 @@ public class MyGameManager : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(player);
             SceneManager.LoadScene("Scene 2", LoadSceneMode.Single);
         }
         player.GetComponentInChildren<QuestManager>().CurrentQuest = levelManager.levelQuest;
@@ -55,6 +53,10 @@ public class MyGameManager : MonoBehaviour
         {
             restart = true;
             LoadGamesLevel("");
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene((int)Scenes.MainMenu);
         }
         if (Input.GetKeyDown(KeyCode.Slash))//to restart
         {
