@@ -15,6 +15,7 @@ public class EnvyBossFight : MonoBehaviour
     public float phase2AttackTime;
     public SandbagManager sandbagManager;
     public GameObject Note;
+    public GameObject Minion;
     public GameObject Player;
 
     private float minionSpawnTimer;
@@ -24,7 +25,7 @@ public class EnvyBossFight : MonoBehaviour
     public float phase1Time;
 
     [SerializeField]
-    private Transform phase1NoteSpawner, phase2NoteSpawner;
+    private Transform phase1NoteSpawner, phase2MinionSpawner;
     private Transform noteSpawner;
 
     [SerializeField]
@@ -56,7 +57,7 @@ public class EnvyBossFight : MonoBehaviour
                 DropSandbags();
                 break;
             case BossFightPhase.Second:
-                noteSpawner = phase2NoteSpawner;
+                noteSpawner = phase2MinionSpawner;
                 SpawnMinions();
                 Phase2Attack();
                 break;
@@ -104,8 +105,7 @@ public class EnvyBossFight : MonoBehaviour
         if (minionSpawnTimer >= minionSpawnTime)
         {
             Debug.Log("Spawn Minion");
-            GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
-            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
+            GameObject temp = Instantiate(Minion, noteSpawner.position, Quaternion.identity, this.transform);
             minionSpawnTimer = 0;
         }
     }
