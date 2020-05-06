@@ -37,16 +37,15 @@ public class EndSlothRoom : MonoBehaviour
     }
     public void RoomOver()
     {
-
         slothRoomAnim.SetTrigger("SlothKilled");
         StartCoroutine(SpitOutSword());
-        Instantiate(Sword, Spawner.transform.position, Quaternion.identity);
-        GameObject temp = Instantiate(QuestReward, Spawner.transform.position, Quaternion.identity);
-        PlayerQuest.CollectedItem(temp.GetComponentInChildren<IInventoryItem>());
     }
 
     IEnumerator SpitOutSword()
     {
-        yield return 2.12;
+        yield return new WaitForSeconds(2.12f);
+        Instantiate(Sword, Spawner.transform.position, Quaternion.identity);
+        GameObject temp = Instantiate(QuestReward, Spawner.transform.position, Quaternion.identity);
+        PlayerQuest.CollectedItem(temp.GetComponentInChildren<IInventoryItem>());
     }
 }

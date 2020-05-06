@@ -24,9 +24,9 @@ public class KeyManager : MonoBehaviour
         stairs.SetActive(false);
         if (!playerInventory.CheckObject("SlothKey"))
             keys[0].SetActive(true); 
-        else if (playerInventory.CheckObject("SlothReward") && !playerInventory.CheckObject("EnvyKey"))
+        if (playerInventory.CheckObject("SlothReward") && !playerInventory.CheckObject("EnvyKey"))
             keys[1].SetActive(true);
-        else if (playerInventory.CheckObject("EnvyMask") || playerInventory.CheckObject("PrideReward"))
+        if (playerInventory.CheckObject("EnvyMask") || playerInventory.CheckObject("PrideReward"))
         {
             Garbagebags.SetActive(false);
             stairs.SetActive(true);
