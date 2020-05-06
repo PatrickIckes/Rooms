@@ -37,6 +37,8 @@ public class EnvyBossFight : MonoBehaviour
     [SerializeField]
     private GameObject envyPhase2Sprite, envyPhase2Hitbox;
 
+    private float envyPhase2SpriteXScale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,8 @@ public class EnvyBossFight : MonoBehaviour
 
         envyPhase2Hitbox.SetActive(false);
         envyPhase2Sprite.SetActive(false);
+
+        envyPhase2SpriteXScale = envyPhase2Sprite.transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -79,7 +83,17 @@ public class EnvyBossFight : MonoBehaviour
         phase2AttackTimer += Time.deltaTime;
         if (phase2AttackTimer >= phase2AttackTime)
         {
-            envyPhase2Sprite.transform.position = windows[Random.Range(0, 2)].transform.position; //random window
+            int window = Random.Range(0, 2);
+            envyPhase2Sprite.transform.position = windows[window].transform.position; //random window
+
+            if (window == 0)
+            {
+                envyPhase2Sprite.transform.localScale = new Vector3(envyPhase2SpriteXScale, envyPhase2Sprite.transform.localScale.y, envyPhase2Sprite.transform.localScale.z); 
+            }
+            else if (window == 1)
+            {
+                envyPhase2Sprite.transform.localScale = new Vector3(-envyPhase2SpriteXScale, envyPhase2Sprite.transform.localScale.y, envyPhase2Sprite.transform.localScale.z); 
+            }
 
             StartCoroutine(Phase2AttackInstance());
             phase2AttackTimer = 0;
