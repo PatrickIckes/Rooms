@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 5645019339603542502}
   - component: {fileID: 6437135073513213895}
   - component: {fileID: 6437135073513213893}
+  - component: {fileID: 82256913}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -347,7 +348,30 @@ MonoBehaviour:
   playerHurtAmount: 0
   gameManager: {fileID: 0}
   startinghealth: 20
+  health: 0
+  healthScript: {fileID: 0}
   playerAnimator: {fileID: 6437135073513213895}
+--- !u!114 &82256913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645019339603542040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236d7b675ad01b0498af5fba08eec62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0
+  attackPos: {fileID: 5645019339603542500}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRangeX: 0
+  attackRangeY: 0
+  damage: 0
+  playerinventory: {fileID: 6768777302839310364}
 --- !u!1 &7454150820322988052
 GameObject:
   m_ObjectHideFlags: 0
