@@ -435,7 +435,7 @@ MonoBehaviour:
   attackRangeX: 0.67
   attackRangeY: 1.03
   damage: 1
-  playerinventory: {fileID: 0}
+  playerinventory: {fileID: 1421066235988371704}
 --- !u!50 &173166846
 Rigidbody2D:
   serializedVersion: 4
