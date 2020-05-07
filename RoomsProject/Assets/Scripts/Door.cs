@@ -119,7 +119,6 @@ public class Door : MonoBehaviour
     {
         if (transition != null)
         {
-            transition.SetBool("UnitySucks", true);
             transition.SetTrigger("Start");
         }
         yield return new WaitForSeconds(transitionTime);
