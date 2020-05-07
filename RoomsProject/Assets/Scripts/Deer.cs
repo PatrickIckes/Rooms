@@ -13,6 +13,7 @@ public class Deer : MonoBehaviour
     void Start()
     {
         DeerTarget = new Vector3(Target.transform.position.x, this.transform.position.y, 0);
+        PlayDeerCharge();
     }
 
     // Update is called once per frame
@@ -40,6 +41,6 @@ public class Deer : MonoBehaviour
     //a method to play the deer charge sfx
     public void PlayDeerCharge()
     {
-
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Deer Men/sx_npc_deer_men_charge", GetComponent<Transform>().position);
     }
 }
