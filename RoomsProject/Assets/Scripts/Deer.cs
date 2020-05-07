@@ -35,4 +35,11 @@ public class Deer : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    //jpost Audio
+    //a method to play the deer charge sfx
+    public void PlayDeerCharge()
+    {
+
+    }
 }
