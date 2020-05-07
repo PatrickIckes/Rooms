@@ -28,11 +28,13 @@ public class Deer : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             collision.GetComponent<pride_comes_before_the_fall>().Hit();
+            PlayDeerAntlerHit();
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerData>().Damage(1);
+            PlayDeerAntlerHit();
             Destroy(this.gameObject);
         }
     }
@@ -42,5 +44,10 @@ public class Deer : MonoBehaviour
     public void PlayDeerCharge()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Deer Men/sx_npc_deer_men_charge", GetComponent<Transform>().position);
+    }
+    //a method to play the deer charge sfx
+    public void PlayDeerAntlerHit()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Deer Men/sx_npc_deer_men_antler_hit", GetComponent<Transform>().position);
     }
 }
