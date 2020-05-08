@@ -20,20 +20,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5335071118187102416, guid: 381ccd955a237134b92fa00b55e47339,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335071118187102416, guid: 381ccd955a237134b92fa00b55e47339,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.3110223
+      objectReference: {fileID: 0}
     - target: {fileID: 5335071118187102420, guid: 381ccd955a237134b92fa00b55e47339,
         type: 3}
       propertyPath: m_Name
-      value: EnvyMask
+      value: EnvyMask Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5335071118187102422, guid: 381ccd955a237134b92fa00b55e47339,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5058824
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5335071118187102422, guid: 381ccd955a237134b92fa00b55e47339,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5105154
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335071118187102422, guid: 381ccd955a237134b92fa00b55e47339,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 260716731100841394, guid: 5855a1da78d70834d94cb2f797eb5017,
+        type: 3}
+    - target: {fileID: 5335071118187102422, guid: 381ccd955a237134b92fa00b55e47339,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5335071118187102423, guid: 381ccd955a237134b92fa00b55e47339,
         type: 3}

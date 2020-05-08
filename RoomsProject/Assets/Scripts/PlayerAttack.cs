@@ -24,25 +24,24 @@ public class PlayerAttack : MonoBehaviour
     {
 
         if (playerinventory.CheckObject("Sword"))
-
-        if (timeBtwAttack <= 0)
-        {
-            //Then you can attack
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (timeBtwAttack <= 0)
             {
+                //Then you can attack
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
 
-                StartCoroutine(Attack());
+                    StartCoroutine(Attack());
+                }
             }
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
+            else
+            {
+                timeBtwAttack -= Time.deltaTime;
+            }
     }
     IEnumerator Attack()
     {
         animation.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.5f);
         //Player attacking animation here
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)

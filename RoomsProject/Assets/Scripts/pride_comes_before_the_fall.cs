@@ -15,12 +15,16 @@ public class pride_comes_before_the_fall : MonoBehaviour
     private float fallCount;
     [SerializeField]
     private int HitsToFall;
+    [SerializeField]
+    private GameObject Arms;
+    private Animator animator;
     private void Start()
     {
         fall = false;
         rigidbody = this.GetComponent<Rigidbody2D>();
         rigidbody.gravityScale = 0;
         StartPoint = this.transform.position;
+
     }
     public void Hit()
     {
@@ -46,6 +50,7 @@ public class pride_comes_before_the_fall : MonoBehaviour
             {
                 timer = 0;
                 fall = false;
+                animator.Play("PrideJump");
                 ReturnToPlatform();
             }
         }
