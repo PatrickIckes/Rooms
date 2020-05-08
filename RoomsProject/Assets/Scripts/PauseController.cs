@@ -6,25 +6,32 @@ using UnityEngine.UI;
 public class PauseController : MonoBehaviour
 {
     [SerializeField]
-    private Button resumeButton, exitButton;
+    private Button resumeButton, menuButton;
     [SerializeField]
     private GameObject pausePanel, dialoguePanel, interactText;
 
     // Start is called before the first frame update
     void Start()
     {
-        resumeButton.onClick.AddListener(Story);
-        exitButton.onClick.AddListener(StartGame);
+        resumeButton.onClick.AddListener(Resume);
+        menuButton.onClick.AddListener(MainMenu);
     }
 
     void Resume()
     {
         //jpost Audio
-        PlayUIClickThrough();
+        PlayUIClickBack();
 
         pausePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         interactText.SetActive(true);
+    }
+
+    void MainMenu()
+    {
+        //jpost Audio
+        PlayUIClickThrough();
+
     }
 
     //jpost audio
