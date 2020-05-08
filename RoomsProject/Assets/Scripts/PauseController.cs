@@ -1,18 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseController : MonoBehaviour
 {
+    [SerializeField]
+    private Button resumeButton, exitButton;
+    [SerializeField]
+    private GameObject pausePanel, dialoguePanel, interactText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        resumeButton.onClick.AddListener(Story);
+        exitButton.onClick.AddListener(StartGame);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Resume()
     {
-        
+        //jpost Audio
+        PlayUIClickThrough();
+
+        pausePanel.SetActive(false);
+        dialoguePanel.SetActive(true);
+        interactText.SetActive(true);
+    }
+
+    //jpost audio
+    void PlayUIClickThrough()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_through", gameObject.transform.position);
+    }
+    //jpost audio
+    void PlayUIClickBack()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_back", gameObject.transform.position);
+    }
+    //jpost audio
+    void PlayUIClickPlay()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/sx_game_menu_ui_click_play", gameObject.transform.position);
     }
 }

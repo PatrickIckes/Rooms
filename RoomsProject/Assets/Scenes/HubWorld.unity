@@ -1415,7 +1415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -2.1787324, z: -10}
+  m_LocalPosition: {x: -3.31, y: -3.4, z: -10}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2591,6 +2591,7 @@ GameObject:
   - component: {fileID: 1211287628}
   - component: {fileID: 1211287627}
   - component: {fileID: 1211287626}
+  - component: {fileID: 1211287629}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2646,6 +2647,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211287629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211287625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b3e2e843d6b5944b6969272d92e5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartGameButton: {fileID: 0}
+  PlayGameButton: {fileID: 0}
+  SettingsButton: {fileID: 0}
+  CreditsButton: {fileID: 0}
+  CreditsBackButton: {fileID: 0}
+  SettingsBackButton: {fileID: 0}
+  ExitButton: {fileID: 0}
+  MainMenuCanvas: {fileID: 0}
+  StoryCanvas: {fileID: 0}
+  SettingsCanvas: {fileID: 0}
+  CreditsCanvas: {fileID: 0}
 --- !u!1 &1267673221
 GameObject:
   m_ObjectHideFlags: 0
