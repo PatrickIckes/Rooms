@@ -13,7 +13,7 @@ public class Rat : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         PlayRatSpawn();
-        lifeTime = 2;
+        lifeTime = 10;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Rat : MonoBehaviour
     {
         rb.velocity = rb.transform.right * speed * Time.deltaTime * (this.gameObject.transform.localScale.x / Mathf.Abs(this.gameObject.transform.localScale.x));
         lifeTime -= Time.deltaTime;
-        if(lifeTime == 0)
+        if(lifeTime <= 0)
         {
             Destroy(this.gameObject);
         }
