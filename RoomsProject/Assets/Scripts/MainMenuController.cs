@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
     public Button CreditsButton;
     public Button CreditsBackButton;
     public Button SettingsBackButton;
+    public Button ExitButton;
     public GameObject MainMenuCanvas;
     public GameObject StoryCanvas;
     public GameObject SettingsCanvas;
@@ -26,6 +27,7 @@ public class MainMenuController : MonoBehaviour
         CreditsButton.onClick.AddListener(Credits);
         CreditsBackButton.onClick.AddListener(CreditsBack);
         SettingsBackButton.onClick.AddListener(SettingsBack);
+        ExitButton.onClick.AddListener(Exit);
     }
 
     void StartGame()
@@ -79,6 +81,14 @@ public class MainMenuController : MonoBehaviour
 
         SettingsCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
+    }
+
+    void Exit()
+    {
+        //jpost Audio
+        PlayUIClickThrough();
+
+        Application.Quit();
     }
 
     //jpost audio
