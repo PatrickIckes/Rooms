@@ -13,6 +13,7 @@ public class Deer : MonoBehaviour
     void Start()
     {
         DeerTarget = new Vector3(Target.transform.position.x, this.transform.position.y, 0);
+        PlayDeerCharge();
     }
 
     // Update is called once per frame
@@ -27,12 +28,26 @@ public class Deer : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             collision.GetComponent<pride_comes_before_the_fall>().Hit();
+            PlayDeerAntlerHit();
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerData>().Damage(1);
+            PlayDeerAntlerHit();
             Destroy(this.gameObject);
         }
+    }
+
+    //jpost Audio
+    //a method to play the deer charge sfx
+    public void PlayDeerCharge()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Deer Men/sx_npc_deer_men_charge", GetComponent<Transform>().position);
+    }
+    //a method to play the deer charge sfx
+    public void PlayDeerAntlerHit()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Deer Men/sx_npc_deer_men_antler_hit", GetComponent<Transform>().position);
     }
 }

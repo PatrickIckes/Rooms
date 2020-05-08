@@ -89,5 +89,5 @@ public class PrideFight : MonoBehaviour
             tempTrap.GetComponent<Fired>().Direction = Player.transform.position - new Vector3(0, 0.1f);
             TrapAtPlayerTimer = 0;
         }
-    }
+    }    
 }
