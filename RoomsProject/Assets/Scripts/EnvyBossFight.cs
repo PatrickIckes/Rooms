@@ -39,6 +39,9 @@ public class EnvyBossFight : MonoBehaviour
 
     private float envyPhase2SpriteXScale;
 
+    [SerializeField]
+    private GameObject envySing, envyTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +77,8 @@ public class EnvyBossFight : MonoBehaviour
         if (phase1Timer >= phase1Time && phase != BossFightPhase.Dead)
         {
             sandbagManager.DisableSandbags();
+            envySing.SetActive(false);
+            envyTransform.SetActive(true);
             phase = BossFightPhase.Second;
         }
     }
