@@ -263,13 +263,8 @@ public class PlayerMovement : MonoBehaviour
     }
     //jpost Audio
     public void PlayPlayerJump()
-    {
-        if (Grounded)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);
-        }
-        
-            
+    {       
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Vocalizations/sx_game_plr_voc_jump", GetComponent<Transform>().position);            
     }
 
     private void OnCollisionStay2D(Collision2D collision)

@@ -29,6 +29,7 @@ public class pride_comes_before_the_fall : MonoBehaviour
         {
             fall = true;
             fallCount = 0;
+            Invoke("PlayPrideThud", 0.5f);
         }
     }
     private void Update()
@@ -54,5 +55,18 @@ public class pride_comes_before_the_fall : MonoBehaviour
     {
         rigidbody.gravityScale = 0;
         this.gameObject.transform.position = StartPoint;
+        PlayPrideJump();
+    }
+
+    //jpost Audio
+    //a method to play the pride jump sfx
+    public void PlayPrideJump()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Pride/sx_npc_pride_jump", GetComponent<Transform>().position);
+    }
+    //a method to play the pride thud sfx
+    public void PlayPrideThud()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NPC/Pride/sx_npc_pride_thud", GetComponent<Transform>().position);
     }
 }
