@@ -10,6 +10,12 @@ public class BossHealth : MonoBehaviour
     //jpost Audio
     SlothSFX slothSFX;
 
+    [SerializeField]
+    private bool destroyWhenDead = true;
+
+    [HideInInspector]
+    public bool isDead = false;
+
     private void Start()
     {
         health = maxHealth;
@@ -34,7 +40,12 @@ public class BossHealth : MonoBehaviour
                 slothSFX.PlaySlothDie();
             }
 
-            Destroy(gameObject);
+            isDead = true;
+
+            if (destroyWhenDead)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

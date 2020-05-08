@@ -28,8 +28,7 @@ public class EnvyBossFight : MonoBehaviour
     private Transform phase1NoteSpawner, phase2MinionSpawner;
     private Transform noteSpawner;
 
-    [SerializeField]
-    private BossHealth EnvysHealth;
+    public BossHealth EnvysHealth;
 
     [SerializeField]
     private GameObject[] windows = new GameObject[3];
@@ -80,6 +79,11 @@ public class EnvyBossFight : MonoBehaviour
             envySing.SetActive(false);
             envyTransform.SetActive(true);
             phase = BossFightPhase.Second;
+        }
+
+        if (EnvysHealth.isDead)
+        {
+            phase = BossFightPhase.Dead;
         }
     }
 
