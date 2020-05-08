@@ -324,6 +324,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8467565210516454201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Player.bank
+  SubDir: 
+  lastModified: 637244610508567744
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8452807730193446190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +645,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_play
   guid: 860d0c2b412a7d4abc8826f02c9eb977
   Banks:
-  - {fileID: -5055783216174020376}
+  - {fileID: -6534520334801217540}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1154,7 +1172,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_hub
   guid: dd55dcfefc3d3d47897ce2084cee8169
   Banks:
-  - {fileID: 4123444863445748299}
+  - {fileID: 3013413326951796824}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1414,6 +1432,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6797359479389639903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Environment.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Environment.bank
+  SubDir: 
+  lastModified: 637244610500737749
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6722488822008343065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1504,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-6534520334801217540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637244610509137757
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6522863949343231245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1627,7 @@ MonoBehaviour:
   Path: event:/Interactible/Collisions/sx_game_int_collide_trash
   guid: ab6e6a3d9395e94eb336f07434ba0797
   Banks:
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1650,7 +1704,7 @@ MonoBehaviour:
   Path: event:/Environment/Trash/sx_game_env_trashbag_fall
   guid: 3dda27aa5bf0154ea8160506dd7b704f
   Banks:
-  - {fileID: -6049485845725234502}
+  - {fileID: -6797359479389639903}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1835,7 +1889,7 @@ MonoBehaviour:
   Path: snapshot:/No Reverb
   guid: f6a4c1dd67ddae489f74ffe581ad12a3
   Banks:
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2056,7 +2110,7 @@ MonoBehaviour:
   Path: event:/Player/Vocalizations/sx_game_plr_voc_jump
   guid: 88275536d3d6a14d995fb7f8f8cae0e6
   Banks:
-  - {fileID: 84575702202269227}
+  - {fileID: -8467565210516454201}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2133,7 +2187,7 @@ MonoBehaviour:
   Path: event:/Environment/Floorboards/sx_game_env_slothfight_platforms_fall
   guid: 37441f76e341a84d83cd46ab59b1b95a
   Banks:
-  - {fileID: -6049485845725234502}
+  - {fileID: -6797359479389639903}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2318,7 +2372,7 @@ MonoBehaviour:
   Path: event:/NPC/Rats/sx_game_npc_rat_spawn
   guid: 90838a136f282e4593fb8d35c6543102
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2558,7 +2612,7 @@ MonoBehaviour:
   guid: 44d2200beaae1244910cd1d0107aae23
   Banks:
   - {fileID: 8496866599463326157}
-  - {fileID: 84575702202269227}
+  - {fileID: -8467565210516454201}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2780,7 +2834,7 @@ MonoBehaviour:
   guid: 73583c65c0d2be4bacc71708789d0d55
   Banks:
   - {fileID: 8496866599463326157}
-  - {fileID: 84575702202269227}
+  - {fileID: -8467565210516454201}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3023,7 +3077,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Large
   guid: c1e52ef45f064746a7b88441a6365666
   Banks:
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -3064,7 +3118,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_rummage_under_belly
   guid: 110caa31231b8f449ca77ae9bd11a866
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4249,7 +4303,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_throw_trash
   guid: 201576c5157cf2499763e35a3ae03f1d
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4488,7 +4542,7 @@ MonoBehaviour:
   Path: event:/Interactible/Trash/sx_game_int_slothfight_trashbag_hit_sloth
   guid: 49d4c117dfcba04690839863a4d12695
   Banks:
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4625,7 +4679,7 @@ MonoBehaviour:
   guid: 47e3a52d18f23c48942c344104563bd3
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4701,13 +4755,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 1793763361134788574}
-  - {fileID: 4123444863445748299}
-  - {fileID: -6049485845725234502}
-  - {fileID: 3914763433897958683}
-  - {fileID: 4734072645672137588}
-  - {fileID: 8251976669857911042}
-  - {fileID: 84575702202269227}
-  - {fileID: -5055783216174020376}
+  - {fileID: 3013413326951796824}
+  - {fileID: -6797359479389639903}
+  - {fileID: 3783269230664488683}
+  - {fileID: 114708919315923930}
+  - {fileID: 4509686880914394105}
+  - {fileID: -8467565210516454201}
+  - {fileID: -6534520334801217540}
   EditorEvents:
   - {fileID: 5336323607592846241}
   - {fileID: -4196634747074765506}
@@ -4745,10 +4799,10 @@ MonoBehaviour:
   - {fileID: -5423310146572221736}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   StringsBanks:
   - {fileID: 1793763361134788574}
-  stringsBankWriteTime: 637194584243379425
+  stringsBankWriteTime: 637244610504127754
   cacheVersion: 3
 --- !u!114 &84575702202269227
 MonoBehaviour:
@@ -4786,6 +4840,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114708919315923930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637244610504057751
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &146165313259209291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,7 +5053,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_sloth_bossroom
   guid: ec79c13064690546a82bdd63be97e9a7
   Banks:
-  - {fileID: 4123444863445748299}
+  - {fileID: 3013413326951796824}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -5004,7 +5076,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Small
   guid: 9aa7bae46cdc3441a11849b79171e7ed
   Banks:
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -5225,7 +5297,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_breathing_inhale
   guid: b04838be6909bf429e9168afa8143ba4
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5446,7 +5518,7 @@ MonoBehaviour:
   Path: event:/Interactible/Trash/sx_game_int_slothfight_trashbag_appear
   guid: 81f16e08dbb83b4aa433853ab5c0d099
   Banks:
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5523,7 +5595,7 @@ MonoBehaviour:
   Path: event:/Player/Vocalizations/sx_game_plr_voc_grunt
   guid: e54acb391fab0444baeb635f8c31e373
   Banks:
-  - {fileID: 84575702202269227}
+  - {fileID: -8467565210516454201}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5689,7 +5761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Within/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637194584243379425
+  lastModified: 637244610504127754
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -6286,7 +6358,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_die
   guid: 320cb3717c624442bf49f700e27b2ed2
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6348,6 +6420,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3013413326951796824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637244610498087757
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3097006442344069877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6381,7 +6471,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_back
   guid: ab0ab0290cd003448184c159a3ea1305
   Banks:
-  - {fileID: -5055783216174020376}
+  - {fileID: -6534520334801217540}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6549,7 +6639,7 @@ MonoBehaviour:
   guid: 1806443f112d864bab5f8eec739b75e2
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6629,6 +6719,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3783269230664488683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactibles.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/Interactibles.bank
+  SubDir: 
+  lastModified: 637244610502637750
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3785254794538096352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6842,7 +6950,7 @@ MonoBehaviour:
   Path: event:/Interactible/Trash/sx_game_int_slothfight_trashbag_pickup
   guid: c10e8882f432474d89a918920192eeef
   Banks:
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7048,6 +7156,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4509686880914394105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NPC.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Within/Build/Desktop/NPC.bank
+  SubDir: 
+  lastModified: 637244610506957748
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4517648553561457689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7297,7 +7423,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_breathing_exhale
   guid: 42ca5a4b3af60542b9304439bbbd9ac8
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7465,7 +7591,7 @@ MonoBehaviour:
   guid: 181ff1ab84dc294cbfd3e044d469ceff
   Banks:
   - {fileID: -5443650354547336499}
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7848,7 +7974,7 @@ MonoBehaviour:
   Path: event:/Interactible/Trash/sx_game_int_slothfight_trashbag_throw
   guid: 80e0be405c8207409d1035753d1a17a3
   Banks:
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8481,7 +8607,7 @@ MonoBehaviour:
   guid: 8334939e4bcb73419308ccad84e41ce2
   Banks:
   - {fileID: -3031529636767470991}
-  - {fileID: 3914763433897958683}
+  - {fileID: 3783269230664488683}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8540,7 +8666,7 @@ MonoBehaviour:
   Path: event:/Ambience/sx_game_amb_mainmenu
   guid: adb33d13aac8554098bee3296b2adf14
   Banks:
-  - {fileID: 4123444863445748299}
+  - {fileID: 3013413326951796824}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -8617,7 +8743,7 @@ MonoBehaviour:
   Path: event:/UI/sx_game_menu_ui_click_through
   guid: c174c45a8ac58243ad22e0bed8a87d20
   Banks:
-  - {fileID: -5055783216174020376}
+  - {fileID: -6534520334801217540}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9382,7 +9508,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_takedamage
   guid: c02503a411bcff438c4fd650e148782f
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9621,7 +9747,7 @@ MonoBehaviour:
   Path: event:/NPC/Sloth/sx_game_npc_sloth_laugh
   guid: 26d9d54ba113d0438970eadfbe2c4d22
   Banks:
-  - {fileID: 8251976669857911042}
+  - {fileID: 4509686880914394105}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9644,7 +9770,7 @@ MonoBehaviour:
   Path: snapshot:/Reverb Medium
   guid: aefef0747fa6ca409c95c0b7855e3f4c
   Banks:
-  - {fileID: 4734072645672137588}
+  - {fileID: 114708919315923930}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -9740,7 +9866,7 @@ MonoBehaviour:
   guid: 29cdcf7acd661a46a2ca4fbb04eea45c
   Banks:
   - {fileID: 4208593305198940009}
-  - {fileID: -6049485845725234502}
+  - {fileID: -6797359479389639903}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
