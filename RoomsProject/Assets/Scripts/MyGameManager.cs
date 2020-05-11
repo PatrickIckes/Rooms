@@ -54,10 +54,10 @@ public class MyGameManager : MonoBehaviour
             restart = true;
             LoadGamesLevel("");
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        /*if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene((int)Scenes.MainMenu);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Slash))//to restart
         {
             Debug.Log("Test");

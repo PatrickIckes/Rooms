@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
@@ -17,6 +18,23 @@ public class PauseController : MonoBehaviour
         menuButton.onClick.AddListener(MainMenu);
     }
 
+    private void Update()
+    {
+        PauseGame();
+    }
+
+    void PauseGame()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            pausePanel.SetActive(true);
+            dialoguePanel.SetActive(false);
+            interactText.SetActive(false);
+
+            Time.timeScale = 0;
+        }
+    }
+
     void Resume()
     {
         //jpost Audio
@@ -25,13 +43,15 @@ public class PauseController : MonoBehaviour
         pausePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         interactText.SetActive(true);
+
+        Time.timeScale = 1;
     }
 
     void MainMenu()
     {
         //jpost Audio
         PlayUIClickThrough();
-
+        SceneManager.LoadScene((int)Scenes.MainMenu);
     }
 
     //jpost audio
