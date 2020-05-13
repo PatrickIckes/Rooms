@@ -9,7 +9,7 @@ public class PauseController : MonoBehaviour
     [SerializeField]
     private Button resumeButton, menuButton;
     [SerializeField]
-    private GameObject pausePanel, dialoguePanel, interactText;
+    private GameObject pausePanel, dialoguePanel, interactText, lifeBar;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,8 @@ public class PauseController : MonoBehaviour
             pausePanel.SetActive(true);
             dialoguePanel.SetActive(false);
             interactText.SetActive(false);
+            lifeBar.SetActive(false);
+
 
             Time.timeScale = 0;
         }
@@ -43,6 +45,7 @@ public class PauseController : MonoBehaviour
         pausePanel.SetActive(false);
         dialoguePanel.SetActive(true);
         interactText.SetActive(true);
+        lifeBar.SetActive(true);
 
         Time.timeScale = 1;
     }
