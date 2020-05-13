@@ -839,8 +839,8 @@ MonoBehaviour:
   Falling: 0
   isJumping: 0
   inventory: {fileID: 1351454515}
-  gameManager: {fileID: 0}
-  QuestCollectionText: {fileID: 0}
+  gameManager: {fileID: 592419545}
+  QuestCollectionText: {fileID: 990244481}
   InteractionIndicator: {fileID: 899433598}
   ThrowableObject: {fileID: 0}
   PlayerGravityScale: 0.4
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GravityEnabled: 0
-  questText: {fileID: 0}
+  questText: {fileID: 990244481}
 --- !u!114 &592419545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,14 +1367,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boundaries: []
-  player: {fileID: 0}
+  player: {fileID: 252558850}
   GameInProgress: 0
   restart: 0
   levelManager: {fileID: 592419544}
   SpawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 901510595}
+  - {fileID: 1137411552}
+  - {fileID: 1164144124}
 --- !u!4 &592419546
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,11 +1651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
-  player: {fileID: 0}
+  stairway: {fileID: 1718437129}
+  player: {fileID: 252558850}
   ExitPoint: {fileID: 1877782422}
-  Notification: {fileID: 0}
-  NotificationText: {fileID: 0}
+  Notification: {fileID: 899433598}
+  NotificationText: {fileID: 990244481}
 --- !u!61 &694714953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2117,6 +2117,18 @@ Transform:
   m_Father: {fileID: 252558859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901510595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+    type: 3}
+  m_PrefabInstance: {fileID: 769558707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &935653870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,6 +2688,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137411552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191235727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1164144124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+    type: 3}
+  m_PrefabInstance: {fileID: 1601674717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1191235727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2852,11 +2888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
-  player: {fileID: 0}
+  stairway: {fileID: 1718437129}
+  player: {fileID: 252558850}
   ExitPoint: {fileID: 1283202571}
-  Notification: {fileID: 0}
-  NotificationText: {fileID: 0}
+  Notification: {fileID: 899433598}
+  NotificationText: {fileID: 990244481}
 --- !u!61 &1204710239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3218,11 +3254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
-  player: {fileID: 0}
+  stairway: {fileID: 1718437129}
+  player: {fileID: 252558850}
   ExitPoint: {fileID: 1204710237}
-  Notification: {fileID: 0}
-  NotificationText: {fileID: 0}
+  Notification: {fileID: 899433598}
+  NotificationText: {fileID: 990244481}
 --- !u!61 &1283202574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4452,11 +4488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
-  player: {fileID: 0}
+  stairway: {fileID: 1718437129}
+  player: {fileID: 252558850}
   ExitPoint: {fileID: 694714951}
-  Notification: {fileID: 0}
-  NotificationText: {fileID: 0}
+  Notification: {fileID: 899433598}
+  NotificationText: {fileID: 990244481}
 --- !u!61 &1877782425
 BoxCollider2D:
   m_ObjectHideFlags: 0
