@@ -20,6 +20,8 @@ public class Door : MonoBehaviour
     public MyGameManager gameManager;
     public Inventory inventory;
     public Text QuestCollectionText;
+    [SerializeField]
+    private GameObject BlockDoorItem;
     /// <summary>
     /// Figures out the situation and if the requirements are met it saves the game and goes to the next position
     /// </summary>
@@ -46,12 +48,36 @@ public class Door : MonoBehaviour
             {
                 //jpost Audio
                 //PlayDoorOpen();
-
-                StartCoroutine(LoadLevel());
+                if (BlockDoorItem != null &&
+                    (!inventory.CheckObject(BlockDoorItem.name) &&
+                    !inventory.CheckObject(BlockDoorItem.name + "(Clone)")))
+                {
+                    StartCoroutine(LoadLevel());
+                }
+                else if (BlockDoorItem == null)
+                {
+                    StartCoroutine(LoadLevel());
+                }
+                else
+                {
+                    QuestCollectionText.text = "You've completed this room go back.";
+                }
             }
             else if (Key == null)
             {
-                StartCoroutine(LoadLevel());
+                if (BlockDoorItem != null &&
+                    (!inventory.CheckObject(BlockDoorItem.name) &&
+                    !inventory.CheckObject(BlockDoorItem.name + "(Clone)")))
+                {
+                    StartCoroutine(LoadLevel());
+                }
+                else if(BlockDoorItem == null)
+                {
+                    StartCoroutine(LoadLevel());
+                } else
+                {
+                    QuestCollectionText.text = "You've completed this room go back.";
+                }
             }
             else
             {

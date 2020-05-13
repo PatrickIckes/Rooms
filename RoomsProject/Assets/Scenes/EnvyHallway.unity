@@ -764,12 +764,12 @@ PrefabInstance:
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.66
+      value: 6.12
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.52
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -1284,7 +1284,7 @@ PrefabInstance:
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.12
+      value: -6.32
       objectReference: {fileID: 0}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
@@ -1606,12 +1606,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c8d3b55241a154eab06b6dd09ebd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Doors: []
   Boundaries: []
   player: {fileID: 990943348}
   GameInProgress: 0
   restart: 0
   levelManager: {fileID: 1736346701}
+  SpawnPoints: []
 --- !u!1001 &1780891201
 PrefabInstance:
   m_ObjectHideFlags: 0

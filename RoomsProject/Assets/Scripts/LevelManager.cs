@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public bool GravityEnabled;//Probably a bad practice but to work simply needed a public setter
     List<Quest> possibleQuests;
     public Text questText;
+    [SerializeField]
     private void Awake()
     {
     }
@@ -17,7 +18,6 @@ public class LevelManager : MonoBehaviour
     {
         if (questText != null)
         {
-
             if (SceneManager.GetActiveScene().buildIndex == HallwayQuest.CurrentScene)
             {
                 //levelQuest = new HallwayQuest();
@@ -30,6 +30,9 @@ public class LevelManager : MonoBehaviour
             else if (SceneManager.GetActiveScene().buildIndex == BeatEnvy.CurrentScene)
             {
                 levelQuest = new BeatEnvy();
+            } else if (SceneManager.GetActiveScene().buildIndex == BeatPride.CurrentScene)
+            {
+                levelQuest = new BeatPride();
             }
             else
             {
