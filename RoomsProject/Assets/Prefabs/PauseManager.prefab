@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4459006985802725113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9e0f898be2db64fa0ca14b2563c2ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ae0387a861b7654c891d5da26806f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resumeButton: {fileID: 0}
@@ -48,3 +48,4 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   dialoguePanel: {fileID: 0}
   interactText: {fileID: 0}
+  lifeBar: {fileID: 0}

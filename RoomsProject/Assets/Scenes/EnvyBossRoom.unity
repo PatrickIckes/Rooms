@@ -731,12 +731,12 @@ PrefabInstance:
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -153
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -53
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
@@ -751,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
@@ -761,7 +761,7 @@ PrefabInstance:
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
@@ -781,17 +781,17 @@ PrefabInstance:
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0139418
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0139418
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3610706627964512623, guid: 6bb5b9f2239200c439e2cbcec4dcbc72,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0139418
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bb5b9f2239200c439e2cbcec4dcbc72, type: 3}
@@ -1414,7 +1414,7 @@ SpriteRenderer:
   m_Size: {x: 6.4607325, y: 18.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1319642374
@@ -2069,7 +2069,7 @@ SpriteRenderer:
   m_Size: {x: 91.305534, y: 33.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1658748874
