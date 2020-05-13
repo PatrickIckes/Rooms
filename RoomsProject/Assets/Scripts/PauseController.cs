@@ -27,10 +27,10 @@ public class PauseController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            pausePanel.SetActive(true);
-            dialoguePanel.SetActive(false);
-            interactText.SetActive(false);
-            lifeBar.SetActive(false);
+           if(pausePanel!=null)pausePanel.SetActive(true);
+           if(dialoguePanel!=null)dialoguePanel.SetActive(false);
+           if(interactText!=null)interactText.SetActive(false);
+           if(lifeBar!=null)lifeBar.SetActive(false);
 
 
             Time.timeScale = 0;
@@ -42,10 +42,10 @@ public class PauseController : MonoBehaviour
         //jpost Audio
         PlayUIClickBack();
 
-        pausePanel.SetActive(false);
-        dialoguePanel.SetActive(true);
-        interactText.SetActive(true);
-        lifeBar.SetActive(true);
+        if(pausePanel!=null)pausePanel.SetActive(false);
+        if(dialoguePanel!=null)dialoguePanel.SetActive(true);
+        if(interactText!=null)interactText.SetActive(true);
+        if(lifeBar != null) lifeBar.SetActive(true);
 
         Time.timeScale = 1;
     }
