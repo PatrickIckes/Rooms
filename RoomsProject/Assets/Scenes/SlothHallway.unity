@@ -248,11 +248,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.73
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -276,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20330468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.786, y: -3.91, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1462,7 +1462,7 @@ PrefabInstance:
         type: 3}
       propertyPath: QuestCollectionText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10677782}
     - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: gameManager
@@ -1799,7 +1799,7 @@ PrefabInstance:
         type: 3}
       propertyPath: QuestCollectionText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 10677782}
     - target: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: transition
@@ -1934,7 +1934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874690877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -405.53668, y: -227.8471, z: -7.1111107}
+  m_LocalPosition: {x: -404.61737, y: -227.37436, z: -5.930319}
   m_LocalScale: {x: 0.71111107, y: 0.71111107, z: 0.71111107}
   m_Children:
   - {fileID: 980163681}
