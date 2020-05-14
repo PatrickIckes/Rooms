@@ -1131,6 +1131,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4834efdf13f3b4db832c4154e22959, type: 3}
+--- !u!114 &949776706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+    type: 3}
+  m_PrefabInstance: {fileID: 949776705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990943348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5645019339603542040, guid: 4aaaef29d9813ea4db8d430495a8192f,
@@ -1651,6 +1663,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c4834efdf13f3b4db832c4154e22959, type: 3}
+--- !u!114 &1493879702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7687737060373974722, guid: 5c4834efdf13f3b4db832c4154e22959,
+    type: 3}
+  m_PrefabInstance: {fileID: 1493879701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733a45d9445f4a140a9938eac780e8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716722973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1928,9 @@ MonoBehaviour:
   GameInProgress: 0
   restart: 0
   levelManager: {fileID: 1736346701}
-  SpawnPoints: []
+  spawnPoints:
+  - {fileID: 949776706}
+  - {fileID: 1493879702}
 --- !u!1001 &1780891201
 PrefabInstance:
   m_ObjectHideFlags: 0
