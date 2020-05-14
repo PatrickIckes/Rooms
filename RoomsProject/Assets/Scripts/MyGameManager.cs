@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class MyGameManager : MonoBehaviour
 {
-    public GameObject[] Doors;//Keeps a list of the Dorrs(This honestly may not be needed and will probably be removed)
     public Vector2[] Boundaries;//Boundaries(Will be used to make sure everything is properly deleted and things are kept within.
     public GameObject player;//Used to keep track of the player
     public bool GameInProgress;//Used to see if the game is still in progress
@@ -15,9 +14,22 @@ public class MyGameManager : MonoBehaviour
     public LevelManager levelManager;
     public List<Quest> AllQuests;
     int PresentLevel;
+    [SerializeField]
+    List<Door> spawnPoints;
+    static Scenes prevScene;
     // Start is called before the first frame update
     void Start()
     {
+        if(spawnPoints.Count > 0)
+        {
+            Door door = spawnPoints.Find(l => l.scene == prevScene);
+            if(door != null)
+            {
+                player.transform.position = door.gameObject.transform.position;
+            }
+        }
+
+        prevScene = (Scenes)SceneManager.GetActiveScene().buildIndex;
         AllQuests = new List<Quest>();
         AllQuests.Add(new BeatSloth());//Solve adding quests later
         player.GetComponent<PlayerMovement>().gameManager = this;
