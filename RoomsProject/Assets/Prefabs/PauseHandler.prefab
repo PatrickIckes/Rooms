@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3916860606793570883}
   - component: {fileID: 8414752169986123484}
   m_Layer: 0
-  m_Name: PauseHadler
+  m_Name: PauseHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
