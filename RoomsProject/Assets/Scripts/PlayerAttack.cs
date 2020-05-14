@@ -36,11 +36,25 @@ public class PlayerAttack : MonoBehaviour
                     }
                     else if (enemiesToDamage[i].tag == "Boss")
                     {
-                        enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        if (enemiesToDamage[i].GetComponent<DamageEnemy>() != null)
+                        {
+                            enemiesToDamage[i].GetComponent<DamageEnemy>().TakeDamage(damage);
+                        }
+                        else
+                        {
+                            enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        }
                     }
                     else
                     {
-                        enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        if (enemiesToDamage[i].GetComponent<DamageEnemy>() != null)
+                        {
+                            enemiesToDamage[i].GetComponent<DamageEnemy>().TakeDamage(damage);
+                        }
+                        else
+                        {
+                            enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        }
                     }
                 }
                 timeBtwAttack = startTimeBtwAttack;

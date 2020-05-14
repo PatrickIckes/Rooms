@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,19 +18,23 @@ public class EnvyBossFight : MonoBehaviour
     public GameObject Note;
     public GameObject Minion;
     public GameObject Player;
-
+    public Door EndRoom;
     private float minionSpawnTimer;
     public float minionSpawnTime;
-
+    [SerializeField]
+    private GameObject EnvyMask;
     private float phase1Timer;
     public float phase1Time;
+
+    [SerializeField]
+    private Inventory PlayerInventory;
 
     [SerializeField]
     private Transform phase1NoteSpawner, phase2MinionSpawner;
     private Transform noteSpawner;
 
     [SerializeField]
-    private BossHealth EnvysHealth;
+    private Enemy EnvysHealth;
 
     [SerializeField]
     private GameObject[] windows = new GameObject[3];
@@ -37,6 +42,7 @@ public class EnvyBossFight : MonoBehaviour
     [SerializeField]
     private GameObject envyPhase2Sprite, envyPhase2Hitbox;
 
+    bool endGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +56,7 @@ public class EnvyBossFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         switch (phase) 
         {
             case BossFightPhase.First:
@@ -72,10 +79,18 @@ public class EnvyBossFight : MonoBehaviour
             sandbagManager.DisableSandbags();
             phase = BossFightPhase.Second;
         }
+        else if(phase == BossFightPhase.Dead && !endGame)
+        {
+            GameObject go = Instantiate(EnvyMask, new Vector3(), Quaternion.identity);
+            PlayerInventory.AddItem(go.GetComponent<IInventoryItem>());
+            EndRoom.OpenDoor(true);
+            endGame = true;
+        }
     }
 
     private void Phase2Attack()
     {
+        if (envyPhase2Hitbox == null) phase = BossFightPhase.Dead;
         phase2AttackTimer += Time.deltaTime;
         if (phase2AttackTimer >= phase2AttackTime)
         {
