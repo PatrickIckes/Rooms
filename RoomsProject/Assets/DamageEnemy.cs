@@ -11,4 +11,11 @@ public class DamageEnemy : MonoBehaviour
     {
         enemy.TakeDamage(damage);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.GetComponent<PlayerData>().Damage(1);
+        }
+    }
 }

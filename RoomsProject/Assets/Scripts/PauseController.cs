@@ -43,8 +43,8 @@ public class PauseController : MonoBehaviour
 
     void Resume()
     {
-        //jpost Audio
-        PlayUIClickBack();
+
+
 
         if(pausePanel!=null)pausePanel.SetActive(false);
         if(dialoguePanel!=null)dialoguePanel.SetActive(true);
@@ -52,13 +52,17 @@ public class PauseController : MonoBehaviour
         if(lifeBar != null) lifeBar.SetActive(true);
         pause = false;
         Time.timeScale = 1;
+
+        //jpost Audio
+        PlayUIClickBack();
     }
 
     void MainMenu()
     {
+        SceneManager.LoadScene((int)Scenes.MainMenu);
+
         //jpost Audio
         PlayUIClickThrough();
-        SceneManager.LoadScene((int)Scenes.MainMenu);
     }
 
     //jpost audio

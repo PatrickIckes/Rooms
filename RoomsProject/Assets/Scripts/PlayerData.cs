@@ -25,6 +25,8 @@ public class PlayerData : MonoBehaviour
     [SerializeField]
     private Animator playerAnimator;
 
+    public GameObject CrossFade;
+
     public void ResetPlayer()
     {
         pa.health = startinghealth;
@@ -86,10 +88,10 @@ public class PlayerData : MonoBehaviour
 
     private IEnumerator Death()
     {
-        playerAnimator.Play("Walking");
+        CrossFade.SetActive(true);
+        playerAnimator.Play("Crossfade_End");
 
         yield return new WaitForSeconds(2f);
-
         ResetPlayer();
         gameManager.GetComponent<MyGameManager>().GameInProgress = false;
     }

@@ -124,5 +124,5 @@ MonoBehaviour:
   bulletSpeed: 10
   damage: 1
   LifeTime: 5
-  HurtPlayer: 0
-  DestroyOnHit: 0
+  HurtPlayer: 1
+  DestroyOnHit: 1

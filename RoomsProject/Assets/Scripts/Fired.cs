@@ -15,6 +15,7 @@ public class Fired : MonoBehaviour
     [SerializeField]
     private bool DestroyOnHit;
     Vector3 angle;
+    private bool hit;
     // Update is called once per frame
     void Update()
     {
@@ -44,15 +45,19 @@ public class Fired : MonoBehaviour
                     Direction -= angle;
                 } else
                 {
-                    this.tag = "Trap";
+                    if (this.tag != "Note")
+                    {
+                        this.tag = "Trap";
+                    }
                 }
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" &&  HurtPlayer)
+        if (collision.tag == "Player" &&  HurtPlayer && !hit)
         {
+            hit = true;
             collision.GetComponent<PlayerData>().Damage(damage);
             Destroy(gameObject);
         }
