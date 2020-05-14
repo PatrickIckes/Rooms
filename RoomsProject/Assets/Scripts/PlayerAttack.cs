@@ -31,6 +31,35 @@ public class PlayerAttack : MonoBehaviour
                 {
 
                     StartCoroutine(Attack());
+                    if (enemiesToDamage[i].tag == "Note")
+                        enemiesToDamage[i].GetComponent<Fired>().Direction = GameObject.FindGameObjectWithTag("Boss").transform.position;
+                    else if (enemiesToDamage[i].tag == "Trap")
+                    {
+                        enemiesToDamage[i].GetComponent<Trap>().Break();
+                        Destroy(enemiesToDamage[i].gameObject);
+                    }
+                    else if (enemiesToDamage[i].tag == "Boss")
+                    {
+                        if (enemiesToDamage[i].GetComponent<DamageEnemy>() != null)
+                        {
+                            enemiesToDamage[i].GetComponent<DamageEnemy>().TakeDamage(damage);
+                        }
+                        else
+                        {
+                            enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        }
+                    }
+                    else
+                    {
+                        if (enemiesToDamage[i].GetComponent<DamageEnemy>() != null)
+                        {
+                            enemiesToDamage[i].GetComponent<DamageEnemy>().TakeDamage(damage);
+                        }
+                        else
+                        {
+                            enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                        }
+                    }
                 }
             }
             else
