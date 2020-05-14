@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class MyGameManager : MonoBehaviour
 {
+    public GameObject[] Doors;//Keeps a list of the Dorrs(This honestly may not be needed and will probably be removed)
     public Vector2[] Boundaries;//Boundaries(Will be used to make sure everything is properly deleted and things are kept within.
     public GameObject player;//Used to keep track of the player
     public bool GameInProgress;//Used to see if the game is still in progress
@@ -14,23 +15,9 @@ public class MyGameManager : MonoBehaviour
     public LevelManager levelManager;
     public List<Quest> AllQuests;
     int PresentLevel;
-    [SerializeField]
-    private List<Door> SpawnPoints;
-    private static Scenes PreviousRoom;
     // Start is called before the first frame update
     void Start()
     {
-
-        if (SpawnPoints != null && SpawnPoints.Count > 0)
-        {
-            Door Spawn = SpawnPoints.Find(l => l.scene.Equals(PreviousRoom));
-            if(Spawn != null)
-            {
-                player.transform.position = Spawn.transform.position;
-            }
-        }
-        PreviousRoom = (Scenes)SceneManager.GetActiveScene().buildIndex;
-
         AllQuests = new List<Quest>();
         AllQuests.Add(new BeatSloth());//Solve adding quests later
         player.GetComponent<PlayerMovement>().gameManager = this;
@@ -62,15 +49,15 @@ public class MyGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameInProgress || (Input.GetKeyDown(KeyCode.LeftAlt) && (Input.GetKeyDown(KeyCode.F4))))
+        if(!GameInProgress || (Input.GetKeyDown(KeyCode.LeftAlt) && (Input.GetKeyDown(KeyCode.F4))))
         {
             restart = true;
             LoadGamesLevel("");
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene((int)Scenes.MainMenu);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.Slash))//to restart
         {
             Debug.Log("Test");
@@ -108,7 +95,7 @@ public class MyGameManager : MonoBehaviour
         {
             using (FileStream fs = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open))
             {
-                data = (PlayerAttributes)bf.Deserialize(fs);
+               data = (PlayerAttributes)bf.Deserialize(fs);
             }
         }
         return data;
@@ -122,7 +109,7 @@ public class MyGameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().inventory.PopulateInventory(data.inventory);
     }
     internal void LoadInventory()
-    {
+    { 
         //PlayerAttributes data = LoadData();
         //if (data.inventory != null)
         //{
