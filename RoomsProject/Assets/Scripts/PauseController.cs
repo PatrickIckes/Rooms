@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
+    private bool pause;
     [SerializeField]
     private Button resumeButton, menuButton;
     [SerializeField]
@@ -25,15 +26,18 @@ public class PauseController : MonoBehaviour
 
     void PauseGame()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && !pause)
         {
            if(pausePanel!=null)pausePanel.SetActive(true);
            if(dialoguePanel!=null)dialoguePanel.SetActive(false);
            if(interactText!=null)interactText.SetActive(false);
            if(lifeBar!=null)lifeBar.SetActive(false);
 
-
+            pause = true;
             Time.timeScale = 0;
+        } else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Resume();
         }
     }
 
@@ -46,7 +50,7 @@ public class PauseController : MonoBehaviour
         if(dialoguePanel!=null)dialoguePanel.SetActive(true);
         if(interactText!=null)interactText.SetActive(true);
         if(lifeBar != null) lifeBar.SetActive(true);
-
+        pause = false;
         Time.timeScale = 1;
     }
 

@@ -4138,6 +4138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1501509852022522798, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1501509852022522799, guid: 9458e910e7ba8874e9085d68f83c3452,
         type: 3}
       propertyPath: m_Sprite
@@ -5365,6 +5370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872515980965845820, guid: 00ebda16305ccc549adab4f46d44e820,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3916860606793570883, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
