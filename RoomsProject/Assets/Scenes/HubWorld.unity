@@ -4240,6 +4240,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9458e910e7ba8874e9085d68f83c3452, type: 3}
+--- !u!114 &1501509850987272749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3531490449970783827, guid: 9458e910e7ba8874e9085d68f83c3452,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501509850987272748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1501509850987272750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6218317641111207684, guid: 9458e910e7ba8874e9085d68f83c3452,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501509850987272748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1658009728391012129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5340,7 +5364,7 @@ PrefabInstance:
     - target: {fileID: 3872515980965845820, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: m_Name
-      value: auseHandler
+      value: PauseHandler
       objectReference: {fileID: 0}
     - target: {fileID: 3916860606793570883, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
@@ -5401,12 +5425,12 @@ PrefabInstance:
         type: 3}
       propertyPath: resumeButton
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1501509850987272750}
     - target: {fileID: 8414752169986123484, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: menuButton
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1501509850987272749}
     - target: {fileID: 8414752169986123484, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: pausePanel
@@ -5417,6 +5441,11 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 507939262}
+    - target: {fileID: 8414752169986123484, guid: 00ebda16305ccc549adab4f46d44e820,
+        type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 362972496}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ebda16305ccc549adab4f46d44e820, type: 3}
 --- !u!1 &7092994908930287059
