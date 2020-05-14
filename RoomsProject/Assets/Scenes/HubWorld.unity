@@ -120,18 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &22030364 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1501509850998813232, guid: 9458e910e7ba8874e9085d68f83c3452,
-    type: 3}
-  m_PrefabInstance: {fileID: 1501509850987272748}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &40513536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
@@ -2390,18 +2378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1087710477 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1501509852047720225, guid: 9458e910e7ba8874e9085d68f83c3452,
-    type: 3}
-  m_PrefabInstance: {fileID: 1501509850987272748}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1087899382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
@@ -4162,6 +4138,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1501509852022522799, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501509852022522799, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501509852022522799, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695238911154969935, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695238911154969935, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695238911154969935, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695238911154969935, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834414918899978510, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834414918899978510, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834414918899978510, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834414918899978510, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899573987651866097, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899573987651866097, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899573987651866097, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899573987651866097, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899573987651866097, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036354051226240698, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036354051226240698, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036354051226240698, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036354051226240698, guid: 9458e910e7ba8874e9085d68f83c3452,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9458e910e7ba8874e9085d68f83c3452, type: 3}
 --- !u!114 &1658009728391012129
@@ -5264,7 +5340,7 @@ PrefabInstance:
     - target: {fileID: 3872515980965845820, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: m_Name
-      value: PauseHadler
+      value: auseHandler
       objectReference: {fileID: 0}
     - target: {fileID: 3916860606793570883, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
@@ -5325,12 +5401,12 @@ PrefabInstance:
         type: 3}
       propertyPath: resumeButton
       value: 
-      objectReference: {fileID: 22030364}
+      objectReference: {fileID: 0}
     - target: {fileID: 8414752169986123484, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: menuButton
       value: 
-      objectReference: {fileID: 1087710477}
+      objectReference: {fileID: 0}
     - target: {fileID: 8414752169986123484, guid: 00ebda16305ccc549adab4f46d44e820,
         type: 3}
       propertyPath: pausePanel
