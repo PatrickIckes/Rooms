@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attack = true;
         animation.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         //Player attacking animation here
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
