@@ -34,17 +34,21 @@ public class EnvyBossFight : MonoBehaviour
     private Transform noteSpawner;
 
     [SerializeField]
+    private Animator SingAnimator;
+
+    [SerializeField]
     private Enemy EnvysHealth;
 
     [SerializeField]
     private GameObject[] windows = new GameObject[3];
 
     [SerializeField]
-    private GameObject envyPhase2Sprite, envyPhase2Hitbox;
+    private GameObject envyPhase1,envyPhase2Sprite, envyPhase2Hitbox;
 
     private float envyPhase2SpriteXScale;
 
     bool endGame;
+    bool fired;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +85,7 @@ public class EnvyBossFight : MonoBehaviour
         if (phase1Timer >= phase1Time && phase != BossFightPhase.Dead)
         {
             sandbagManager.DisableSandbags();
+            StartCoroutine(StartPhaseTwo());
             phase = BossFightPhase.Second;
         }
         else if(phase == BossFightPhase.Dead && !endGame)
@@ -90,6 +95,13 @@ public class EnvyBossFight : MonoBehaviour
             EndRoom.OpenDoor(true);
             endGame = true;
         }
+    }
+
+    public IEnumerator StartPhaseTwo()
+    {
+        SingAnimator.SetTrigger("Phase2");
+        yield return new WaitForSeconds(2f);
+        envyPhase1.SetActive(false);
     }
 
     private void Phase2Attack()
@@ -117,16 +129,28 @@ public class EnvyBossFight : MonoBehaviour
 
     private void FireNotes()
     {
-        noteTimer += Time.deltaTime;
-        if (noteTimer >= noteFireTime)
+        if (!fired)
         {
-            Debug.Log("Fire Note");
-            GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
-            temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
-            noteTimer = 0;
+            noteTimer += Time.deltaTime;
+            if (noteTimer >= noteFireTime)
+            {
+                StartCoroutine(FireNote());
+            }
         }
     }
     
+    public IEnumerator FireNote()
+    {
+        fired = true;
+        SingAnimator.SetBool("Sing", true);
+        yield return new WaitForSeconds(6f);
+        GameObject temp = Instantiate(Note, noteSpawner.position, Quaternion.identity, this.transform);
+        temp.GetComponent<Fired>().Direction = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
+        noteTimer = 0;
+        SingAnimator.SetBool("Sing", false);
+        fired = false;
+    }
+
     //TODO: Edit once minion sprites exist
     private void SpawnMinions()
     {
