@@ -389,10 +389,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 452859561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc719c4f1b9d971439bdf13c99b78b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: df3c51791c37db14dacbe7d6f3621434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuButton: {fileID: 635509443}
+  ReplayButton: {fileID: 635509443}
 --- !u!114 &452859563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1117,7 @@ RectTransform:
   m_Children:
   - {fileID: 1920137693}
   - {fileID: 635509442}
+  - {fileID: 1898728044}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1232,13 +1233,13 @@ MonoBehaviour:
   m_margin: {x: 125.05719, y: 0, z: 0.056152344, w: 0}
   m_textInfo:
     textComponent: {fileID: 1898728042}
-    characterCount: 0
+    characterCount: 126
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 24
+    wordCount: 25
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 8
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1274,12 +1275,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1785446011}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -959.99994, y: -540.16}
   m_SizeDelta: {x: 523.2, y: 574.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1920137692
