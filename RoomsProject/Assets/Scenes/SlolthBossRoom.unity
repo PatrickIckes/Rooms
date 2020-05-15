@@ -225,6 +225,18 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 828237470}
+    - target: {fileID: 1269773791, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 487233618}
+    - target: {fileID: 1269773791, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 828237470}
+    - target: {fileID: 1269773791, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 644240696}
     - target: {fileID: 5645019339603542040, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_Name
@@ -2826,6 +2838,7 @@ MonoBehaviour:
   inventory: {fileID: 1697728127}
   QuestCollectionText: {fileID: 1772483459}
   BlockDoorItem: {fileID: 0}
+  DialogueManager: {fileID: 0}
 --- !u!1 &1932512512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151567435624231489, guid: 9478d301df90b5046b70f3dbcb98dba3,
