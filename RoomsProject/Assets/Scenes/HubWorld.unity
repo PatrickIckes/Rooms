@@ -3081,6 +3081,96 @@ MonoBehaviour:
   ExitPoint: {fileID: 2117914720}
   Notification: {fileID: 9128179484499309956}
   NotificationText: {fileID: 362972498}
+--- !u!1001 &1693598358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1106528938379960253, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: speakerItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: textFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 3083f33b768fdbd4c8ab7812d04786fe, type: 3}
+    - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: speakerItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
+        type: 3}
+    - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: StartDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960255, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d6cef0fc0b7b04ab2208a7be478c2e, type: 3}
 --- !u!1 &1702266465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4287,7 @@ MonoBehaviour:
   health: 0
   healthScript: {fileID: 0}
   playerAnimator: {fileID: 0}
+  CrossFade: {fileID: 0}
 --- !u!95 &1658009728391012131
 Animator:
   serializedVersion: 3

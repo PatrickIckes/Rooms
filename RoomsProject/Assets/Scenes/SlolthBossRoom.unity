@@ -1258,9 +1258,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
+      propertyPath: speakerItems.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+        type: 3}
       propertyPath: textFile
       value: 
-      objectReference: {fileID: 4900000, guid: 0b000d0e40846f5438f9019ff3d6a849, type: 3}
+      objectReference: {fileID: 4900000, guid: 8918f24b31d67644d9c6f211f838050c, type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
       propertyPath: StartDialogue
@@ -1276,7 +1281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: speakerItems.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
+      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
@@ -1288,13 +1293,13 @@ PrefabInstance:
         type: 3}
       propertyPath: speakerItems.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
+      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
       propertyPath: speakerItems.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
+      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
@@ -1306,13 +1311,13 @@ PrefabInstance:
         type: 3}
       propertyPath: speakerItems.Array.data[7]
       value: 
-      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
+      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
       propertyPath: speakerItems.Array.data[9]
       value: 
-      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
+      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
@@ -1336,13 +1341,13 @@ PrefabInstance:
         type: 3}
       propertyPath: speakerItems.Array.data[6]
       value: 
-      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
+      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
       propertyPath: speakerItems.Array.data[8]
       value: 
-      objectReference: {fileID: 21300000, guid: a297b7e0a719e164f926eec912712f4d,
+      objectReference: {fileID: 21300000, guid: 9ec365c295cf8e04ea07e1cfb343a9d2,
         type: 3}
     - target: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
         type: 3}
