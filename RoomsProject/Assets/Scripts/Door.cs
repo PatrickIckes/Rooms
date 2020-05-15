@@ -22,6 +22,8 @@ public class Door : MonoBehaviour
     public Text QuestCollectionText;
     [SerializeField]
     private GameObject BlockDoorItem;
+    [SerializeField]
+    private DialogueManager DialogueManager;
     /// <summary>
     /// Figures out the situation and if the requirements are met it saves the game and goes to the next position
     /// </summary>
@@ -36,7 +38,10 @@ public class Door : MonoBehaviour
         //Invoke("LoadSceneSlothHallway", 1.01f);
         if (Input.GetButtonDown("Interact") && withinInteractable)
         {
-            OpenDoor(true);
+            if (DialogueManager == null || !DialogueManager.enabled)
+            {
+                OpenDoor(true);
+            }
         }
     }
 
