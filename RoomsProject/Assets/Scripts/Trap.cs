@@ -7,8 +7,21 @@ public class Trap : MonoBehaviour
     [SerializeField]
     float basespeed;
     private PlayerMovement player;
+    [SerializeField]
+    Sprite OpenTrap;
+    [SerializeField]
+    Sprite ClosedTrap;
+
+    SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        spriteRenderer.sprite = ClosedTrap;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -26,5 +39,6 @@ public class Trap : MonoBehaviour
     internal void Break()
     {
         player.movementSpeed = basespeed;
+        spriteRenderer.sprite = OpenTrap;
     }
 }

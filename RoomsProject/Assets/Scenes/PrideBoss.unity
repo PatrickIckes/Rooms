@@ -2893,12 +2893,12 @@ PrefabInstance:
     - target: {fileID: 3801920187021720563, guid: 68b0ffb57b631f94da842dc1157b0587,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.21
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 3801920187021720563, guid: 68b0ffb57b631f94da842dc1157b0587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: 3801920187021720563, guid: 68b0ffb57b631f94da842dc1157b0587,
         type: 3}
@@ -2945,15 +2945,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3801920187021720574, guid: 68b0ffb57b631f94da842dc1157b0587,
+        type: 3}
+      propertyPath: OpenTrap
+      value: 
+      objectReference: {fileID: -203481749782717597, guid: fcc1e8e1352ff09429d7b74f1dbbb9f2,
+        type: 3}
+    - target: {fileID: 3801920187021720574, guid: 68b0ffb57b631f94da842dc1157b0587,
+        type: 3}
+      propertyPath: ClosedTrap
+      value: 
+      objectReference: {fileID: 5718734088511453061, guid: fcc1e8e1352ff09429d7b74f1dbbb9f2,
+        type: 3}
     - target: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587,
         type: 3}
       propertyPath: m_Name
       value: Bear Trap
-      objectReference: {fileID: 0}
-    - target: {fileID: 3801920187021720575, guid: 68b0ffb57b631f94da842dc1157b0587,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b0ffb57b631f94da842dc1157b0587, type: 3}
