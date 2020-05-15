@@ -225,6 +225,18 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 828237470}
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 644240696}
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 487233618}
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 828237470}
     - target: {fileID: 1269773791, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

@@ -1010,53 +1010,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1680830212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &996953814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996953813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236d7b675ad01b0498af5fba08eec62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAttack: 1
-  attackPos: {fileID: 996953822}
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 3584
-  attackRangeX: 2.5
-  attackRangeY: 2.5
-  damage: 1
-  playerinventory: {fileID: 461758704}
---- !u!114 &996953815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996953813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ce8d2a3f048704ea2f12ed3dd1f7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  numOFHearts: 3
-  hearts:
-  - {fileID: 16217117}
-  - {fileID: 2121720924}
-  - {fileID: 2088902865}
-  full: {fileID: -8770001503089466214, guid: 1a1fa7c726ea8e94ba69d0b3276a1ad3, type: 3}
-  empty: {fileID: 4974403084737825917, guid: 1a1fa7c726ea8e94ba69d0b3276a1ad3, type: 3}
---- !u!4 &996953822 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1680830212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1104642595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1491,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 16217117}
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 2121720924}
+    - target: {fileID: 996953815, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2088902865}
     - target: {fileID: 5645019339603542040, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_Name
@@ -1553,11 +1518,6 @@ PrefabInstance:
       propertyPath: QuestCollectionText
       value: 
       objectReference: {fileID: 1690108646}
-    - target: {fileID: 5645019339603542041, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5645019339603542500, guid: 4aaaef29d9813ea4db8d430495a8192f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1618,21 +1578,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 181070448}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: startinghealth
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: healthScript
-      value: 
-      objectReference: {fileID: 996953815}
-    - target: {fileID: 6437135073513213893, guid: 4aaaef29d9813ea4db8d430495a8192f,
-        type: 3}
-      propertyPath: health
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaaef29d9813ea4db8d430495a8192f, type: 3}
 --- !u!114 &1689931681 stripped
