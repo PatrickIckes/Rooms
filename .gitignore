@@ -46,4 +46,3 @@ Assets/StreamingAssets/**/*.bank.meta
 fmod_editor.log
 
 RoomsProject/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
-*.meta
