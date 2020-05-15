@@ -21,13 +21,13 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartGameButton.onClick.AddListener(Story);
-        PlayGameButton.onClick.AddListener(StartGame);
-        SettingsButton.onClick.AddListener(Settings);
-        CreditsButton.onClick.AddListener(Credits);
-        CreditsBackButton.onClick.AddListener(CreditsBack);
-        SettingsBackButton.onClick.AddListener(SettingsBack);
-        ExitButton.onClick.AddListener(Exit);
+        if (StartGameButton != null) StartGameButton.onClick.AddListener(Story);
+        if (PlayGameButton != null) PlayGameButton.onClick.AddListener(StartGame);
+        if (SettingsButton != null) SettingsButton.onClick.AddListener(Settings);
+        if (CreditsButton != null) CreditsButton.onClick.AddListener(Credits);
+        if (CreditsBackButton != null) CreditsBackButton.onClick.AddListener(CreditsBack);
+        if (SettingsBackButton != null) SettingsBackButton.onClick.AddListener(SettingsBack);
+        if (ExitButton != null) ExitButton.onClick.AddListener(Exit);
     }
 
     void StartGame()
