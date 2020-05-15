@@ -35,7 +35,8 @@ public class PauseController : MonoBehaviour
 
             pause = true;
             Time.timeScale = 0;
-        } else if(Input.GetKeyDown(KeyCode.Escape))
+        } 
+        else if(Input.GetKeyDown(KeyCode.Escape))
         {
             Resume();
         }
@@ -43,9 +44,6 @@ public class PauseController : MonoBehaviour
 
     void Resume()
     {
-
-
-
         if(pausePanel!=null)pausePanel.SetActive(false);
         if(dialoguePanel!=null)dialoguePanel.SetActive(true);
         if(interactText!=null)interactText.SetActive(true);
