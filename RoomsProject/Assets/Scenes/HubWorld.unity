@@ -1067,7 +1067,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.81
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1091,7 +1091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -2.1787324, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1185,12 +1185,18 @@ MonoBehaviour:
   ExitPoint: {fileID: 532308869}
   Notification: {fileID: 9128179484499309956}
   NotificationText: {fileID: 362972498}
---- !u!1 &527553274 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1106528938379960253, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
+--- !u!114 &527553275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1106528938379960254, guid: 71d6cef0fc0b7b04ab2208a7be478c2e,
     type: 3}
   m_PrefabInstance: {fileID: 1693598358}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653082c7ed20cf640ba7bf8848e772b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532308869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,7 +2228,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DialogueManager
       value: 
-      objectReference: {fileID: 527553274}
+      objectReference: {fileID: 527553275}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2765,7 +2771,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DialogueManager
       value: 
-      objectReference: {fileID: 527553274}
+      objectReference: {fileID: 527553275}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4940,7 +4946,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DialogueManager
       value: 
-      objectReference: {fileID: 527553274}
+      objectReference: {fileID: 527553275}
     - target: {fileID: 8594665210356318530, guid: 5c4834efdf13f3b4db832c4154e22959,
         type: 3}
       propertyPath: m_LocalPosition.x
