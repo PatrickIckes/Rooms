@@ -11,13 +11,13 @@ public class WinStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (MainMenuButton != null) MainMenuButton.onClick.AddListener(MainMenu);
+        MainMenuButton.onClick.AddListener(MainMenu);
     }
 
     void MainMenu()
     {
         //jpost Audio
-        PlayUIClickPlay();
+        //PlayUIClickPlay();
 
         SceneManager.LoadScene((int)Scenes.MainMenu);
     }

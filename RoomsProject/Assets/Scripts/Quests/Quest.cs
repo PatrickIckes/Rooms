@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public enum Scenes { MainMenu, Tutorial, HubWorld, SlothHallway, SlothBossRoom, EnvyHallway, EnvyBossRoom, PrideBossFight, DemoWinScene }
+public enum Scenes { MainMenu, Tutorial, HubWorld, SlothHallway, SlothBossRoom, EnvyHallway, EnvyBossRoom, PrideBossFight, DemoWinScene, WinScene }
 public class Quest
 {
     protected List<QuestRequirement> qr;
