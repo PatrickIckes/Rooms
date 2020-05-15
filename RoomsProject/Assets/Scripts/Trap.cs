@@ -21,13 +21,16 @@ public class Trap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        spriteRenderer.sprite = ClosedTrap;
+        if (collision.gameObject.tag == "Player" && this.tag == "Trap")
+        {
+            spriteRenderer.sprite = ClosedTrap;
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && this.tag == "Trap")
         {
-            collision.transform.position = new Vector3(this.transform.position.x,this.transform.position.y+0.25f);
+            collision.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.25f);
             player = collision.gameObject.GetComponent<PlayerMovement>();
             if (player.movementSpeed != 0)
             {

@@ -17,7 +17,6 @@ public class pride_comes_before_the_fall : MonoBehaviour
     private int HitsToFall;
     [SerializeField]
     private GameObject Arms;
-    private Animator animator;
     private void Start()
     {
         fall = false;
@@ -50,7 +49,6 @@ public class pride_comes_before_the_fall : MonoBehaviour
             {
                 timer = 0;
                 fall = false;
-                animator.Play("PrideJump");
                 ReturnToPlatform();
             }
         }

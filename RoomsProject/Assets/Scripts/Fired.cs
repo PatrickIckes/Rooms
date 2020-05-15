@@ -40,10 +40,11 @@ public class Fired : MonoBehaviour
             }
             else if (this.transform.position == Direction)
             {
-                if (!(this.transform.position.y <= -4.1))
+                if (!(this.transform.position.y <= -3.95))
                 {
                     Direction -= angle;
-                } else
+                } 
+                else
                 {
                     if (this.tag != "Note")
                     {

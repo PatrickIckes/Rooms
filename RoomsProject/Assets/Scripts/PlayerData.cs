@@ -88,8 +88,11 @@ public class PlayerData : MonoBehaviour
 
     private IEnumerator Death()
     {
-        CrossFade.SetActive(true);
-        playerAnimator.Play("Crossfade_End");
+        if (CrossFade != null)
+        {
+            CrossFade.SetActive(true);
+            playerAnimator.Play("Crossfade_End");
+        }
 
         yield return new WaitForSeconds(2f);
         ResetPlayer();
