@@ -1876,8 +1876,8 @@ MonoBehaviour:
   playerInventory: {fileID: 1421066235988371704}
   keys:
   - {fileID: 1902597438}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1018895853}
+  - {fileID: 1770257160}
 --- !u!1 &952250130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2180,12 @@ PrefabInstance:
 --- !u!4 &1018895852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018895851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018895853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
     type: 3}
   m_PrefabInstance: {fileID: 1018895851}
   m_PrefabAsset: {fileID: 0}
@@ -3455,6 +3461,12 @@ PrefabInstance:
 --- !u!4 &1770257159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 652514390014894037, guid: 37a2f5c044a216f408f36e7985dae1a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1770257158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1770257160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7061407910062290952, guid: 37a2f5c044a216f408f36e7985dae1a5,
     type: 3}
   m_PrefabInstance: {fileID: 1770257158}
   m_PrefabAsset: {fileID: 0}
