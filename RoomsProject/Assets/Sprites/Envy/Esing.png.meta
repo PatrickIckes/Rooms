@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: a04350041c14715439a2a430b6059d8c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7683796277270805368
+    second: Esing_0
+  - first:
+      213: 9126091441087700723
+    second: Esing_1
+  - first:
+      213: 7968697141701426401
+    second: Esing_2
+  - first:
+      213: -7515450304563402583
+    second: Esing_3
+  - first:
+      213: 8916348842894169581
+    second: Esing_4
+  - first:
+      213: 5118942150308198205
+    second: Esing_5
+  - first:
+      213: -5775850683590834430
+    second: Esing_6
+  - first:
+      213: 3768849989442758004
+    second: Esing_7
+  - first:
+      213: -2250925135319643678
+    second: Esing_8
+  - first:
+      213: -8728903153897778914
+    second: Esing_9
+  - first:
+      213: -9109634602709025478
+    second: Esing_10
+  - first:
+      213: -7834919002965702494
+    second: Esing_11
+  - first:
+      213: 5749897343430030500
+    second: Esing_12
+  - first:
+      213: -284023391323352750
+    second: Esing_13
+  - first:
+      213: -6178744597554925872
+    second: Esing_14
+  - first:
+      213: -8282202533180969843
+    second: Esing_15
+  - first:
+      213: 3904187403919155262
+    second: Esing_16
+  - first:
+      213: -4082699737085420339
+    second: Esing_17
+  - first:
+      213: 7146678178778443508
+    second: Esing_18
+  - first:
+      213: 3601578766126400512
+    second: Esing_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +100,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +130,477 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Esing_0
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 6501
+        width: 646
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2433b0aca3c124abcce02fc4dfa6bf
+      internalID: -7683796277270805368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_1
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 6501
+        width: 607
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590e8562fa92d0c4c98618c8f3fcb2f9
+      internalID: 9126091441087700723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_2
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 6501
+        width: 607
+        height: 1831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed06355770b303543a986b1c6a87b2a6
+      internalID: 7968697141701426401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_3
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6501
+        width: 599
+        height: 1837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa17e03bc353de41b8edce8a0cfe178
+      internalID: -7515450304563402583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_4
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 6501
+        width: 604
+        height: 1832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3009870621821459bd6b09de4b611a
+      internalID: 8916348842894169581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_5
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 4485
+        width: 596
+        height: 1837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dd7c3678246274eb06e943addd66a7
+      internalID: 5118942150308198205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_6
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 4485
+        width: 607
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86787f6cf706efa409e5eb6d117290f4
+      internalID: -5775850683590834430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_7
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 4485
+        width: 574
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08863be7ffe82af4ca426eed3983c45f
+      internalID: 3768849989442758004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_8
+      rect:
+        serializedVersion: 2
+        x: 3906
+        y: 4485
+        width: 587
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebf96ab3b6fb2d46883c47cf6c27f9b
+      internalID: -2250925135319643678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_9
+      rect:
+        serializedVersion: 2
+        x: 5058
+        y: 4485
+        width: 587
+        height: 1837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6653b4b344b3efc4998468df898bb58e
+      internalID: -8728903153897778914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_10
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 2469
+        width: 586
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f722121d0374ea141bf2b5db1ec4ffe2
+      internalID: -9109634602709025478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_11
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 2469
+        width: 587
+        height: 1837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db46873fec08a0c49800c0cd65035147
+      internalID: -7834919002965702494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_12
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 2469
+        width: 574
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f43524ccd5f374da73a0cb498f39f2
+      internalID: 5749897343430030500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_13
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2469
+        width: 605
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db7c2e30cbda124bad9b6dff37e3e23
+      internalID: -284023391323352750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_14
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 2469
+        width: 604
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c953841cc427b7f48867ca2d51f3af0c
+      internalID: -6178744597554925872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_15
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 453
+        width: 604
+        height: 1829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2329bd158adafff4cbedb6f6dbfb03df
+      internalID: -8282202533180969843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_16
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 453
+        width: 599
+        height: 1837
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d057474d3333d49a2399874ab6a0cc
+      internalID: 3904187403919155262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_17
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 453
+        width: 607
+        height: 1829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbdf954868794c45bf30580d93d5041
+      internalID: -4082699737085420339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_18
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 453
+        width: 605
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe82a59d085fd6b4c96bf81b5aafaae5
+      internalID: 7146678178778443508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Esing_19
+      rect:
+        serializedVersion: 2
+        x: 5109
+        y: 453
+        width: 647
+        height: 1824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398c48d05da3f8b498ac530098e1e5dd
+      internalID: 3601578766126400512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1875,7 +1875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319642371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: -2.32, y: 2.82, z: 0}
   m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
   m_Children: []
   m_Father: {fileID: 686449936}
@@ -1919,7 +1919,7 @@ SpriteRenderer:
   m_SortingLayerID: -185712785
   m_SortingLayer: 7
   m_SortingOrder: -11
-  m_Sprite: {fileID: -7683796277270805368, guid: 0d20647dc4627a9459e203fda3353c28,
+  m_Sprite: {fileID: -7683796277270805368, guid: a04350041c14715439a2a430b6059d8c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1928,7 +1928,7 @@ SpriteRenderer:
   m_Size: {x: 6.4607325, y: 18.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1319642374
@@ -1941,7 +1941,7 @@ Animator:
   m_GameObject: {fileID: 1319642371}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b0f28ba21894b74f9bbb00ed7392baf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3c0d9f5b8e5caac47b1268d8bf1d47a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2418,13 +2418,13 @@ MonoBehaviour:
   Player: {fileID: 1269773790}
   EndRoom: {fileID: 612089821}
   minionSpawnTime: 6
-  EnvyMask: {fileID: 3828108979334953943, guid: 566a39b995946e945ab649d4f2c32511,
+  EnvyMask: {fileID: 8601866593477533971, guid: 8028b5be07d6b3542b71bbb2f26619ec,
     type: 3}
   phase1Time: 30
   PlayerInventory: {fileID: 907240497}
   phase1NoteSpawner: {fileID: 1602153877}
   phase2MinionSpawner: {fileID: 1123415002}
-  EnvysHealth: {fileID: 0}
+  EnvysHealth: {fileID: 686449935}
   windows:
   - {fileID: 1594725273}
   - {fileID: 2086716993}

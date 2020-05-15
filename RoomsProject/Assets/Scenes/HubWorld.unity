@@ -1235,7 +1235,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.81
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1259,7 +1259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -2.1787324, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
+  stairway: {fileID: 519002543}
   player: {fileID: 173166844}
   ExitPoint: {fileID: 532308869}
   Notification: {fileID: 9128179484499309956}
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
+  stairway: {fileID: 519002543}
   player: {fileID: 173166844}
   ExitPoint: {fileID: 522048969}
   Notification: {fileID: 9128179484499309956}
@@ -3076,7 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
+  stairway: {fileID: 519002543}
   player: {fileID: 173166844}
   ExitPoint: {fileID: 2117914720}
   Notification: {fileID: 9128179484499309956}
@@ -3819,7 +3819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08645db652e49ea42b1330e76331b553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stairway: {fileID: 0}
+  stairway: {fileID: 519002543}
   player: {fileID: 173166844}
   ExitPoint: {fileID: 1662216695}
   Notification: {fileID: 9128179484499309956}
@@ -4197,6 +4197,7 @@ MonoBehaviour:
   health: 0
   healthScript: {fileID: 0}
   playerAnimator: {fileID: 0}
+  CrossFade: {fileID: 0}
 --- !u!95 &1658009728391012131
 Animator:
   serializedVersion: 3
