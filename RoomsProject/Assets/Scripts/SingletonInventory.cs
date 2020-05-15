@@ -24,7 +24,7 @@ namespace Assets.Scripts
             }
         }
 
-        [SerializeField] int SLOTS = 5;
+        [SerializeField] int SLOTS = 500;
 
         private List<IInventoryItem> mItems = new List<IInventoryItem>();
         public List<IInventoryItem> items { get { return new List<IInventoryItem>(mItems); } }

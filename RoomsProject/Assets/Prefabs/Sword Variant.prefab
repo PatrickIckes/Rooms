@@ -22,33 +22,48 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0021026134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.003118828
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+        type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.33
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.33
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7515559
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306721255428760584, guid: 76ad2545fe6f2a14396a19e6b04cb055,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.73088324
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_Name
-      value: Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 8306721255428760587, guid: 76ad2545fe6f2a14396a19e6b04cb055,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
+      value: Sword Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0456195
+      value: 0.2936
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.595
+      value: -3.5483
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
@@ -98,21 +113,20 @@ PrefabInstance:
     - target: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 1.5435213
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760630, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.7164534
       objectReference: {fileID: 0}
     - target: {fileID: 8306721255428760631, guid: 76ad2545fe6f2a14396a19e6b04cb055,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7a806f626d390b14a9667db3e133cb2e,
+      objectReference: {fileID: 21300000, guid: 5ab59c3372815cd489c88664e2c1c871,
         type: 3}
-    m_RemovedComponents:
-    - {fileID: 8306721255428760586, guid: 76ad2545fe6f2a14396a19e6b04cb055, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ad2545fe6f2a14396a19e6b04cb055, type: 3}
 --- !u!1 &4234296845400896663 stripped
 GameObject:
